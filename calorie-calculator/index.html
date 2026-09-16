@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Calculator — Daily Calorie Needs Free | CalcFitly</title>
+    <meta name="description" content="Free Calorie Calculator: find out how many calories you need daily to lose, maintain, or gain weight. Based on the Mifflin-St Jeor equation. No sign-up, 100% private.">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many calories should I eat per day?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It depends on your age, gender, height, weight, and activity level. On average, adult women need 1,600–2,400 calories and adult men need 2,000–3,000 calories per day. Use our calculator for a personalized estimate." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between BMR and TDEE?",
+          "acceptedAnswer": { "@type": "Answer", "text": "BMR (Basal Metabolic Rate) is the calories your body burns at complete rest. TDEE (Total Daily Energy Expenditure) is your BMR multiplied by your activity level — it's the total calories you burn each day." }
+        },
+        {
+          "@type": "Question",
+          "name": "How many calories should I cut to lose weight?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A deficit of about 500 calories per day leads to roughly 0.5 kg (1 lb) of weight loss per week, which is considered safe and sustainable. Never go below 1,200 calories (women) or 1,500 calories (men) without medical supervision." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which formula does this calculator use?",
+          "acceptedAnswer": { "@type": "Answer", "text": "We use the Mifflin-St Jeor equation, which is considered the most accurate BMR formula by the Academy of Nutrition and Dietetics." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data saved when I use this calculator?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. All calculations run entirely in your browser. Your age, weight, height, and results are never stored or sent anywhere." }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --green: #11998e;
+            --green-light: #38ef7d;
+            --green-dark: #0d7a72;
+            --ink: #14212b;
+            --muted: #5f6b76;
+            --bg: #f4fbf8;
+            --border: #e4efe9;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+
+        /* ===== NAVBAR ===== */
+        .navbar { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+        .nav-inner { max-width: 1100px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4em; font-weight: 800; text-decoration: none; color: var(--ink); }
+        .logo span { color: var(--green); }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.95em; }
+        .nav-links a:hover { color: var(--green); }
+        .nav-cta { background: linear-gradient(135deg, var(--green), var(--green-light)); color: #fff !important; padding: 10px 20px; border-radius: 999px; box-shadow: 0 4px 12px rgba(17,153,142,0.25); }
+        .menu-btn { display: none; background: none; border: none; font-size: 1.6em; cursor: pointer; color: var(--ink); }
+
+        /* ===== HERO ===== */
+        .hero { position: relative; overflow: hidden; text-align: center; padding: 60px 20px 50px; background: linear-gradient(180deg, #e9fbf3 0%, var(--bg) 100%); }
+        .hero::before { content: ''; position: absolute; width: 380px; height: 380px; background: radial-gradient(circle, rgba(56,239,125,0.28), transparent 70%); top: -120px; left: -120px; }
+        .hero::after { content: ''; position: absolute; width: 380px; height: 380px; background: radial-gradient(circle, rgba(17,153,142,0.22), transparent 70%); bottom: -140px; right: -120px; }
+        .hero-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+        .pill { display: inline-block; background: #fff; border: 1px solid var(--border); color: var(--green-dark); font-weight: 600; font-size: 0.85em; padding: 8px 18px; border-radius: 999px; box-shadow: 0 2px 8px rgba(17,153,142,0.08); margin-bottom: 20px; }
+        .hero h1 { font-size: clamp(1.9em, 4.5vw, 2.8em); font-weight: 800; letter-spacing: -1px; line-height: 1.15; margin-bottom: 14px; }
+        .grad { background: linear-gradient(135deg, var(--green), var(--green-light)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .hero p { color: var(--muted); font-size: 1.05em; max-width: 580px; margin: 0 auto; }
+
+        /* ===== SECTIONS ===== */
+        .section { max-width: 900px; margin: 0 auto; padding: 55px 20px; }
+        .section-tag { display: block; text-align: center; color: var(--green); font-weight: 700; font-size: 0.82em; text-transform: uppercase; letter-spacing: 2px; }
+        .section h2 { text-align: center; font-size: clamp(1.5em, 3vw, 2em); font-weight: 800; margin: 10px 0 8px; letter-spacing: -0.5px; }
+        .section-sub { text-align: center; color: var(--muted); max-width: 560px; margin: 0 auto 36px; }
+
+        /* ===== CALCULATOR CARD ===== */
+        .calc-card { background: #fff; border: 1px solid var(--border); border-radius: 24px; padding: 34px; box-shadow: 0 10px 30px rgba(17,153,142,0.08); max-width: 620px; margin: 0 auto; }
+        .toggle-label { font-weight: 700; font-size: 0.9em; margin-bottom: 8px; display: block; }
+        .unit-toggle { display: flex; background: #eefaf4; border-radius: 999px; padding: 5px; margin-bottom: 20px; }
+        .unit-toggle button { flex: 1; padding: 11px; border: none; border-radius: 999px; font-weight: 700; font-size: 0.95em; cursor: pointer; background: transparent; color: var(--muted); transition: 0.2s; }
+        .unit-toggle button.active { background: linear-gradient(135deg, var(--green), var(--green-light)); color: #fff; box-shadow: 0 4px 10px rgba(17,153,142,0.25); }
+        .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .input-group label { display: block; font-weight: 700; font-size: 0.9em; margin-bottom: 7px; }
+        .input-group input, .input-group select { width: 100%; padding: 13px 15px; border: 2px solid var(--border); border-radius: 12px; font-size: 1em; font-family: inherit; transition: 0.2s; background: #fff; }
+        .input-group input:focus, .input-group select:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 4px rgba(17,153,142,0.1); }
+        .calc-btn { width: 100%; padding: 15px; border: none; border-radius: 999px; background: linear-gradient(135deg, var(--green), var(--green-light)); color: #fff; font-size: 1.05em; font-weight: 800; cursor: pointer; box-shadow: 0 8px 20px rgba(17,153,142,0.3); transition: 0.2s; margin-top: 8px; }
+        .calc-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(17,153,142,0.38); }
+
+        /* ===== RESULT ===== */
+        .result { display: none; margin-top: 28px; }
+        .result.show { display: block; }
+        .bmr-box { text-align: center; padding: 22px; border-radius: 18px; background: #eefaf4; border: 1px solid var(--border); margin-bottom: 18px; }
+        .bmr-label { color: var(--muted); font-weight: 600; font-size: 0.9em; }
+        .bmr-num { font-size: 2.6em; font-weight: 800; background: linear-gradient(135deg, var(--green), var(--green-light)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .bmr-sub { color: var(--muted); font-size: 0.85em; }
+        .goal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+        .goal-card { text-align: center; padding: 20px 12px; border-radius: 16px; border: 1px solid var(--border); background: #fff; }
+        .goal-card .goal-title { font-weight: 700; font-size: 0.85em; margin-bottom: 6px; }
+        .goal-card .goal-num { font-size: 1.5em; font-weight: 800; }
+        .goal-card .goal-sub { font-size: 0.75em; color: var(--muted); }
+        .goal-lose { background: #fff8e1; border-color: #ffe082; }
+        .goal-lose .goal-num { color: #b58900; }
+        .goal-maintain { background: #e6f9f0; border-color: #a5e8c9; }
+        .goal-maintain .goal-num { color: var(--green-dark); }
+        .goal-gain { background: #e3f2fd; border-color: #90caf9; }
+        .goal-gain .goal-num { color: #1565c0; }
+        .safety-note { display: none; margin-top: 14px; padding: 14px 18px; background: #fdecea; border-radius: 12px; color: #c62828; font-size: 0.88em; font-weight: 600; }
+        .safety-note.show { display: block; }
+
+        /* ===== CONTENT ===== */
+        .content-card { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 32px; margin-bottom: 22px; }
+        .content-card h3 { color: var(--green-dark); margin-bottom: 12px; font-size: 1.2em; }
+        .content-card p { color: var(--muted); margin-bottom: 12px; font-size: 0.97em; }
+        .content-card ul { margin: 0 0 12px 22px; color: var(--muted); }
+        .content-card li { margin-bottom: 6px; }
+        .bmi-table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 0.95em; }
+        .bmi-table th, .bmi-table td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+        .bmi-table th { background: #eefaf4; color: var(--green-dark); }
+        .bmi-table tr:last-child td { border-bottom: none; }
+
+        /* ===== FAQ ===== */
+        .faq-list { max-width: 760px; margin: 0 auto; }
+        details { background: #fff; border: 1px solid var(--border); border-radius: 14px; margin-bottom: 12px; padding: 18px 22px; }
+        summary { cursor: pointer; font-weight: 700; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '+'; color: var(--green); font-size: 1.5em; font-weight: 700; flex-shrink: 0; }
+        details[open] summary::after { content: '−'; }
+        details p { margin-top: 12px; color: var(--muted); font-size: 0.95em; }
+
+        /* ===== CTA ===== */
+        .cta { background: linear-gradient(135deg, var(--green), var(--green-light)); border-radius: 24px; text-align: center; color: #fff; padding: 46px 24px; }
+        .cta h2 { font-size: clamp(1.4em, 3vw, 1.9em); margin-bottom: 10px; }
+        .cta p { opacity: 0.92; margin-bottom: 22px; }
+        .btn-white { display: inline-block; background: #fff; color: var(--green-dark); padding: 14px 30px; border-radius: 999px; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(0,0,0,0.12); transition: 0.2s; }
+        .btn-white:hover { transform: translateY(-2px); }
+
+        /* ===== FOOTER ===== */
+        footer { background: #0e2420; color: #cfe3dd; padding: 46px 20px 26px; margin-top: 60px; }
+        .footer-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+        .footer-logo { font-size: 1.3em; font-weight: 800; color: #fff; margin-bottom: 16px; }
+        .footer-logo span { color: var(--green-light); }
+        .footer-links { margin-bottom: 14px; }
+        footer a { color: #9fe8c9; text-decoration: none; margin: 0 10px; font-weight: 600; }
+        footer a:hover { color: #fff; }
+        .disclaimer { font-size: 0.82em; color: #7fa39a; max-width: 640px; margin: 14px auto 0; }
+        .copyright { margin-top: 16px; font-size: 0.85em; color: #7fa39a; }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 768px) {
+            .menu-btn { display: block; }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; align-items: flex-start; padding: 18px 22px; gap: 16px; border-bottom: 1px solid var(--border); box-shadow: 0 12px 24px rgba(0,0,0,0.07); }
+            .nav-links.open { display: flex; }
+            .input-row { grid-template-columns: 1fr; }
+            .calc-card { padding: 24px; }
+            .goal-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="/" class="logo">💪 Calc<span>Fitly</span></a>
+            <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+            <div class="nav-links" id="navLinks">
+                <a href="/">Home</a>
+                <a href="/#calculators">Calculators</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+                <a href="/bmi-calculator/" class="nav-cta">BMI Calculator</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-inner">
+            <span class="pill">🔥 Free · Instant · 100% Private</span>
+            <h1>Calorie <span class="grad">Calculator</span></h1>
+            <p>Find out exactly how many calories you need daily to lose, maintain, or gain weight — based on the Mifflin-St Jeor equation.</p>
+        </div>
+    </header>
+
+    <!-- CALCULATOR -->
+    <section class="section">
+        <div class="calc-card">
+
+            <span class="toggle-label">Units</span>
+            <div class="unit-toggle">
+                <button id="metricBtn" class="active" onclick="setUnit('metric')">Metric (kg/cm)</button>
+                <button id="imperialBtn" onclick="setUnit('imperial')">Imperial (lbs/in)</button>
+            </div>
+
+            <span class="toggle-label">Gender</span>
+            <div class="unit-toggle">
+                <button id="maleBtn" class="active" onclick="setGender('male')">👨 Male</button>
+                <button id="femaleBtn" onclick="setGender('female')">👩 Female</button>
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Age (years)</label>
+                    <input type="number" id="age" placeholder="e.g. 25" min="10" max="120">
+                </div>
+                <div class="input-group">
+                    <label id="heightLabel">Height (cm)</label>
+                    <input type="number" id="height" placeholder="e.g. 175" min="1">
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label id="weightLabel">Weight (kg)</label>
+                    <input type="number" id="weight" placeholder="e.g. 70" min="1">
+                </div>
+                <div class="input-group">
+                    <label>Activity Level</label>
+                    <select id="activity">
+                        <option value="1.2">Sedentary (little/no exercise)</option>
+                        <option value="1.375">Light (1–3 days/week)</option>
+                        <option value="1.55" selected>Moderate (3–5 days/week)</option>
+                        <option value="1.725">Active (6–7 days/week)</option>
+                        <option value="1.9">Very Active (physical job)</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="calc-btn" onclick="calculateCalories()">Calculate My Calories →</button>
+
+            <div class="result" id="result">
+                <div class="bmr-box">
+                    <div class="bmr-label">Your Maintenance Calories (TDEE)</div>
+                    <div class="bmr-num" id="maintainValue">0</div>
+                    <div class="bmr-sub">calories per day · BMR: <span id="bmrValue">0</span> kcal</div>
+                </div>
+                <div class="goal-grid">
+                    <div class="goal-card goal-lose">
+                        <div class="goal-title">📉 Weight Loss</div>
+                        <div class="goal-num" id="loseValue">0</div>
+                        <div class="goal-sub">kcal/day (−0.5 kg/week)</div>
+                    </div>
+                    <div class="goal-card goal-maintain">
+                        <div class="goal-title">⚖️ Maintain</div>
+                        <div class="goal-num" id="maintainValue2">0</div>
+                        <div class="goal-sub">kcal/day</div>
+                    </div>
+                    <div class="goal-card goal-gain">
+                        <div class="goal-title">📈 Weight Gain</div>
+                        <div class="goal-num" id="gainValue">0</div>
+                        <div class="goal-sub">kcal/day (+0.5 kg/week)</div>
+                    </div>
+                </div>
+                <div class="safety-note" id="safetyNote">⚠️ Your weight loss target is below the safe minimum. Please consult a healthcare professional before following a very low-calorie diet.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEARN -->
+    <section class="section">
+        <span class="section-tag">Learn</span>
+        <h2>Understanding Your Calories</h2>
+        <p class="section-sub">The science behind your daily energy needs.</p>
+
+        <div class="content-card">
+            <h3>🧮 How Is It Calculated?</h3>
+            <p>We use the <strong>Mifflin-St Jeor equation</strong> — recommended by the Academy of Nutrition and Dietetics as the most accurate BMR formula:</p>
+            <p><strong>Men:</strong> BMR = 10 × weight (kg) + 6.25 × height (cm) − 5 × age + 5</p>
+            <p><strong>Women:</strong> BMR = 10 × weight (kg) + 6.25 × height (cm) − 5 × age − 161</p>
+            <p>Your BMR is then multiplied by your activity level to get your <strong>TDEE</strong> (Total Daily Energy Expenditure) — the calories you actually burn each day.</p>
+        </div>
+
+        <div class="content-card">
+            <h3>🏃 Activity Level Guide</h3>
+            <table class="bmi-table">
+                <tr><th>Activity Level</th><th>Description</th></tr>
+                <tr><td>Sedentary</td><td>Desk job, little or no exercise</td></tr>
+                <tr><td>Light</td><td>Exercise 1–3 days per week</td></tr>
+                <tr><td>Moderate</td><td>Exercise 3–5 days per week</td></tr>
+                <tr><td>Active</td><td>Hard exercise 6–7 days per week</td></tr>
+                <tr><td>Very Active</td><td>Physical job + daily exercise</td></tr>
+            </table>
+        </div>
+
+        <div class="content-card">
+            <h3>⚖️ Safe Weight Loss Tips</h3>
+            <ul>
+                <li>Aim for a <strong>500 calorie/day deficit</strong> — that's about 0.5 kg loss per week.</li>
+                <li>Never eat below <strong>1,200 kcal (women)</strong> or <strong>1,500 kcal (men)</strong> without medical supervision.</li>
+                <li>Combine a small calorie deficit with regular exercise for best results.</li>
+                <li>Prioritize protein to preserve muscle while losing fat.</li>
+                <li>Slow, steady progress beats crash diets every time.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <span class="section-tag">FAQs</span>
+        <h2>Calorie Questions, Answered</h2>
+        <p class="section-sub">Quick answers to common calorie questions.</p>
+        <div class="faq-list">
+            <details>
+                <summary>How many calories should I eat per day?</summary>
+                <p>It depends on your age, gender, height, weight, and activity level. On average, adult women need 1,600–2,400 calories and adult men need 2,000–3,000 calories per day. Use our calculator for a personalized estimate.</p>
+            </details>
+            <details>
+                <summary>What is the difference between BMR and TDEE?</summary>
+                <p>BMR (Basal Metabolic Rate) is the calories your body burns at complete rest. TDEE (Total Daily Energy Expenditure) is your BMR multiplied by your activity level — it's the total calories you burn each day.</p>
+            </details>
+            <details>
+                <summary>How many calories should I cut to lose weight?</summary>
+                <p>A deficit of about 500 calories per day leads to roughly 0.5 kg (1 lb) of weight loss per week, which is considered safe and sustainable. Never go below 1,200 calories (women) or 1,500 calories (men) without medical supervision.</p>
+            </details>
+            <details>
+                <summary>Which formula does this calculator use?</summary>
+                <p>We use the Mifflin-St Jeor equation, which is considered the most accurate BMR formula by the Academy of Nutrition and Dietetics.</p>
+            </details>
+            <details>
+                <summary>Is my data saved when I use this calculator?</summary>
+                <p>No. All calculations run entirely in your browser. Your age, weight, height, and results are never stored or sent anywhere.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+        <div class="cta">
+            <h2>Know Your BMI Too? ⚖️</h2>
+            <p>Check your Body Mass Index in under 30 seconds.</p>
+            <a href="/bmi-calculator/" class="btn-white">Try BMI Calculator — Free</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">💪 Calc<span>Fitly</span></div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/bmi-calculator/">BMI Calculator</a>
+                <a href="/calorie-calculator/">Calorie Calculator</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+                <a href="/privacy-policy/">Privacy Policy</a>
+            </div>
+            <p class="disclaimer">CalcFitly provides educational tools only and does not offer medical advice. Always consult a qualified healthcare professional before making health decisions.</p>
+            <p class="copyright">&copy; 2026 CalcFitly. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        var menuBtn = document.getElementById('menuBtn');
+        var navLinks = document.getElementById('navLinks');
+        menuBtn.addEventListener('click', function () {
+            navLinks.classList.toggle('open');
+        });
+
+        // Unit & gender toggles
+        var currentUnit = 'metric';
+        var currentGender = 'male';
+
+        function setUnit(unit) {
+            currentUnit = unit;
+            document.getElementById('metricBtn').classList.toggle('active', unit === 'metric');
+            document.getElementById('imperialBtn').classList.toggle('active', unit === 'imperial');
+            if (unit === 'metric') {
+                document.getElementById('heightLabel').textContent = 'Height (cm)';
+                document.getElementById('weightLabel').textContent = 'Weight (kg)';
+                document.getElementById('height').placeholder = 'e.g. 175';
+                document.getElementById('weight').placeholder = 'e.g. 70';
+            } else {
+                document.getElementById('heightLabel').textContent = 'Height (inches)';
+                document.getElementById('weightLabel').textContent = 'Weight (lbs)';
+                document.getElementById('height').placeholder = 'e.g. 69';
+                document.getElementById('weight').placeholder = 'e.g. 154';
+            }
+        }
+
+        function setGender(gender) {
+            currentGender = gender;
+            document.getElementById('maleBtn').classList.toggle('active', gender === 'male');
+            document.getElementById('femaleBtn').classList.toggle('active', gender === 'female');
+        }
+
+        // Calorie calculation (Mifflin-St Jeor)
+        function calculateCalories() {
+            var age = parseFloat(document.getElementById('age').value);
+            var height = parseFloat(document.getElementById('height').value);
+            var weight = parseFloat(document.getElementById('weight').value);
+            var activity = parseFloat(document.getElementById('activity').value);
+
+            if (!age || !height || !weight || age <= 0 || height <= 0 || weight <= 0) {
+                alert('Please fill in all fields with valid values.');
+                return;
+            }
+            if (age < 10 || age > 120) {
+                alert('Please enter a valid age between 10 and 120.');
+                return;
+            }
+
+            // Convert to metric if needed
+            var weightKg = (currentUnit === 'metric') ? weight : weight * 0.453592;
+            var heightCm = (currentUnit === 'metric') ? height : height * 2.54;
+
+            // Mifflin-St Jeor equation
+            var bmr;
+            if (currentGender === 'male') {
+                bmr = 10 * weightKg + 6.25 * heightCm - 5 * age + 5;
+            } else {
+                bmr = 10 * weightKg + 6.25 * heightCm - 5 * age - 161;
+            }
+
+            var tdee = bmr * activity;
+            var lose = tdee - 500;
+            var gain = tdee + 500;
+
+            document.getElementById('bmrValue').textContent = Math.round(bmr).toLocaleString();
+            document.getElementById('maintainValue').textContent = Math.round(tdee).toLocaleString();
+            document.getElementById('maintainValue2').textContent = Math.round(tdee).toLocaleString();
+            document.getElementById('loseValue').textContent = Math.round(lose).toLocaleString();
+            document.getElementById('gainValue').textContent = Math.round(gain).toLocaleString();
+
+            // Safety warning for very low calorie targets
+            var minSafe = (currentGender === 'male') ? 1500 : 1200;
+            var safetyNote = document.getElementById('safetyNote');
+            if (lose < minSafe) {
+                safetyNote.classList.add('show');
+            } else {
+                safetyNote.classList.remove('show');
+            }
+
+            document.getElementById('result').classList.add('show');
+            document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+
+</body>
+</html>
