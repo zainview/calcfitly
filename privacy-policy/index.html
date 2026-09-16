@@ -3,84 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - CalcFitly</title>
+    <title>Privacy Policy — CalcFitly</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💪</text></svg>">
-    <meta name="description" content="Privacy Policy for CalcFitly. Learn how we handle data, cookies, and third-party advertising on our free health calculator website.">
+    <meta name="description" content="CalcFitly Privacy Policy: learn how we protect your data. All calculations run in your browser — we never store your personal health information.">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.7; color: #333; background: #f9fafb; }
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
-        header { background: linear-gradient(135deg, #11998e, #38ef7d); color: #fff; padding: 30px 20px; text-align: center; }
-        header h1 { font-size: 1.8em; }
-        nav { background: #fff; padding: 12px 20px; border-bottom: 1px solid #eee; }
-        nav a { color: #11998e; text-decoration: none; margin-right: 15px; font-weight: 600; }
-        .content { background: #fff; padding: 30px; margin: 20px 0; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-        h2 { color: #11998e; margin: 25px 0 10px; font-size: 1.3em; }
-        p { margin-bottom: 12px; }
-        ul { margin: 0 0 12px 25px; }
-        a { color: #11998e; }
-        footer { text-align: center; padding: 20px; color: #888; font-size: 0.9em; }
-        footer a { color: #11998e; text-decoration: none; margin: 0 8px; }
+        :root {
+            --green: #11998e;
+            --green-light: #38ef7d;
+            --green-dark: #0d7a72;
+            --ink: #14212b;
+            --muted: #5f6b76;
+            --bg: #f4fbf8;
+            --border: #e4efe9;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+
+        /* ===== NAVBAR ===== */
+        .navbar { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+        .nav-inner { max-width: 1100px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4em; font-weight: 800; text-decoration: none; color: var(--ink); }
+        .logo span { color: var(--green); }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.95em; }
+        .nav-links a:hover { color: var(--green); }
+        .nav-cta { background: linear-gradient(135deg, var(--green), var(--green-light)); color: #fff !important; padding: 10px 20px; border-radius: 999px; box-shadow: 0 4px 12px rgba(17,153,142,0.25); }
+        .menu-btn { display: none; background: none; border: none; font-size: 1.6em; cursor: pointer; color: var(--ink); }
+
+        /* ===== HERO ===== */
+        .hero { position: relative; overflow: hidden; text-align: center; padding: 60px 20px 50px; background: linear-gradient(180deg, #e9fbf3 0%, var(--bg) 100%); }
+        .hero::before { content: ''; position: absolute; width: 380px; height: 380px; background: radial-gradient(circle, rgba(56,239,125,0.28), transparent 70%); top: -120px; left: -120px; }
+        .hero::after { content: ''; position: absolute; width: 380px; height: 380px; background: radial-gradient(circle, rgba(17,153,142,0.22), transparent 70%); bottom: -140px; right: -120px; }
+        .hero-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+        .pill { display: inline-block; background: #fff; border: 1px solid var(--border); color: var(--green-dark); font-weight: 600; font-size: 0.85em; padding: 8px 18px; border-radius: 999px; box-shadow: 0 2px 8px rgba(17,153,142,0.08); margin-bottom: 20px; }
+        .hero h1 { font-size: clamp(1.9em, 4.5vw, 2.8em); font-weight: 800; letter-spacing: -1px; line-height: 1.15; margin-bottom: 14px; }
+        .grad { background: linear-gradient(135deg, var(--green), var(--green-light)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .hero p { color: var(--muted); font-size: 1.05em; max-width: 580px; margin: 0 auto; }
+
+        /* ===== SECTIONS ===== */
+        .section { max-width: 820px; margin: 0 auto; padding: 55px 20px; }
+
+        /* ===== CONTENT ===== */
+        .content-card { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 32px; margin-bottom: 22px; }
+        .content-card h3 { color: var(--green-dark); margin-bottom: 12px; font-size: 1.2em; }
+        .content-card p { color: var(--muted); margin-bottom: 12px; font-size: 0.97em; }
+        .content-card ul { margin: 0 0 12px 22px; color: var(--muted); }
+        .content-card li { margin-bottom: 6px; }
+        .content-card a { color: var(--green); font-weight: 600; }
+        .content-card a:hover { color: var(--green-dark); }
+        .highlight-box { background: #eefaf4; border-left: 4px solid var(--green); border-radius: 12px; padding: 18px 22px; margin-bottom: 22px; }
+        .highlight-box p { color: var(--green-dark); font-weight: 600; margin: 0; }
+        .updated { text-align: center; color: var(--muted); font-size: 0.88em; margin-bottom: 30px; }
+
+        /* ===== FOOTER ===== */
+        footer { background: #0e2420; color: #cfe3dd; padding: 46px 20px 26px; margin-top: 60px; }
+        .footer-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+        .footer-logo { font-size: 1.3em; font-weight: 800; color: #fff; margin-bottom: 16px; }
+        .footer-logo span { color: var(--green-light); }
+        .footer-links { margin-bottom: 14px; }
+        footer a { color: #9fe8c9; text-decoration: none; margin: 0 10px; font-weight: 600; }
+        footer a:hover { color: #fff; }
+        .disclaimer { font-size: 0.82em; color: #7fa39a; max-width: 640px; margin: 14px auto 0; }
+        .copyright { margin-top: 16px; font-size: 0.85em; color: #7fa39a; }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 768px) {
+            .menu-btn { display: block; }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; align-items: flex-start; padding: 18px 22px; gap: 16px; border-bottom: 1px solid var(--border); box-shadow: 0 12px 24px rgba(0,0,0,0.07); }
+            .nav-links.open { display: flex; }
+            .content-card { padding: 24px; }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Privacy Policy</h1>
-        <p>Last updated: September 15, 2026</p>
-    </header>
-    <nav>
-        <a href="https://calcfitly.com/">Home</a>
-        <a href="https://calcfitly.com/bmi-calculator/">BMI Calculator</a>
-    </nav>
-    <div class="container">
-        <div class="content">
-            <p>Welcome to CalcFitly ("we", "our", or "us"). This Privacy Policy explains how we collect, use, and protect your information when you visit <strong>https://calcfitly.com</strong>.</p>
 
-            <h2>1. Information We Collect</h2>
-            <p>Our calculators work entirely in your browser. <strong>We do not collect, store, or transmit</strong> any personal health data you enter (such as weight, height, or age). All calculations happen on your own device.</p>
-            <p>We may automatically collect limited non-personal information, such as:</p>
-            <ul>
-                <li>Browser type and device information</li>
-                <li>Pages visited and time spent on the site</li>
-                <li>Approximate location (country/city level) via analytics</li>
-            </ul>
-
-            <h2>2. Cookies</h2>
-            <p>We use cookies to improve your experience and to serve relevant advertisements. Cookies are small text files stored on your device. You can disable cookies in your browser settings, though some features may not work as intended.</p>
-
-            <h2>3. Google AdSense and Third-Party Advertising</h2>
-            <p>We use Google AdSense to display advertisements. Google and its partners use cookies (including the DoubleClick cookie) to serve ads based on your prior visits to this and other websites.</p>
-            <ul>
-                <li>Third-party vendors, including Google, use cookies to serve ads based on your browsing history.</li>
-                <li>You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings</a>.</li>
-                <li>You can also visit <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">www.aboutads.info/choices</a> to opt out of other third-party vendors.</li>
-            </ul>
-
-            <h2>4. Analytics</h2>
-            <p>We may use Google Analytics to understand how visitors use our site. This service collects anonymized usage data. You can opt out using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</p>
-
-            <h2>5. Third-Party Links</h2>
-            <p>Our website may contain links to external sites. We are not responsible for the privacy practices of those websites. Please review their policies separately.</p>
-
-            <h2>6. Children's Privacy</h2>
-            <p>Our website is not directed at children under 13, and we do not knowingly collect personal information from children.</p>
-
-            <h2>7. Medical Disclaimer</h2>
-            <p>All calculators and content on CalcFitly are for informational purposes only and do not constitute medical advice. Always consult a qualified healthcare professional before making health decisions.</p>
-
-            <h2>8. Changes to This Policy</h2>
-            <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
-
-            <h2>9. Contact Us</h2>
-            <p>If you have questions about this Privacy Policy, please contact us through our <a href="https://calcfitly.com/contact/">Contact page</a>.</p>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="/" class="logo">💪 Calc<span>Fitly</span></a>
+            <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+            <div class="nav-links" id="navLinks">
+                <a href="/">Home</a>
+                <a href="/#calculators">Calculators</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+                <a href="/bmi-calculator/" class="nav-cta">BMI Calculator</a>
+            </div>
         </div>
-    </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-inner">
+            <span class="pill">🔒 Your Privacy Matters</span>
+            <h1>Privacy <span class="grad">Policy</span></h1>
+            <p>How we handle your information — explained in simple, honest language.</p>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <section class="section">
+        <p class="updated">Last updated: September 2026</p>
+
+        <div class="highlight-box">
+            <p>🌟 Good news: All CalcFitly calculators run entirely in your browser. Your health data never leaves your device.</p>
+        </div>
+
+        <div class="content-card">
+            <h3>1. Introduction</h3>
+            <p>Welcome to CalcFitly ("we," "our," or "us"). This Privacy Policy explains how we collect, use, and protect your information when you visit <strong>calcfitly.com</strong> (the "Site").</p>
+            <p>By using our Site, you agree to the practices described in this policy. If you do not agree, please discontinue use of the Site.</p>
+        </div>
+
+        <div class="content-card">
+            <h3>2. Information We Do NOT Collect</h3>
+            <p>CalcFitly is designed with privacy at its core. We do <strong>not</strong> collect or store:</p>
+            <ul>
+                <li>Your height, weight, age, or any health data you enter into our calculators</li>
+                <li>Your name, email address, or contact details (unless you voluntarily email us)</li>
+                <li>Any calculation results — everything is processed locally in your browser</li>
+                <li>Passwords or account credentials (we don't have accounts!)</li>
+            </ul>
+        </div>
+
+        <div class="content-card">
+            <h3>3. Information Collected Automatically</h3>
+            <p>Like most websites, some non-personal information may be collected automatically when you visit:</p>
+            <ul>
+                <li><strong>Log data:</strong> Browser type, device type, pages visited, and time spent (collected by our hosting provider, Cloudflare)</li>
+                <li><strong>Cookies:</strong> Small files used for site functionality and analytics (see Section 5)</li>
+            </ul>
+            <p>This information is anonymous and cannot be used to identify you personally.</p>
+        </div>
+
+        <div class="content-card">
+            <h3>4. Google AdSense & Third-Party Advertising</h3>
+            <p>We may use Google AdSense to display advertisements on our Site. Google and its partners may use cookies to serve ads based on your prior visits to this or other websites.</p>
+            <ul>
+                <li>Google's use of advertising cookies enables it and its partners to serve ads based on your visit to our Site and/or other sites on the Internet.</li>
+                <li>You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings</a>.</li>
+                <li>You can also visit <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">www.aboutads.info/choices</a> to opt out of third-party vendor cookies.</li>
+            </ul>
+        </div>
+
+        <div class="content-card">
+            <h3>5. Cookies</h3>
+            <p>Cookies are small text files stored on your device. We use them for:</p>
+            <ul>
+                <li><strong>Essential functions:</strong> Making the Site work properly</li>
+                <li><strong>Analytics:</strong> Understanding how visitors use the Site (anonymously)</li>
+                <li><strong>Advertising:</strong> Displaying relevant ads through Google AdSense</li>
+            </ul>
+            <p>You can disable cookies in your browser settings at any time. The Site will still work, though some features may be limited.</p>
+        </div>
+
+        <div class="content-card">
+            <h3>6. Contact Form</h3>
+            <p>If you contact us through our contact form or email (<strong>contact@calcfitly.com</strong>), we will receive your name, email address, and message. We use this information solely to respond to your inquiry and never share it with third parties for marketing purposes.</p>
+        </div>
+
+        <div class="content-card">
+            <h3>7. Data Security</h3>
+            <p>Our Site is served over HTTPS (secure encrypted connection) via Cloudflare. Since we don't store personal health data, there is no database of user information that could be compromised.</p>
+        </div>
+
+        <div class="content-card">
+            <h3>8. Children's Privacy</h3>
+            <p>Our Site is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided us personal information, please contact us and we will promptly address it.</p>
+        </div>
+
+        <div class="content-card">
+            <h3>9. Third-Party Links</h3>
+            <p>Our Site may contain links to external websites. We are not responsible for the privacy practices or content of those sites. We encourage you to read their privacy policies.</p>
+        </div>
+
+        <div class="content-card">
+            <h3>10. Changes to This Policy</h3>
+            <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date. Continued use of the Site after changes means you accept the updated policy.</p>
+        </div>
+
+        <div class="content-card">
+            <h3>11. Contact Us</h3>
+            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:contact@calcfitly.com">contact@calcfitly.com</a></li>
+                <li><strong>Contact Form:</strong> <a href="/contact/">calcfitly.com/contact</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-        <a href="https://calcfitly.com/">Home</a> |
-        <a href="https://calcfitly.com/about/">About</a> |
-        <a href="https://calcfitly.com/contact/">Contact</a> |
-        <a href="https://calcfitly.com/privacy-policy/">Privacy Policy</a>
-        <p>&copy; 2026 CalcFitly. All rights reserved.</p>
+        <div class="footer-inner">
+            <div class="footer-logo">💪 Calc<span>Fitly</span></div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/bmi-calculator/">BMI Calculator</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+                <a href="/privacy-policy/">Privacy Policy</a>
+            </div>
+            <p class="disclaimer">CalcFitly provides educational tools only and does not offer medical advice. Always consult a qualified healthcare professional before making health decisions.</p>
+            <p class="copyright">&copy; 2026 CalcFitly. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script>
+        var menuBtn = document.getElementById('menuBtn');
+        var navLinks = document.getElementById('navLinks');
+        menuBtn.addEventListener('click', function () {
+            navLinks.classList.toggle('open');
+        });
+    </script>
+
 </body>
 </html>
