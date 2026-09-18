@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Water Intake Calculator — How Much Water Should You Drink? | CalcFitly</title>
+    <title>Water Intake Calculator — Daily Hydration Needs Free | CalcFitly</title>
     <meta name="description" content="Free Water Intake Calculator: find out exactly how much water you should drink daily based on your weight, activity, and climate. No sign-up, 100% private.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💪</text></svg>">
 
@@ -15,27 +15,37 @@
         {
           "@type": "Question",
           "name": "How much water should I drink a day?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A common guideline is about 33 ml per kg of body weight. For a 70 kg person, that's roughly 2.3 liters per day. Exercise and hot weather increase your needs." }
+          "acceptedAnswer": { "@type": "Answer", "text": "A common guideline is 30–35 ml per kg of body weight. For a 70 kg person, that's about 2.1–2.5 liters daily. Exercise, hot weather, and pregnancy increase your needs." }
         },
         {
           "@type": "Question",
-          "name": "Does coffee or tea count toward my water intake?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes, mostly. While caffeine has a mild diuretic effect, the water in coffee and tea still contributes to your daily hydration. Plain water is still the best choice." }
+          "name": "Is 8 glasses of water a day enough?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The '8 glasses' rule (about 2 liters) is a rough average, but individual needs vary widely. Heavier people, athletes, and those in hot climates often need significantly more. Your weight-based target is more accurate." }
         },
         {
           "@type": "Question",
-          "name": "Can I drink too much water?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes, though it's rare. Drinking extreme amounts in a short time can cause hyponatremia (low sodium). Spread your intake throughout the day and listen to your body." }
+          "name": "Does coffee and tea count toward my water intake?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Despite mild caffeine, coffee and tea contribute to your daily hydration. Water-rich foods like fruits, vegetables, and soups also count — typically providing about 20% of daily fluid needs." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you drink too much water?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, though it's rare. Drinking extreme amounts in a short time can cause hyponatremia (dangerously low sodium). Healthy kidneys handle about 0.8–1 liter per hour, so spread your intake across the day." }
         },
         {
           "@type": "Question",
           "name": "How much extra water should I drink when exercising?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A good rule is to add about 350–500 ml for every 30 minutes of moderate exercise, and more in hot conditions or during intense workouts." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Add roughly 500–750 ml for every 30–60 minutes of moderate exercise, and more for intense or sweaty sessions. Weighing yourself before and after shows exactly how much fluid you lost." }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the signs of dehydration?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Early signs include thirst, dark yellow urine, dry mouth, fatigue, and headache. By the time you feel thirsty, you're already mildly dehydrated. Pale yellow urine is a good sign of proper hydration." }
         },
         {
           "@type": "Question",
           "name": "Is my data saved when I use this calculator?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. All calculations run entirely in your browser. Your weight and results are never stored or sent anywhere." }
+          "acceptedAnswer": { "@type": "Answer", "text": "No. All calculations run entirely in your browser. Your details and results are never stored or sent anywhere." }
         }
       ]
     }
@@ -51,6 +61,8 @@
             --muted: #5f6b76;
             --bg: #f4fbf8;
             --border: #e4efe9;
+            --water: #2a9d8f;
+            --water-light: #48cae4;
         }
         html { scroll-behavior: smooth; }
         body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
@@ -86,7 +98,7 @@
         .calc-card { background: #fff; border: 1px solid var(--border); border-radius: 24px; padding: 34px; box-shadow: 0 10px 30px rgba(17,153,142,0.08); max-width: 620px; margin: 0 auto; }
         .toggle-label { font-weight: 700; font-size: 0.9em; margin-bottom: 8px; display: block; }
         .unit-toggle { display: flex; background: #eefaf4; border-radius: 999px; padding: 5px; margin-bottom: 20px; }
-        .unit-toggle button { flex: 1; padding: 11px; border: none; border-radius: 999px; font-weight: 700; font-size: 0.95em; cursor: pointer; background: transparent; color: var(--muted); transition: 0.2s; }
+        .unit-toggle button { flex: 1; padding: 11px; border: none; border-radius: 999px; font-weight: 700; font-size: 0.88em; cursor: pointer; background: transparent; color: var(--muted); transition: 0.2s; }
         .unit-toggle button.active { background: linear-gradient(135deg, var(--green), var(--green-light)); color: #fff; box-shadow: 0 4px 10px rgba(17,153,142,0.25); }
         .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
         .input-group label { display: block; font-weight: 700; font-size: 0.9em; margin-bottom: 7px; }
@@ -98,17 +110,18 @@
         /* ===== RESULT ===== */
         .result { display: none; margin-top: 28px; }
         .result.show { display: block; }
-        .water-box { text-align: center; padding: 26px; border-radius: 18px; background: #eefaf4; border: 1px solid var(--border); margin-bottom: 18px; }
+        .water-box { text-align: center; padding: 26px; border-radius: 18px; background: linear-gradient(180deg, #e8f9fd, #eefaf4); border: 1px solid var(--border); margin-bottom: 18px; }
         .water-label { color: var(--muted); font-weight: 600; font-size: 0.9em; }
-        .water-num { font-size: 3em; font-weight: 800; background: linear-gradient(135deg, var(--green), var(--green-light)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-        .water-unit { font-size: 1.2em; font-weight: 700; color: var(--green-dark); }
-        .water-emojis { font-size: 1.5em; margin-top: 10px; letter-spacing: 2px; }
-        .water-note { color: var(--muted); font-size: 0.85em; margin-top: 10px; }
-        .breakdown-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-        .breakdown-card { text-align: center; padding: 18px 12px; border-radius: 16px; border: 1px solid var(--border); background: #fff; }
-        .breakdown-card .b-icon { font-size: 1.6em; margin-bottom: 6px; }
-        .breakdown-card .b-num { font-size: 1.4em; font-weight: 800; color: var(--green-dark); }
-        .breakdown-card .b-sub { font-size: 0.78em; color: var(--muted); }
+        .water-num { font-size: 3em; font-weight: 800; background: linear-gradient(135deg, var(--water), var(--water-light)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .water-sub { color: var(--muted); font-size: 0.88em; margin-top: 6px; }
+        .glasses { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-top: 18px; font-size: 1.6em; }
+        .glass { opacity: 0; transform: scale(0.5); animation: pop 0.3s ease forwards; }
+        @keyframes pop { to { opacity: 1; transform: scale(1); } }
+        .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+        .stat-card { text-align: center; padding: 18px 10px; border-radius: 16px; border: 1px solid var(--border); background: #fff; }
+        .stat-card .s-icon { font-size: 1.5em; margin-bottom: 6px; }
+        .stat-card .s-num { font-size: 1.3em; font-weight: 800; color: var(--water); }
+        .stat-card .s-sub { font-size: 0.75em; color: var(--muted); }
 
         /* ===== CONTENT ===== */
         .content-card { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 32px; margin-bottom: 22px; }
@@ -116,6 +129,10 @@
         .content-card p { color: var(--muted); margin-bottom: 12px; font-size: 0.97em; }
         .content-card ul { margin: 0 0 12px 22px; color: var(--muted); }
         .content-card li { margin-bottom: 6px; }
+        .water-table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 0.95em; }
+        .water-table th, .water-table td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+        .water-table th { background: #eefaf4; color: var(--green-dark); }
+        .water-table tr:last-child td { border-bottom: none; }
 
         /* ===== FAQ ===== */
         .faq-list { max-width: 760px; margin: 0 auto; }
@@ -151,7 +168,7 @@
             .nav-links.open { display: flex; }
             .input-row { grid-template-columns: 1fr; }
             .calc-card { padding: 24px; }
-            .breakdown-grid { grid-template-columns: 1fr; }
+            .stat-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -198,12 +215,12 @@
                 </div>
                 <div class="input-group">
                     <label>Daily Exercise</label>
-                    <select id="exercise">
-                        <option value="0">None / Very little</option>
-                        <option value="30">~30 minutes</option>
-                        <option value="60" selected>~60 minutes</option>
-                        <option value="90">~90 minutes</option>
-                        <option value="120">2+ hours</option>
+                    <select id="activity">
+                        <option value="0">None / Sedentary</option>
+                        <option value="350">Light — 30 min</option>
+                        <option value="500" selected>Moderate — 45–60 min</option>
+                        <option value="750">Intense — 60–90 min</option>
+                        <option value="1000">Very Intense — 90+ min</option>
                     </select>
                 </div>
             </div>
@@ -212,18 +229,18 @@
                 <div class="input-group">
                     <label>Climate</label>
                     <select id="climate">
-                        <option value="0" selected>Normal / Mild</option>
-                        <option value="500">Hot / Humid</option>
-                        <option value="750">Very Hot / Intense Heat</option>
+                        <option value="0">❄️ Cool / Cold</option>
+                        <option value="250" selected>🌤️ Moderate</option>
+                        <option value="500">🔥 Hot / Humid</option>
                     </select>
                 </div>
                 <div class="input-group">
                     <label>Special Condition</label>
                     <select id="special">
                         <option value="0" selected>None</option>
-                        <option value="300">Pregnant</option>
-                        <option value="700">Breastfeeding</option>
-                        <option value="300">Fever / Illness</option>
+                        <option value="700">🤰 Pregnant</option>
+                        <option value="1000">🤱 Breastfeeding</option>
+                        <option value="300">🤒 Fever / Illness</option>
                     </select>
                 </div>
             </div>
@@ -232,21 +249,27 @@
 
             <div class="result" id="result">
                 <div class="water-box">
-                    <div class="water-label">Your Daily Water Goal</div>
-                    <div class="water-num"><span id="litersValue">0</span> <span class="water-unit">Liters</span></div>
-                    <div class="water-emojis" id="waterEmojis">💧</div>
-                    <div class="water-note">Spread it evenly throughout your day</div>
+                    <div class="water-label">Your Daily Water Target</div>
+                    <div class="water-num"><span id="litersValue">0</span> L</div>
+                    <div class="water-sub">per day · spread across your waking hours</div>
+                    <div class="glasses" id="glasses"></div>
                 </div>
-                <div class="breakdown-grid">
-                    <div class="breakdown-card">
-                        <div class="b-icon">🥛</div>
-                        <div class="b-num" id="glassesValue">0</div>
-                        <div class="b-sub">glasses (250 ml each)</div>
+
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <div class="s-icon">🥛</div>
+                        <div class="s-num" id="cupsValue">0</div>
+                        <div class="s-sub">glasses (250 ml)</div>
                     </div>
-                    <div class="breakdown-card">
-                        <div class="b-icon">🍶</div>
-                        <div class="b-num" id="bottlesValue">0</div>
-                        <div class="b-sub">bottles (500 ml each)</div>
+                    <div class="stat-card">
+                        <div class="s-icon">🍼</div>
+                        <div class="s-num" id="ozValue">0</div>
+                        <div class="s-sub">fluid ounces</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="s-icon">🍶</div>
+                        <div class="s-num" id="bottlesValue">0</div>
+                        <div class="s-sub">bottles (500 ml)</div>
                     </div>
                 </div>
             </div>
@@ -256,40 +279,63 @@
     <!-- LEARN -->
     <section class="section">
         <span class="section-tag">Learn</span>
-        <h2>Why Hydration Matters</h2>
-        <p class="section-sub">Your body is about 60% water — keep it topped up.</p>
+        <h2>Understanding Hydration</h2>
+        <p class="section-sub">Why water is the most underrated performance tool you have.</p>
 
         <div class="content-card">
-            <h3>🧮 How Is It Calculated?</h3>
-            <p>Our calculator uses a widely recommended base formula:</p>
-            <p><strong>Base intake = your weight (kg) × 33 ml</strong></p>
-            <p>Then we adjust for your lifestyle:</p>
+            <h3>🧮 How Is My Water Target Calculated?</h3>
+            <p>This calculator starts with the most widely used baseline: <strong>33 ml of water per kg of body weight</strong>. A 70 kg person therefore needs about 2.3 liters as a foundation. From there, we add adjustments for the three biggest factors that increase fluid loss:</p>
             <ul>
-                <li><strong>Exercise:</strong> +350 ml for every 30 minutes of activity</li>
-                <li><strong>Hot climate:</strong> +500–750 ml (you lose more through sweat)</li>
-                <li><strong>Pregnancy/breastfeeding/illness:</strong> +300–700 ml extra</li>
+                <li><strong>Exercise:</strong> +350 to +1,000 ml depending on duration and intensity — you lose 0.5–1 liter per hour through sweat during moderate exercise.</li>
+                <li><strong>Climate:</strong> +250 to +500 ml in hot or humid weather, where sweat loss increases even at rest.</li>
+                <li><strong>Special conditions:</strong> Pregnancy, breastfeeding, and fever all raise fluid needs significantly.</li>
             </ul>
         </div>
 
         <div class="content-card">
-            <h3>✅ Signs You're Well Hydrated</h3>
+            <h3>💧 Why Hydration Matters More Than You Think</h3>
+            <p>Your body is roughly 60% water, and even mild dehydration (1–2% of body weight) has measurable effects:</p>
             <ul>
-                <li>Pale yellow or clear urine</li>
-                <li>You rarely feel thirsty</li>
-                <li>Good energy levels throughout the day</li>
-                <li>Skin feels elastic and healthy</li>
+                <li><strong>Energy and focus:</strong> Mild dehydration reduces concentration, memory, and mood — often mistaken for tiredness or hunger.</li>
+                <li><strong>Physical performance:</strong> Losing just 2% of body water can reduce exercise performance by 10–20%.</li>
+                <li><strong>Weight management:</strong> Thirst is frequently confused with hunger. Drinking water before meals has been shown to reduce calorie intake.</li>
+                <li><strong>Digestion and skin:</strong> Adequate water supports regular digestion, kidney function, and skin elasticity.</li>
             </ul>
         </div>
 
         <div class="content-card">
-            <h3>⚠️ Signs of Dehydration</h3>
+            <h3>📊 Quick Reference: Water Needs by Weight</h3>
+            <table class="water-table">
+                <tr><th>Body Weight</th><th>Base Daily Water</th><th>With 1 hr Exercise</th></tr>
+                <tr><td>50 kg (110 lbs)</td><td>~1.7 L</td><td>~2.2 L</td></tr>
+                <tr><td>60 kg (132 lbs)</td><td>~2.0 L</td><td>~2.5 L</td></tr>
+                <tr><td>70 kg (154 lbs)</td><td>~2.3 L</td><td>~2.8 L</td></tr>
+                <tr><td>80 kg (176 lbs)</td><td>~2.6 L</td><td>~3.1 L</td></tr>
+                <tr><td>90 kg (198 lbs)</td><td>~3.0 L</td><td>~3.5 L</td></tr>
+                <tr><td>100 kg (220 lbs)</td><td>~3.3 L</td><td>~3.8 L</td></tr>
+            </table>
+            <p style="margin-top:12px;">Remember: about 20% of your fluid comes from food (fruits, vegetables, soups), so you don't need to drink every single milliliter.</p>
+        </div>
+
+        <div class="content-card">
+            <h3>✅ Easy Habits to Hit Your Water Goal</h3>
             <ul>
-                <li>Dark yellow urine or strong odor</li>
-                <li>Dry mouth, lips, or headaches</li>
-                <li>Feeling tired or dizzy</li>
-                <li>Difficulty concentrating</li>
+                <li><strong>Start your day with a glass:</strong> You wake up mildly dehydrated after 7–8 hours without fluids.</li>
+                <li><strong>Keep a bottle visible:</strong> A 1-liter bottle on your desk is a constant reminder — finish it twice and you're done.</li>
+                <li><strong>Link it to habits:</strong> Drink a glass with every meal, every bathroom break, and every coffee.</li>
+                <li><strong>Use the urine test:</strong> Pale yellow = well hydrated. Dark yellow = drink more. Clear = possibly overdoing it.</li>
+                <li><strong>Add flavor if needed:</strong> Lemon, cucumber, mint, or a splash of juice makes water more appealing without meaningful calories.</li>
             </ul>
-            <p><strong>Pro tip:</strong> Don't wait until you're thirsty — thirst is already an early sign of dehydration. Sip water regularly throughout the day.</p>
+        </div>
+
+        <div class="content-card">
+            <h3>⚠️ Hydration Myths, Busted</h3>
+            <ul>
+                <li><strong>"Coffee dehydrates you":</strong> False. Caffeine is a mild diuretic, but the water in coffee and tea more than compensates — they count toward your daily total.</li>
+                <li><strong>"You must drink 8 glasses exactly":</strong> It's a rough average, not a rule. A 50 kg person and a 100 kg person have very different needs.</li>
+                <li><strong>"More water is always better":</strong> Not true. Extreme overconsumption can dilute blood sodium (hyponatremia). Spread intake across the day — your kidneys process about 0.8–1 liter per hour.</li>
+                <li><strong>"Thirst is a late warning":</strong> Partly true, but for healthy people, thirst plus pale-yellow urine is a reliable everyday guide.</li>
+            </ul>
         </div>
     </section>
 
@@ -301,23 +347,31 @@
         <div class="faq-list">
             <details>
                 <summary>How much water should I drink a day?</summary>
-                <p>A common guideline is about 33 ml per kg of body weight. For a 70 kg person, that's roughly 2.3 liters per day. Exercise and hot weather increase your needs.</p>
+                <p>A common guideline is 30–35 ml per kg of body weight. For a 70 kg person, that's about 2.1–2.5 liters daily. Exercise, hot weather, and pregnancy increase your needs.</p>
             </details>
             <details>
-                <summary>Does coffee or tea count toward my water intake?</summary>
-                <p>Yes, mostly. While caffeine has a mild diuretic effect, the water in coffee and tea still contributes to your daily hydration. Plain water is still the best choice.</p>
+                <summary>Is 8 glasses of water a day enough?</summary>
+                <p>The "8 glasses" rule (about 2 liters) is a rough average, but individual needs vary widely. Heavier people, athletes, and those in hot climates often need significantly more. Your weight-based target is more accurate.</p>
             </details>
             <details>
-                <summary>Can I drink too much water?</summary>
-                <p>Yes, though it's rare. Drinking extreme amounts in a short time can cause hyponatremia (low sodium). Spread your intake throughout the day and listen to your body.</p>
+                <summary>Does coffee and tea count toward my water intake?</summary>
+                <p>Yes. Despite mild caffeine, coffee and tea contribute to your daily hydration. Water-rich foods like fruits, vegetables, and soups also count — typically providing about 20% of daily fluid needs.</p>
+            </details>
+            <details>
+                <summary>Can you drink too much water?</summary>
+                <p>Yes, though it's rare. Drinking extreme amounts in a short time can cause hyponatremia (dangerously low sodium). Healthy kidneys handle about 0.8–1 liter per hour, so spread your intake across the day.</p>
             </details>
             <details>
                 <summary>How much extra water should I drink when exercising?</summary>
-                <p>A good rule is to add about 350–500 ml for every 30 minutes of moderate exercise, and more in hot conditions or during intense workouts.</p>
+                <p>Add roughly 500–750 ml for every 30–60 minutes of moderate exercise, and more for intense or sweaty sessions. Weighing yourself before and after shows exactly how much fluid you lost.</p>
+            </details>
+            <details>
+                <summary>What are the signs of dehydration?</summary>
+                <p>Early signs include thirst, dark yellow urine, dry mouth, fatigue, and headache. By the time you feel thirsty, you're already mildly dehydrated. Pale yellow urine is a good sign of proper hydration.</p>
             </details>
             <details>
                 <summary>Is my data saved when I use this calculator?</summary>
-                <p>No. All calculations run entirely in your browser. Your weight and results are never stored or sent anywhere.</p>
+                <p>No. All calculations run entirely in your browser. Your details and results are never stored or sent anywhere.</p>
             </details>
         </div>
     </section>
@@ -325,9 +379,9 @@
     <!-- CTA -->
     <section class="section">
         <div class="cta">
-            <h2>Check Your Body Fat Too 📊</h2>
-            <p>Estimate your body fat percentage with just a tape measure.</p>
-            <a href="/body-fat-calculator/" class="btn-white">Try Body Fat Calculator — Free</a>
+            <h2>Hydrated? Now Fuel Up 🥗</h2>
+            <p>Get your perfect protein, carb, and fat targets to match your training.</p>
+            <a href="/macro-calculator/" class="btn-white">Try Macro Calculator — Free</a>
         </div>
     </section>
 
@@ -337,10 +391,14 @@
             <div class="footer-logo">💪 Calc<span>Fitly</span></div>
             <div class="footer-links">
                 <a href="/">Home</a>
-                <a href="/bmi-calculator/">BMI Calculator</a>
-                <a href="/calorie-calculator/">Calorie Calculator</a>
-                <a href="/body-fat-calculator/">Body Fat Calculator</a>
-                <a href="/water-intake-calculator/">Water Intake</a>
+                <a href="/bmi-calculator/">BMI</a>
+                <a href="/calorie-calculator/">Calorie</a>
+                <a href="/body-fat-calculator/">Body Fat</a>
+                <a href="/water-intake-calculator/">Water</a>
+                <a href="/macro-calculator/">Macro</a>
+                <a href="/ideal-weight-calculator/">Ideal Weight</a>
+                <a href="/tdee-calculator/">TDEE</a>
+                <a href="/weight-loss-calculator/">Weight Loss</a>
                 <a href="/about/">About</a>
                 <a href="/contact/">Contact</a>
                 <a href="/privacy-policy/">Privacy Policy</a>
@@ -374,48 +432,52 @@
             }
         }
 
-        // Water Intake Calculation
+        // Water Calculation
         function calculateWater() {
             var weight = parseFloat(document.getElementById('weight').value);
-            var exerciseMin = parseFloat(document.getElementById('exercise').value);
-            var climateExtra = parseFloat(document.getElementById('climate').value);
-            var specialExtra = parseFloat(document.getElementById('special').value);
+            var activity = parseFloat(document.getElementById('activity').value);
+            var climate = parseFloat(document.getElementById('climate').value);
+            var special = parseFloat(document.getElementById('special').value);
 
             if (!weight || weight <= 0) {
                 alert('Please enter a valid weight.');
                 return;
             }
-            if (weight > 500) {
+
+            // Convert to kg
+            var weightKg = (currentUnit === 'metric') ? weight : weight * 0.453592;
+
+            if (weightKg < 20 || weightKg > 300) {
                 alert('Please double-check your weight value.');
                 return;
             }
 
-            // Convert to kg if needed
-            var weightKg = (currentUnit === 'metric') ? weight : weight * 0.453592;
-
-            // Base: 33 ml per kg
+            // Base: 33 ml per kg + adjustments
             var baseMl = weightKg * 33;
+            var totalMl = baseMl + activity + climate + special;
 
-            // Exercise: +350 ml per 30 minutes
-            var exerciseMl = (exerciseMin / 30) * 350;
-
-            // Total
-            var totalMl = baseMl + exerciseMl + climateExtra + specialExtra;
             var liters = totalMl / 1000;
-            var glasses = Math.round(totalMl / 250);
+            var cups = Math.round(totalMl / 250);
+            var oz = Math.round(totalMl * 0.033814);
             var bottles = (totalMl / 500).toFixed(1);
 
+            // Display
             document.getElementById('litersValue').textContent = liters.toFixed(1);
-            document.getElementById('glassesValue').textContent = glasses;
+            document.getElementById('cupsValue').textContent = cups;
+            document.getElementById('ozValue').textContent = oz.toLocaleString();
             document.getElementById('bottlesValue').textContent = bottles;
 
-            // Water drop emojis based on glasses (max 10 shown)
-            var drops = '';
-            var dropCount = Math.min(glasses, 10);
-            for (var i = 0; i < dropCount; i++) {
-                drops += '💧';
+            // Glasses visualization (max 12 shown)
+            var glassesEl = document.getElementById('glasses');
+            glassesEl.innerHTML = '';
+            var showGlasses = Math.min(cups, 12);
+            for (var i = 0; i < showGlasses; i++) {
+                var g = document.createElement('span');
+                g.className = 'glass';
+                g.textContent = '🥛';
+                g.style.animationDelay = (i * 0.08) + 's';
+                glassesEl.appendChild(g);
             }
-            document.getElementById('waterEmojis').textContent = drops;
 
             document.getElementById('result').classList.add('show');
             document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'center' });
