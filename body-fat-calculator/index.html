@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Body Fat Calculator — U.S. Navy Method Free | CalcFitly</title>
-    <meta name="description" content="Free Body Fat Calculator using the U.S. Navy method. Estimate your body fat percentage with just a tape measure. No sign-up, 100% private — runs in your browser.">
+    <title>Body Fat Calculator — US Navy Method Free | CalcFitly</title>
+    <meta name="description" content="Free Body Fat Calculator using the US Navy method: estimate your body fat percentage, fat mass, and lean mass with just a tape measure. No sign-up, 100% private.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💪</text></svg>">
 
     <script type="application/ld+json">
@@ -15,22 +15,32 @@
         {
           "@type": "Question",
           "name": "What is a healthy body fat percentage?",
-          "acceptedAnswer": { "@type": "Answer", "text": "For men, 14–24% is generally considered healthy. For women, 21–31% is healthy. Athletes typically have lower ranges: 6–13% for men and 14–20% for women." }
+          "acceptedAnswer": { "@type": "Answer", "text": "For men, a healthy range is roughly 14–24%; for women, roughly 21–31%. Athletes run lower (6–13% men, 14–20% women), while essential fat minimums are about 2–5% for men and 10–13% for women." }
         },
         {
           "@type": "Question",
-          "name": "How accurate is the U.S. Navy body fat method?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The Navy method is accurate within about 3–4% for most people when measurements are taken correctly. It's one of the best at-home methods without special equipment." }
+          "name": "How accurate is the US Navy body fat method?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The Navy tape method is typically accurate within 3–4% of lab methods like DEXA scans when measurements are taken correctly. It's one of the best free, at-home options available." }
         },
         {
           "@type": "Question",
-          "name": "How do I measure my waist correctly?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Measure horizontally around your abdomen at the level of your belly button, while standing relaxed. Don't suck in your stomach or pull the tape too tight." }
+          "name": "How do I measure my waist, neck, and hips correctly?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Measure your neck just below the Adam's apple, your waist at the navel (standing relaxed, not sucking in), and hips at the widest point. Keep the tape snug but not tight, and measure in the morning for consistency." }
         },
         {
           "@type": "Question",
           "name": "Is body fat percentage better than BMI?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Body fat percentage is often more useful because it measures actual fat, while BMI only compares weight to height. A muscular person can have a high BMI but low body fat." }
+          "acceptedAnswer": { "@type": "Answer", "text": "For most active people, yes. Body fat percentage tells you what your weight is made of — fat versus muscle — while BMI only compares weight to height. Two people with the same BMI can have very different body compositions." }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should I measure my body fat?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Every 2–4 weeks is ideal. Body fat changes slowly, and daily measurements will only show noise from water and measurement error. Always measure under the same conditions." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I have a healthy BMI but high body fat?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — it's called being 'skinny fat' (normal weight obesity). If you have low muscle mass, your BMI can look healthy while your body fat is too high. This is why body fat percentage is worth tracking alongside BMI." }
         },
         {
           "@type": "Question",
@@ -86,14 +96,15 @@
         .calc-card { background: #fff; border: 1px solid var(--border); border-radius: 24px; padding: 34px; box-shadow: 0 10px 30px rgba(17,153,142,0.08); max-width: 620px; margin: 0 auto; }
         .toggle-label { font-weight: 700; font-size: 0.9em; margin-bottom: 8px; display: block; }
         .unit-toggle { display: flex; background: #eefaf4; border-radius: 999px; padding: 5px; margin-bottom: 20px; }
-        .unit-toggle button { flex: 1; padding: 11px; border: none; border-radius: 999px; font-weight: 700; font-size: 0.95em; cursor: pointer; background: transparent; color: var(--muted); transition: 0.2s; }
+        .unit-toggle button { flex: 1; padding: 11px; border: none; border-radius: 999px; font-weight: 700; font-size: 0.9em; cursor: pointer; background: transparent; color: var(--muted); transition: 0.2s; }
         .unit-toggle button.active { background: linear-gradient(135deg, var(--green), var(--green-light)); color: #fff; box-shadow: 0 4px 10px rgba(17,153,142,0.25); }
         .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
         .input-group label { display: block; font-weight: 700; font-size: 0.9em; margin-bottom: 7px; }
         .input-group input { width: 100%; padding: 13px 15px; border: 2px solid var(--border); border-radius: 12px; font-size: 1em; font-family: inherit; transition: 0.2s; background: #fff; }
         .input-group input:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 4px rgba(17,153,142,0.1); }
-        .hip-group { display: none; }
-        .hip-group.show { display: block; }
+        .input-hint { font-size: 0.8em; color: var(--muted); margin-top: 6px; }
+        .hip-row { display: none; }
+        .hip-row.show { display: grid; }
         .calc-btn { width: 100%; padding: 15px; border: none; border-radius: 999px; background: linear-gradient(135deg, var(--green), var(--green-light)); color: #fff; font-size: 1.05em; font-weight: 800; cursor: pointer; box-shadow: 0 8px 20px rgba(17,153,142,0.3); transition: 0.2s; margin-top: 8px; }
         .calc-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(17,153,142,0.38); }
 
@@ -104,12 +115,16 @@
         .bf-label { color: var(--muted); font-weight: 600; font-size: 0.9em; }
         .bf-num { font-size: 3em; font-weight: 800; background: linear-gradient(135deg, var(--green), var(--green-light)); -webkit-background-clip: text; background-clip: text; color: transparent; }
         .bf-cat { display: inline-block; margin-top: 8px; padding: 7px 20px; border-radius: 999px; font-weight: 700; font-size: 0.95em; color: #fff; }
-        .cat-athletes { background: #11998e; }
-        .cat-fitness { background: #38b000; }
+        .cat-essential { background: #457b9d; }
+        .cat-athletes { background: #38b000; }
+        .cat-fitness { background: #11998e; }
         .cat-average { background: #f0a500; }
         .cat-obese { background: #e63946; }
-        .cat-essential { background: #457b9d; }
-        .bf-note { text-align: center; color: var(--muted); font-size: 0.85em; margin-top: 10px; }
+        .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .stat-card { text-align: center; padding: 18px 12px; border-radius: 16px; border: 1px solid var(--border); background: #fff; }
+        .stat-card .s-icon { font-size: 1.5em; margin-bottom: 6px; }
+        .stat-card .s-num { font-size: 1.35em; font-weight: 800; color: var(--green-dark); }
+        .stat-card .s-sub { font-size: 0.78em; color: var(--muted); }
 
         /* ===== CONTENT ===== */
         .content-card { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 32px; margin-bottom: 22px; }
@@ -156,6 +171,7 @@
             .nav-links.open { display: flex; }
             .input-row { grid-template-columns: 1fr; }
             .calc-card { padding: 24px; }
+            .stat-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -179,9 +195,9 @@
     <!-- HERO -->
     <header class="hero">
         <div class="hero-inner">
-            <span class="pill">📊 Free · Instant · 100% Private</span>
+            <span class="pill">📏 Free · Instant · 100% Private</span>
             <h1>Body Fat <span class="grad">Calculator</span></h1>
-            <p>Estimate your body fat percentage with just a tape measure — using the trusted U.S. Navy method.</p>
+            <p>Estimate your body fat percentage with the US Navy method — all you need is a tape measure.</p>
         </div>
     </header>
 
@@ -191,8 +207,8 @@
 
             <span class="toggle-label">Units</span>
             <div class="unit-toggle">
-                <button id="metricBtn" class="active" onclick="setUnit('metric')">Metric (cm)</button>
-                <button id="imperialBtn" onclick="setUnit('imperial')">Imperial (inches)</button>
+                <button id="metricBtn" class="active" onclick="setUnit('metric')">Metric (cm/kg)</button>
+                <button id="imperialBtn" onclick="setUnit('imperial')">Imperial (in/lbs)</button>
             </div>
 
             <span class="toggle-label">Gender</span>
@@ -207,30 +223,52 @@
                     <input type="number" id="height" placeholder="e.g. 175" min="1">
                 </div>
                 <div class="input-group">
-                    <label id="neckLabel">Neck (cm)</label>
-                    <input type="number" id="neck" placeholder="e.g. 38" min="1">
+                    <label id="weightLabel">Weight (kg)</label>
+                    <input type="number" id="weight" placeholder="e.g. 70" min="1">
                 </div>
             </div>
 
             <div class="input-row">
                 <div class="input-group">
+                    <label id="neckLabel">Neck (cm)</label>
+                    <input type="number" id="neck" placeholder="e.g. 38" min="1">
+                    <div class="input-hint">Just below the Adam's apple</div>
+                </div>
+                <div class="input-group">
                     <label id="waistLabel">Waist (cm)</label>
                     <input type="number" id="waist" placeholder="e.g. 85" min="1">
-                </div>
-                <div class="input-group hip-group" id="hipGroup">
-                    <label id="hipLabel">Hip (cm)</label>
-                    <input type="number" id="hip" placeholder="e.g. 95" min="1">
+                    <div class="input-hint">At the navel, relaxed — don't suck in</div>
                 </div>
             </div>
 
-            <button class="calc-btn" onclick="calculateBodyFat()">Calculate Body Fat →</button>
+            <div class="input-row hip-row" id="hipRow">
+                <div class="input-group">
+                    <label id="hipLabel">Hip (cm)</label>
+                    <input type="number" id="hip" placeholder="e.g. 95" min="1">
+                    <div class="input-hint">At the widest point</div>
+                </div>
+            </div>
+
+            <button class="calc-btn" onclick="calculateBodyFat()">Calculate My Body Fat →</button>
 
             <div class="result" id="result">
                 <div class="bf-box">
                     <div class="bf-label">Your Estimated Body Fat</div>
                     <div class="bf-num"><span id="bfValue">0</span>%</div>
-                    <span class="bf-cat" id="bfCategory">Average</span>
-                    <div class="bf-note">Based on the U.S. Navy circumference method</div>
+                    <span class="bf-cat" id="bfCategory">Fitness</span>
+                </div>
+
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <div class="s-icon">🧈</div>
+                        <div class="s-num" id="fatMass">0</div>
+                        <div class="s-sub">fat mass</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="s-icon">💪</div>
+                        <div class="s-num" id="leanMass">0</div>
+                        <div class="s-sub">lean mass (muscle, bone, water)</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -240,20 +278,16 @@
     <section class="section">
         <span class="section-tag">Learn</span>
         <h2>Understanding Body Fat</h2>
-        <p class="section-sub">What your percentage actually means.</p>
+        <p class="section-sub">Why this number matters more than the scale.</p>
 
         <div class="content-card">
-            <h3>📏 How to Measure Correctly</h3>
-            <ul>
-                <li><strong>Neck:</strong> Measure just below the Adam's apple, tape level and relaxed.</li>
-                <li><strong>Waist:</strong> Measure horizontally at your belly button. Stand relaxed — don't suck in!</li>
-                <li><strong>Hip (women only):</strong> Measure around the widest part of your hips/buttocks.</li>
-                <li>Take measurements in the morning before eating for the most consistent results.</li>
-            </ul>
+            <h3>🧮 How Does the US Navy Method Work?</h3>
+            <p>This calculator uses the <strong>US Navy circumference method</strong> — a formula developed for the military to estimate body fat using simple tape measurements. It compares your waist and neck (plus hips for women) to your height, because the relationship between these circumferences reliably predicts body density.</p>
+            <p>When measurements are taken correctly, the Navy method is typically accurate within <strong>3–4%</strong> of lab-based methods like DEXA scans — making it one of the best free, at-home options available. No expensive equipment, no appointments, just a tape measure and 60 seconds.</p>
         </div>
 
         <div class="content-card">
-            <h3>📊 Body Fat Categories (ACE)</h3>
+            <h3>📊 Body Fat Categories (ACE Standards)</h3>
             <table class="bf-table">
                 <tr><th>Category</th><th>Men</th><th>Women</th></tr>
                 <tr><td>Essential Fat</td><td>2–5%</td><td>10–13%</td></tr>
@@ -262,12 +296,36 @@
                 <tr><td>Average</td><td>18–24%</td><td>25–31%</td></tr>
                 <tr><td>Obese</td><td>25%+</td><td>32%+</td></tr>
             </table>
+            <p style="margin-top:12px;"><strong>Why are women's numbers higher?</strong> Women naturally carry more essential fat — it's required for hormonal function and reproductive health. A woman at 22% body fat is comparably lean to a man at 14%.</p>
         </div>
 
         <div class="content-card">
-            <h3>🧮 The U.S. Navy Method</h3>
-            <p>Developed by the U.S. Navy, this method estimates body fat using simple circumference measurements. It's accurate within about <strong>3–4%</strong> for most people — making it one of the best at-home methods without expensive equipment like DEXA scans.</p>
-            <p><strong>Why it beats BMI:</strong> BMI only compares weight to height, so a muscular athlete can be labeled "overweight." Body fat percentage measures actual fat — a much better picture of your health.</p>
+            <h3>📏 How to Measure Correctly</h3>
+            <ul>
+                <li><strong>Neck:</strong> Wrap the tape just below the Adam's apple, keeping it level. Don't flare your neck muscles.</li>
+                <li><strong>Waist:</strong> Measure at the level of your navel while standing relaxed. Breathe out normally — never suck in your stomach.</li>
+                <li><strong>Hips (women):</strong> Measure around the widest point of your hips and buttocks.</li>
+                <li><strong>Tape tension:</strong> Snug against the skin, but not digging in.</li>
+                <li><strong>Timing:</strong> Measure in the morning before eating, and take each measurement twice to confirm.</li>
+            </ul>
+        </div>
+
+        <div class="content-card">
+            <h3>⚖️ Body Fat vs BMI: Which Should You Trust?</h3>
+            <p>BMI only compares your weight to your height — it can't tell muscle from fat. Body fat percentage tells you what your weight is actually <strong>made of</strong>. A muscular athlete can have an "overweight" BMI with 12% body fat, while a sedentary person can have a "healthy" BMI with 30% body fat (sometimes called being "skinny fat").</p>
+            <p><strong>Best approach:</strong> Use both. BMI is a quick screen; body fat percentage tells the real story. If the two disagree, body fat is usually the more meaningful number — especially if you exercise.</p>
+        </div>
+
+        <div class="content-card">
+            <h3>🔥 How to Lower Body Fat Safely</h3>
+            <ul>
+                <li><strong>Moderate calorie deficit:</strong> Eat 400–500 kcal below maintenance for roughly 0.5 kg of fat loss per week.</li>
+                <li><strong>High protein:</strong> 1.6–2.2 g per kg of body weight daily protects muscle while you lose fat.</li>
+                <li><strong>Strength training:</strong> 2–4 sessions per week ensures the weight you lose is fat, not muscle.</li>
+                <li><strong>Daily steps:</strong> 8,000–10,000 steps add significant calorie burn without exhausting you.</li>
+                <li><strong>Sleep 7–9 hours:</strong> Poor sleep raises hunger hormones and increases fat storage.</li>
+                <li><strong>Be patient:</strong> Dropping 1% body fat typically takes 3–6 weeks of consistent effort. Recheck every 2–4 weeks under the same conditions.</li>
+            </ul>
         </div>
     </section>
 
@@ -275,23 +333,31 @@
     <section class="section">
         <span class="section-tag">FAQs</span>
         <h2>Body Fat Questions, Answered</h2>
-        <p class="section-sub">Quick answers to common questions.</p>
+        <p class="section-sub">Quick answers to common body fat questions.</p>
         <div class="faq-list">
             <details>
                 <summary>What is a healthy body fat percentage?</summary>
-                <p>For men, 14–24% is generally considered healthy. For women, 21–31% is healthy. Athletes typically have lower ranges: 6–13% for men and 14–20% for women.</p>
+                <p>For men, a healthy range is roughly 14–24%; for women, roughly 21–31%. Athletes run lower (6–13% men, 14–20% women), while essential fat minimums are about 2–5% for men and 10–13% for women.</p>
             </details>
             <details>
-                <summary>How accurate is the U.S. Navy body fat method?</summary>
-                <p>The Navy method is accurate within about 3–4% for most people when measurements are taken correctly. It's one of the best at-home methods without special equipment.</p>
+                <summary>How accurate is the US Navy body fat method?</summary>
+                <p>The Navy tape method is typically accurate within 3–4% of lab methods like DEXA scans when measurements are taken correctly. It's one of the best free, at-home options available.</p>
             </details>
             <details>
-                <summary>How do I measure my waist correctly?</summary>
-                <p>Measure horizontally around your abdomen at the level of your belly button, while standing relaxed. Don't suck in your stomach or pull the tape too tight.</p>
+                <summary>How do I measure my waist, neck, and hips correctly?</summary>
+                <p>Measure your neck just below the Adam's apple, your waist at the navel (standing relaxed, not sucking in), and hips at the widest point. Keep the tape snug but not tight, and measure in the morning for consistency.</p>
             </details>
             <details>
                 <summary>Is body fat percentage better than BMI?</summary>
-                <p>Body fat percentage is often more useful because it measures actual fat, while BMI only compares weight to height. A muscular person can have a high BMI but low body fat.</p>
+                <p>For most active people, yes. Body fat percentage tells you what your weight is made of — fat versus muscle — while BMI only compares weight to height. Two people with the same BMI can have very different body compositions.</p>
+            </details>
+            <details>
+                <summary>How often should I measure my body fat?</summary>
+                <p>Every 2–4 weeks is ideal. Body fat changes slowly, and daily measurements will only show noise from water and measurement error. Always measure under the same conditions.</p>
+            </details>
+            <details>
+                <summary>Can I have a healthy BMI but high body fat?</summary>
+                <p>Yes — it's called being "skinny fat" (normal weight obesity). If you have low muscle mass, your BMI can look healthy while your body fat is too high. This is why body fat percentage is worth tracking alongside BMI.</p>
             </details>
             <details>
                 <summary>Is my data saved when I use this calculator?</summary>
@@ -303,9 +369,9 @@
     <!-- CTA -->
     <section class="section">
         <div class="cta">
-            <h2>Track Your Calories Too 🔥</h2>
-            <p>Find out how many calories you need daily to reach your goal.</p>
-            <a href="/calorie-calculator/" class="btn-white">Try Calorie Calculator — Free</a>
+            <h2>Ready to Lower Your Body Fat? 📉</h2>
+            <p>Get your personal calorie target and see exactly when you'll reach your goal.</p>
+            <a href="/weight-loss-calculator/" class="btn-white">Try Weight Loss Calculator — Free</a>
         </div>
     </section>
 
@@ -315,9 +381,14 @@
             <div class="footer-logo">💪 Calc<span>Fitly</span></div>
             <div class="footer-links">
                 <a href="/">Home</a>
-                <a href="/bmi-calculator/">BMI Calculator</a>
-                <a href="/calorie-calculator/">Calorie Calculator</a>
-                <a href="/body-fat-calculator/">Body Fat Calculator</a>
+                <a href="/bmi-calculator/">BMI</a>
+                <a href="/calorie-calculator/">Calorie</a>
+                <a href="/body-fat-calculator/">Body Fat</a>
+                <a href="/water-intake-calculator/">Water</a>
+                <a href="/macro-calculator/">Macro</a>
+                <a href="/ideal-weight-calculator/">Ideal Weight</a>
+                <a href="/tdee-calculator/">TDEE</a>
+                <a href="/weight-loss-calculator/">Weight Loss</a>
                 <a href="/about/">About</a>
                 <a href="/contact/">Contact</a>
                 <a href="/privacy-policy/">Privacy Policy</a>
@@ -335,7 +406,7 @@
             navLinks.classList.toggle('open');
         });
 
-        // Unit & gender toggles
+        // Toggles
         var currentUnit = 'metric';
         var currentGender = 'male';
 
@@ -343,41 +414,38 @@
             currentUnit = unit;
             document.getElementById('metricBtn').classList.toggle('active', unit === 'metric');
             document.getElementById('imperialBtn').classList.toggle('active', unit === 'imperial');
-            var u = (unit === 'metric') ? 'cm' : 'inches';
-            document.getElementById('heightLabel').textContent = 'Height (' + u + ')';
-            document.getElementById('neckLabel').textContent = 'Neck (' + u + ')';
-            document.getElementById('waistLabel').textContent = 'Waist (' + u + ')';
-            document.getElementById('hipLabel').textContent = 'Hip (' + u + ')';
-            if (unit === 'metric') {
-                document.getElementById('height').placeholder = 'e.g. 175';
-                document.getElementById('neck').placeholder = 'e.g. 38';
-                document.getElementById('waist').placeholder = 'e.g. 85';
-                document.getElementById('hip').placeholder = 'e.g. 95';
-            } else {
-                document.getElementById('height').placeholder = 'e.g. 69';
-                document.getElementById('neck').placeholder = 'e.g. 15';
-                document.getElementById('waist').placeholder = 'e.g. 33';
-                document.getElementById('hip').placeholder = 'e.g. 37';
-            }
+            var isMetric = (unit === 'metric');
+            var len = isMetric ? 'cm' : 'in';
+            var wt = isMetric ? 'kg' : 'lbs';
+            document.getElementById('heightLabel').textContent = 'Height (' + len + ')';
+            document.getElementById('neckLabel').textContent = 'Neck (' + len + ')';
+            document.getElementById('waistLabel').textContent = 'Waist (' + len + ')';
+            document.getElementById('hipLabel').textContent = 'Hip (' + len + ')';
+            document.getElementById('weightLabel').textContent = 'Weight (' + wt + ')';
+            document.getElementById('height').placeholder = isMetric ? 'e.g. 175' : 'e.g. 69';
+            document.getElementById('neck').placeholder = isMetric ? 'e.g. 38' : 'e.g. 15';
+            document.getElementById('waist').placeholder = isMetric ? 'e.g. 85' : 'e.g. 33';
+            document.getElementById('hip').placeholder = isMetric ? 'e.g. 95' : 'e.g. 37';
+            document.getElementById('weight').placeholder = isMetric ? 'e.g. 70' : 'e.g. 154';
         }
 
         function setGender(gender) {
             currentGender = gender;
             document.getElementById('maleBtn').classList.toggle('active', gender === 'male');
             document.getElementById('femaleBtn').classList.toggle('active', gender === 'female');
-            // Hip field sirf women ke liye
-            document.getElementById('hipGroup').classList.toggle('show', gender === 'female');
+            document.getElementById('hipRow').classList.toggle('show', gender === 'female');
         }
 
-        // U.S. Navy Body Fat Calculation
+        // Body Fat Calculation (US Navy Method)
         function calculateBodyFat() {
             var height = parseFloat(document.getElementById('height').value);
+            var weight = parseFloat(document.getElementById('weight').value);
             var neck = parseFloat(document.getElementById('neck').value);
             var waist = parseFloat(document.getElementById('waist').value);
             var hip = parseFloat(document.getElementById('hip').value);
 
-            if (!height || !neck || !waist || height <= 0 || neck <= 0 || waist <= 0) {
-                alert('Please fill in height, neck, and waist with valid values.');
+            if (!height || !weight || !neck || !waist || height <= 0 || weight <= 0 || neck <= 0 || waist <= 0) {
+                alert('Please fill in all fields with valid values.');
                 return;
             }
             if (currentGender === 'female' && (!hip || hip <= 0)) {
@@ -385,33 +453,34 @@
                 return;
             }
 
-            // Convert to inches (Navy formula uses inches)
-            var h = (currentUnit === 'metric') ? height / 2.54 : height;
-            var n = (currentUnit === 'metric') ? neck / 2.54 : neck;
-            var w = (currentUnit === 'metric') ? waist / 2.54 : waist;
-            var hp = (currentUnit === 'metric') ? hip / 2.54 : hip;
+            // Convert to cm / kg
+            var heightCm = (currentUnit === 'metric') ? height : height * 2.54;
+            var neckCm = (currentUnit === 'metric') ? neck : neck * 2.54;
+            var waistCm = (currentUnit === 'metric') ? waist : waist * 2.54;
+            var hipCm = (currentUnit === 'metric') ? hip : hip * 2.54;
+            var weightKg = (currentUnit === 'metric') ? weight : weight * 0.453592;
 
             var bf;
             if (currentGender === 'male') {
-                if (w - n <= 0) {
+                if (waistCm <= neckCm) {
                     alert('Waist must be larger than neck. Please check your measurements.');
                     return;
                 }
-                bf = 86.010 * Math.log10(w - n) - 70.041 * Math.log10(h) + 36.76;
+                bf = 495 / (1.0324 - 0.19077 * Math.log10(waistCm - neckCm) + 0.15456 * Math.log10(heightCm)) - 450;
             } else {
-                if (w + hp - n <= 0) {
-                    alert('Please check your measurements — the values seem inconsistent.');
+                if (waistCm + hipCm <= neckCm) {
+                    alert('Please double-check your measurements.');
                     return;
                 }
-                bf = 163.205 * Math.log10(w + hp - n) - 97.684 * Math.log10(h) - 78.387;
+                bf = 495 / (1.29579 - 0.35004 * Math.log10(waistCm + hipCm - neckCm) + 0.22100 * Math.log10(heightCm)) - 450;
             }
 
             if (bf < 2 || bf > 60) {
-                alert('The result seems unusual (' + bf.toFixed(1) + '%). Please double-check your measurements.');
+                alert('The result looks unusual. Please double-check your measurements and try again.');
                 return;
             }
 
-            // Category (ACE chart)
+            // Category (ACE standards)
             var cat, catClass;
             if (currentGender === 'male') {
                 if (bf < 6)       { cat = 'Essential Fat'; catClass = 'cat-essential'; }
@@ -427,10 +496,21 @@
                 else              { cat = 'Obese';         catClass = 'cat-obese'; }
             }
 
+            // Fat mass & lean mass
+            var fatKg = weightKg * (bf / 100);
+            var leanKg = weightKg - fatKg;
+            var isMetric = (currentUnit === 'metric');
+            var wUnit = isMetric ? ' kg' : ' lbs';
+            var fatDisplay = isMetric ? fatKg.toFixed(1) : (fatKg * 2.20462).toFixed(1);
+            var leanDisplay = isMetric ? leanKg.toFixed(1) : (leanKg * 2.20462).toFixed(1);
+
+            // Display
             document.getElementById('bfValue').textContent = bf.toFixed(1);
             var catEl = document.getElementById('bfCategory');
             catEl.textContent = cat;
             catEl.className = 'bf-cat ' + catClass;
+            document.getElementById('fatMass').textContent = fatDisplay + wUnit;
+            document.getElementById('leanMass').textContent = leanDisplay + wUnit;
 
             document.getElementById('result').classList.add('show');
             document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'center' });
