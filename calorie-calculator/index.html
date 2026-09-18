@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calorie Calculator — Daily Calorie Needs Free | CalcFitly</title>
+    <meta name="description" content="Free Calorie Calculator: find out how many calories you need daily to lose weight, maintain, or gain muscle. Accurate Mifflin-St Jeor formula. No sign-up, 100% private.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💪</text></svg>">
-    <meta name="description" content="Free Calorie Calculator: find out how many calories you need daily to lose, maintain, or gain weight. Based on the Mifflin-St Jeor equation. No sign-up, 100% private.">
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="apple-touch-icon" href="/favicon.png">
 
     <script type="application/ld+json">
     {
@@ -17,27 +15,37 @@
         {
           "@type": "Question",
           "name": "How many calories should I eat per day?",
-          "acceptedAnswer": { "@type": "Answer", "text": "It depends on your age, gender, height, weight, and activity level. On average, adult women need 1,600–2,400 calories and adult men need 2,000–3,000 calories per day. Use our calculator for a personalized estimate." }
+          "acceptedAnswer": { "@type": "Answer", "text": "It depends on your age, gender, weight, height, and activity level. Most adult women need 1,600–2,400 kcal daily, and most adult men need 2,000–3,000 kcal. Use this calculator for your personal number." }
         },
         {
           "@type": "Question",
-          "name": "What is the difference between BMR and TDEE?",
-          "acceptedAnswer": { "@type": "Answer", "text": "BMR (Basal Metabolic Rate) is the calories your body burns at complete rest. TDEE (Total Daily Energy Expenditure) is your BMR multiplied by your activity level — it's the total calories you burn each day." }
+          "name": "How many calories should I eat to lose weight?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Eat about 500 kcal below your maintenance calories (TDEE). This creates a deficit that leads to roughly 0.5 kg of fat loss per week. Never go below 1,200 kcal (women) or 1,500 kcal (men) without medical supervision." }
         },
         {
           "@type": "Question",
-          "name": "How many calories should I cut to lose weight?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A deficit of about 500 calories per day leads to roughly 0.5 kg (1 lb) of weight loss per week, which is considered safe and sustainable. Never go below 1,200 calories (women) or 1,500 calories (men) without medical supervision." }
+          "name": "What is the Mifflin-St Jeor equation?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It's the formula used to estimate your Basal Metabolic Rate (BMR) — the calories you burn at rest. The Academy of Nutrition and Dietetics considers it the most accurate BMR formula for most people." }
         },
         {
           "@type": "Question",
-          "name": "Which formula does this calculator use?",
-          "acceptedAnswer": { "@type": "Answer", "text": "We use the Mifflin-St Jeor equation, which is considered the most accurate BMR formula by the Academy of Nutrition and Dietetics." }
+          "name": "Do I need to count calories forever?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Most people track for a few weeks or months to learn portion sizes and food values, then maintain their results with mindful eating. Tracking is a learning tool, not a life sentence." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why am I not losing weight at my calculated calories?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Common reasons: underestimating portions, overestimating activity level, or water retention masking fat loss. Track honestly for 2–3 weeks, and if weight hasn't moved, reduce by another 100–200 kcal." }
+        },
+        {
+          "@type": "Question",
+          "name": "Are all calories the same?",
+          "acceptedAnswer": { "@type": "Answer", "text": "For weight loss, yes — a calorie is a calorie. But for health and hunger, no. Protein keeps you fullest, fiber-rich carbs digest slowly, and highly processed foods are easy to overeat. Quality matters for how you feel." }
         },
         {
           "@type": "Question",
           "name": "Is my data saved when I use this calculator?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. All calculations run entirely in your browser. Your age, weight, height, and results are never stored or sent anywhere." }
+          "acceptedAnswer": { "@type": "Answer", "text": "No. All calculations run entirely in your browser. Your details and results are never stored or sent anywhere." }
         }
       ]
     }
@@ -88,7 +96,7 @@
         .calc-card { background: #fff; border: 1px solid var(--border); border-radius: 24px; padding: 34px; box-shadow: 0 10px 30px rgba(17,153,142,0.08); max-width: 620px; margin: 0 auto; }
         .toggle-label { font-weight: 700; font-size: 0.9em; margin-bottom: 8px; display: block; }
         .unit-toggle { display: flex; background: #eefaf4; border-radius: 999px; padding: 5px; margin-bottom: 20px; }
-        .unit-toggle button { flex: 1; padding: 11px; border: none; border-radius: 999px; font-weight: 700; font-size: 0.95em; cursor: pointer; background: transparent; color: var(--muted); transition: 0.2s; }
+        .unit-toggle button { flex: 1; padding: 11px; border: none; border-radius: 999px; font-weight: 700; font-size: 0.9em; cursor: pointer; background: transparent; color: var(--muted); transition: 0.2s; }
         .unit-toggle button.active { background: linear-gradient(135deg, var(--green), var(--green-light)); color: #fff; box-shadow: 0 4px 10px rgba(17,153,142,0.25); }
         .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
         .input-group label { display: block; font-weight: 700; font-size: 0.9em; margin-bottom: 7px; }
@@ -100,21 +108,15 @@
         /* ===== RESULT ===== */
         .result { display: none; margin-top: 28px; }
         .result.show { display: block; }
-        .bmr-box { text-align: center; padding: 22px; border-radius: 18px; background: #eefaf4; border: 1px solid var(--border); margin-bottom: 18px; }
-        .bmr-label { color: var(--muted); font-weight: 600; font-size: 0.9em; }
-        .bmr-num { font-size: 2.6em; font-weight: 800; background: linear-gradient(135deg, var(--green), var(--green-light)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-        .bmr-sub { color: var(--muted); font-size: 0.85em; }
+        .maintain-box { text-align: center; padding: 26px; border-radius: 18px; background: #eefaf4; border: 1px solid var(--border); margin-bottom: 18px; }
+        .maintain-label { color: var(--muted); font-weight: 600; font-size: 0.9em; }
+        .maintain-num { font-size: 3em; font-weight: 800; background: linear-gradient(135deg, var(--green), var(--green-light)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .maintain-sub { color: var(--muted); font-size: 0.85em; }
         .goal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-        .goal-card { text-align: center; padding: 20px 12px; border-radius: 16px; border: 1px solid var(--border); background: #fff; }
-        .goal-card .goal-title { font-weight: 700; font-size: 0.85em; margin-bottom: 6px; }
-        .goal-card .goal-num { font-size: 1.5em; font-weight: 800; }
-        .goal-card .goal-sub { font-size: 0.75em; color: var(--muted); }
-        .goal-lose { background: #fff8e1; border-color: #ffe082; }
-        .goal-lose .goal-num { color: #b58900; }
-        .goal-maintain { background: #e6f9f0; border-color: #a5e8c9; }
-        .goal-maintain .goal-num { color: var(--green-dark); }
-        .goal-gain { background: #e3f2fd; border-color: #90caf9; }
-        .goal-gain .goal-num { color: #1565c0; }
+        .goal-card { text-align: center; padding: 18px 10px; border-radius: 16px; border: 1px solid var(--border); background: #fff; }
+        .goal-card .g-icon { font-size: 1.5em; margin-bottom: 6px; }
+        .goal-card .g-num { font-size: 1.3em; font-weight: 800; color: var(--green-dark); }
+        .goal-card .g-sub { font-size: 0.75em; color: var(--muted); }
         .safety-note { display: none; margin-top: 14px; padding: 14px 18px; background: #fdecea; border-radius: 12px; color: #c62828; font-size: 0.88em; font-weight: 600; }
         .safety-note.show { display: block; }
 
@@ -124,10 +126,10 @@
         .content-card p { color: var(--muted); margin-bottom: 12px; font-size: 0.97em; }
         .content-card ul { margin: 0 0 12px 22px; color: var(--muted); }
         .content-card li { margin-bottom: 6px; }
-        .bmi-table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 0.95em; }
-        .bmi-table th, .bmi-table td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); }
-        .bmi-table th { background: #eefaf4; color: var(--green-dark); }
-        .bmi-table tr:last-child td { border-bottom: none; }
+        .cal-table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 0.95em; }
+        .cal-table th, .cal-table td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+        .cal-table th { background: #eefaf4; color: var(--green-dark); }
+        .cal-table tr:last-child td { border-bottom: none; }
 
         /* ===== FAQ ===== */
         .faq-list { max-width: 760px; margin: 0 auto; }
@@ -189,7 +191,7 @@
         <div class="hero-inner">
             <span class="pill">🔥 Free · Instant · 100% Private</span>
             <h1>Calorie <span class="grad">Calculator</span></h1>
-            <p>Find out exactly how many calories you need daily to lose, maintain, or gain weight — based on the Mifflin-St Jeor equation.</p>
+            <p>Find out exactly how many calories you need daily — to lose fat, maintain your weight, or build muscle.</p>
         </div>
     </header>
 
@@ -240,29 +242,31 @@
             <button class="calc-btn" onclick="calculateCalories()">Calculate My Calories →</button>
 
             <div class="result" id="result">
-                <div class="bmr-box">
-                    <div class="bmr-label">Your Maintenance Calories (TDEE)</div>
-                    <div class="bmr-num" id="maintainValue">0</div>
-                    <div class="bmr-sub">calories per day · BMR: <span id="bmrValue">0</span> kcal</div>
+                <div class="maintain-box">
+                    <div class="maintain-label">Your Maintenance Calories (TDEE)</div>
+                    <div class="maintain-num"><span id="maintainValue">0</span></div>
+                    <div class="maintain-sub">kcal per day · BMR: <span id="bmrValue">0</span> kcal</div>
                 </div>
+
                 <div class="goal-grid">
-                    <div class="goal-card goal-lose">
-                        <div class="goal-title">📉 Weight Loss</div>
-                        <div class="goal-num" id="loseValue">0</div>
-                        <div class="goal-sub">kcal/day (−0.5 kg/week)</div>
+                    <div class="goal-card">
+                        <div class="g-icon">📉</div>
+                        <div class="g-num" id="loseValue">0</div>
+                        <div class="g-sub">kcal/day · lose ~0.5 kg/week</div>
                     </div>
-                    <div class="goal-card goal-maintain">
-                        <div class="goal-title">⚖️ Maintain</div>
-                        <div class="goal-num" id="maintainValue2">0</div>
-                        <div class="goal-sub">kcal/day</div>
+                    <div class="goal-card">
+                        <div class="g-icon">⚖️</div>
+                        <div class="g-num" id="keepValue">0</div>
+                        <div class="g-sub">kcal/day · maintain weight</div>
                     </div>
-                    <div class="goal-card goal-gain">
-                        <div class="goal-title">📈 Weight Gain</div>
-                        <div class="goal-num" id="gainValue">0</div>
-                        <div class="goal-sub">kcal/day (+0.5 kg/week)</div>
+                    <div class="goal-card">
+                        <div class="g-icon">📈</div>
+                        <div class="g-num" id="gainValue">0</div>
+                        <div class="g-sub">kcal/day · gain ~0.25 kg/week</div>
                     </div>
                 </div>
-                <div class="safety-note" id="safetyNote">⚠️ Your weight loss target is below the safe minimum. Please consult a healthcare professional before following a very low-calorie diet.</div>
+
+                <div class="safety-note" id="safetyNote">⚠️ Your weight-loss target is below the safe minimum (1,200 kcal for women / 1,500 kcal for men). Consider a smaller deficit or consult a healthcare professional.</div>
             </div>
         </div>
     </section>
@@ -270,37 +274,60 @@
     <!-- LEARN -->
     <section class="section">
         <span class="section-tag">Learn</span>
-        <h2>Understanding Your Calories</h2>
-        <p class="section-sub">The science behind your daily energy needs.</p>
+        <h2>Understanding Calories</h2>
+        <p class="section-sub">The energy math behind every body goal.</p>
 
         <div class="content-card">
-            <h3>🧮 How Is It Calculated?</h3>
-            <p>We use the <strong>Mifflin-St Jeor equation</strong> — recommended by the Academy of Nutrition and Dietetics as the most accurate BMR formula:</p>
-            <p><strong>Men:</strong> BMR = 10 × weight (kg) + 6.25 × height (cm) − 5 × age + 5</p>
-            <p><strong>Women:</strong> BMR = 10 × weight (kg) + 6.25 × height (cm) − 5 × age − 161</p>
-            <p>Your BMR is then multiplied by your activity level to get your <strong>TDEE</strong> (Total Daily Energy Expenditure) — the calories you actually burn each day.</p>
-        </div>
-
-        <div class="content-card">
-            <h3>🏃 Activity Level Guide</h3>
-            <table class="bmi-table">
-                <tr><th>Activity Level</th><th>Description</th></tr>
-                <tr><td>Sedentary</td><td>Desk job, little or no exercise</td></tr>
-                <tr><td>Light</td><td>Exercise 1–3 days per week</td></tr>
-                <tr><td>Moderate</td><td>Exercise 3–5 days per week</td></tr>
-                <tr><td>Active</td><td>Hard exercise 6–7 days per week</td></tr>
-                <tr><td>Very Active</td><td>Physical job + daily exercise</td></tr>
-            </table>
-        </div>
-
-        <div class="content-card">
-            <h3>⚖️ Safe Weight Loss Tips</h3>
+            <h3>🧮 How Are My Calories Calculated?</h3>
+            <p>This calculator uses the <strong>Mifflin-St Jeor equation</strong> — the formula the Academy of Nutrition and Dietetics considers the most accurate for estimating your Basal Metabolic Rate (BMR):</p>
             <ul>
-                <li>Aim for a <strong>500 calorie/day deficit</strong> — that's about 0.5 kg loss per week.</li>
-                <li>Never eat below <strong>1,200 kcal (women)</strong> or <strong>1,500 kcal (men)</strong> without medical supervision.</li>
-                <li>Combine a small calorie deficit with regular exercise for best results.</li>
-                <li>Prioritize protein to preserve muscle while losing fat.</li>
-                <li>Slow, steady progress beats crash diets every time.</li>
+                <li><strong>Men:</strong> BMR = (10 × weight in kg) + (6.25 × height in cm) − (5 × age) + 5</li>
+                <li><strong>Women:</strong> BMR = (10 × weight in kg) + (6.25 × height in cm) − (5 × age) − 161</li>
+            </ul>
+            <p>Your BMR is then multiplied by an activity factor (1.2 to 1.9) to get your <strong>TDEE</strong> — your true daily calorie burn. That maintenance number is the foundation for every goal: eat below it to lose, at it to maintain, or above it to gain.</p>
+        </div>
+
+        <div class="content-card">
+            <h3>🎯 How Many Calories for Your Goal?</h3>
+            <table class="cal-table">
+                <tr><th>Goal</th><th>Adjustment</th><th>Expected Change</th></tr>
+                <tr><td>📉 Lose fat</td><td>TDEE − 500 kcal</td><td>~0.5 kg loss per week</td></tr>
+                <tr><td>⚖️ Maintain</td><td>Eat at TDEE</td><td>Weight stays stable</td></tr>
+                <tr><td>📈 Gain muscle</td><td>TDEE + 250–300 kcal</td><td>~0.25 kg gain per week</td></tr>
+            </table>
+            <p style="margin-top:12px;"><strong>Why not bigger changes?</strong> Large deficits cause muscle loss, fatigue, and rebound weight gain. Large surpluses mostly add fat, not muscle. Slow and steady genuinely wins this race.</p>
+        </div>
+
+        <div class="content-card">
+            <h3>📊 Average Daily Calorie Needs (General Guide)</h3>
+            <table class="cal-table">
+                <tr><th>Group</th><th>Sedentary</th><th>Moderate</th><th>Active</th></tr>
+                <tr><td>Women (19–30 yrs)</td><td>1,800–2,000</td><td>2,000–2,200</td><td>2,400</td></tr>
+                <tr><td>Women (31–50 yrs)</td><td>1,800</td><td>2,000</td><td>2,200</td></tr>
+                <tr><td>Men (19–30 yrs)</td><td>2,400–2,600</td><td>2,600–2,800</td><td>3,000</td></tr>
+                <tr><td>Men (31–50 yrs)</td><td>2,200–2,400</td><td>2,400–2,600</td><td>2,800–3,000</td></tr>
+            </table>
+            <p style="margin-top:12px;">These are population averages — your personal number from the calculator above will be more accurate because it uses your exact stats.</p>
+        </div>
+
+        <div class="content-card">
+            <h3>✅ Tips for Hitting Your Calorie Target</h3>
+            <ul>
+                <li><strong>Track for 2–4 weeks:</strong> Use a food tracking app to learn what your target actually looks like on a plate. Most people are surprised at first.</li>
+                <li><strong>Prioritize protein:</strong> It's the most filling macronutrient and protects muscle during weight loss. Aim for a palm-sized portion at every meal.</li>
+                <li><strong>Don't drink your calories:</strong> Sodas, juices, and sweet coffees can add 300–500 kcal without making you feel full.</li>
+                <li><strong>Plan for real life:</strong> Birthdays and dinners out happen. One higher-calorie day won't ruin your week — consistency over time is what matters.</li>
+                <li><strong>Recalculate as you change:</strong> Every 5 kg of weight change shifts your needs. Recheck every 4–6 weeks.</li>
+            </ul>
+        </div>
+
+        <div class="content-card">
+            <h3>❌ Common Calorie Mistakes</h3>
+            <ul>
+                <li><strong>Overestimating activity:</strong> An hour at the gym doesn't cancel out 8 hours of sitting. When in doubt, pick one activity level lower.</li>
+                <li><strong>Forgetting weekend eating:</strong> Five disciplined weekdays can be undone by two unstructured weekend days.</li>
+                <li><strong>Trusting machine calorie counts:</strong> Gym equipment and fitness watches often overestimate burn by 20–50%.</li>
+                <li><strong>Going too low:</strong> Eating far below your needs slows progress long-term by costing you muscle and energy. Never go below 1,200 kcal (women) or 1,500 kcal (men) without medical guidance.</li>
             </ul>
         </div>
     </section>
@@ -313,23 +340,31 @@
         <div class="faq-list">
             <details>
                 <summary>How many calories should I eat per day?</summary>
-                <p>It depends on your age, gender, height, weight, and activity level. On average, adult women need 1,600–2,400 calories and adult men need 2,000–3,000 calories per day. Use our calculator for a personalized estimate.</p>
+                <p>It depends on your age, gender, weight, height, and activity level. Most adult women need 1,600–2,400 kcal daily, and most adult men need 2,000–3,000 kcal. Use this calculator for your personal number.</p>
             </details>
             <details>
-                <summary>What is the difference between BMR and TDEE?</summary>
-                <p>BMR (Basal Metabolic Rate) is the calories your body burns at complete rest. TDEE (Total Daily Energy Expenditure) is your BMR multiplied by your activity level — it's the total calories you burn each day.</p>
+                <summary>How many calories should I eat to lose weight?</summary>
+                <p>Eat about 500 kcal below your maintenance calories (TDEE). This creates a deficit that leads to roughly 0.5 kg of fat loss per week. Never go below 1,200 kcal (women) or 1,500 kcal (men) without medical supervision.</p>
             </details>
             <details>
-                <summary>How many calories should I cut to lose weight?</summary>
-                <p>A deficit of about 500 calories per day leads to roughly 0.5 kg (1 lb) of weight loss per week, which is considered safe and sustainable. Never go below 1,200 calories (women) or 1,500 calories (men) without medical supervision.</p>
+                <summary>What is the Mifflin-St Jeor equation?</summary>
+                <p>It's the formula used to estimate your Basal Metabolic Rate (BMR) — the calories you burn at rest. The Academy of Nutrition and Dietetics considers it the most accurate BMR formula for most people.</p>
             </details>
             <details>
-                <summary>Which formula does this calculator use?</summary>
-                <p>We use the Mifflin-St Jeor equation, which is considered the most accurate BMR formula by the Academy of Nutrition and Dietetics.</p>
+                <summary>Do I need to count calories forever?</summary>
+                <p>No. Most people track for a few weeks or months to learn portion sizes and food values, then maintain their results with mindful eating. Tracking is a learning tool, not a life sentence.</p>
+            </details>
+            <details>
+                <summary>Why am I not losing weight at my calculated calories?</summary>
+                <p>Common reasons: underestimating portions, overestimating activity level, or water retention masking fat loss. Track honestly for 2–3 weeks, and if weight hasn't moved, reduce by another 100–200 kcal.</p>
+            </details>
+            <details>
+                <summary>Are all calories the same?</summary>
+                <p>For weight loss, yes — a calorie is a calorie. But for health and hunger, no. Protein keeps you fullest, fiber-rich carbs digest slowly, and highly processed foods are easy to overeat. Quality matters for how you feel.</p>
             </details>
             <details>
                 <summary>Is my data saved when I use this calculator?</summary>
-                <p>No. All calculations run entirely in your browser. Your age, weight, height, and results are never stored or sent anywhere.</p>
+                <p>No. All calculations run entirely in your browser. Your details and results are never stored or sent anywhere.</p>
             </details>
         </div>
     </section>
@@ -337,9 +372,9 @@
     <!-- CTA -->
     <section class="section">
         <div class="cta">
-            <h2>Know Your BMI Too? ⚖️</h2>
-            <p>Check your Body Mass Index in under 30 seconds.</p>
-            <a href="/bmi-calculator/" class="btn-white">Try BMI Calculator — Free</a>
+            <h2>Turn Calories Into Macros 🥗</h2>
+            <p>Split your daily calories into the perfect protein, carbs, and fat targets.</p>
+            <a href="/macro-calculator/" class="btn-white">Try Macro Calculator — Free</a>
         </div>
     </section>
 
@@ -349,8 +384,14 @@
             <div class="footer-logo">💪 Calc<span>Fitly</span></div>
             <div class="footer-links">
                 <a href="/">Home</a>
-                <a href="/bmi-calculator/">BMI Calculator</a>
-                <a href="/calorie-calculator/">Calorie Calculator</a>
+                <a href="/bmi-calculator/">BMI</a>
+                <a href="/calorie-calculator/">Calorie</a>
+                <a href="/body-fat-calculator/">Body Fat</a>
+                <a href="/water-intake-calculator/">Water</a>
+                <a href="/macro-calculator/">Macro</a>
+                <a href="/ideal-weight-calculator/">Ideal Weight</a>
+                <a href="/tdee-calculator/">TDEE</a>
+                <a href="/weight-loss-calculator/">Weight Loss</a>
                 <a href="/about/">About</a>
                 <a href="/contact/">Contact</a>
                 <a href="/privacy-policy/">Privacy Policy</a>
@@ -368,7 +409,7 @@
             navLinks.classList.toggle('open');
         });
 
-        // Unit & gender toggles
+        // Toggles
         var currentUnit = 'metric';
         var currentGender = 'male';
 
@@ -395,7 +436,7 @@
             document.getElementById('femaleBtn').classList.toggle('active', gender === 'female');
         }
 
-        // Calorie calculation (Mifflin-St Jeor)
+        // Calorie Calculation
         function calculateCalories() {
             var age = parseFloat(document.getElementById('age').value);
             var height = parseFloat(document.getElementById('height').value);
@@ -411,11 +452,11 @@
                 return;
             }
 
-            // Convert to metric if needed
+            // Convert to metric
             var weightKg = (currentUnit === 'metric') ? weight : weight * 0.453592;
             var heightCm = (currentUnit === 'metric') ? height : height * 2.54;
 
-            // Mifflin-St Jeor equation
+            // Mifflin-St Jeor BMR
             var bmr;
             if (currentGender === 'male') {
                 bmr = 10 * weightKg + 6.25 * heightCm - 5 * age + 5;
@@ -425,15 +466,16 @@
 
             var tdee = bmr * activity;
             var lose = tdee - 500;
-            var gain = tdee + 500;
+            var gain = tdee + 250;
 
+            // Display
             document.getElementById('bmrValue').textContent = Math.round(bmr).toLocaleString();
             document.getElementById('maintainValue').textContent = Math.round(tdee).toLocaleString();
-            document.getElementById('maintainValue2').textContent = Math.round(tdee).toLocaleString();
             document.getElementById('loseValue').textContent = Math.round(lose).toLocaleString();
+            document.getElementById('keepValue').textContent = Math.round(tdee).toLocaleString();
             document.getElementById('gainValue').textContent = Math.round(gain).toLocaleString();
 
-            // Safety warning for very low calorie targets
+            // Safety warning
             var minSafe = (currentGender === 'male') ? 1500 : 1200;
             var safetyNote = document.getElementById('safetyNote');
             if (lose < minSafe) {
