@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Macro Calculator — Protein, Carbs & Fat Split Free | CalcFitly</title>
-    <meta name="description" content="Free Macro Calculator: get your perfect daily protein, carbs, and fat split based on your body and goals. Lose fat, maintain, or build muscle. No sign-up, 100% private.">
+    <title>Macro Calculator — Protein, Carbs & Fat Free | CalcFitly</title>
+    <meta name="description" content="Free Macro Calculator: split your daily calories into the perfect protein, carb, and fat targets for weight loss, maintenance, or muscle gain. No sign-up, 100% private.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💪</text></svg>">
 
     <script type="application/ld+json">
@@ -15,22 +15,32 @@
         {
           "@type": "Question",
           "name": "What are macros?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Macros (macronutrients) are the three main nutrients your body needs in large amounts: protein, carbohydrates, and fat. Each provides calories — protein and carbs have 4 kcal per gram, fat has 9 kcal per gram." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Macros (macronutrients) are the three nutrients that provide calories: protein (4 kcal per gram), carbohydrates (4 kcal per gram), and fat (9 kcal per gram). Your macro split determines how your daily calories are divided among them." }
         },
         {
           "@type": "Question",
           "name": "How much protein do I need per day?",
-          "acceptedAnswer": { "@type": "Answer", "text": "For active people, 1.6–2.2 grams per kg of body weight is a common recommendation. Our calculator sets protein based on your goal — higher for fat loss and muscle gain to protect muscle mass." }
+          "acceptedAnswer": { "@type": "Answer", "text": "For active people, research supports 1.6–2.2 g of protein per kg of body weight daily (0.7–1 g per pound). Higher protein protects muscle during weight loss and supports muscle growth when bulking." }
         },
         {
           "@type": "Question",
-          "name": "What macro split is best for weight loss?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A higher-protein split like 40% protein, 30% carbs, 30% fat works well for most people. Protein keeps you full and preserves muscle while you lose fat." }
+          "name": "What's the best macro split for weight loss?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A higher-protein split works best for most people: around 40% protein, 30% carbs, 30% fat. The extra protein keeps you full and preserves muscle while you lose fat." }
         },
         {
           "@type": "Question",
-          "name": "Do I need to hit my macros exactly every day?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. Aim to be within about 5–10 grams of each target. Consistency over weeks matters far more than perfection on any single day." }
+          "name": "Should I hit my macros exactly every day?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No — aim to be within 5–10 grams of each target. Consistency over weeks matters far more than daily perfection. Prioritize hitting your protein and calorie targets first." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is keto better than a balanced macro split?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Not for most people. Studies show that when calories and protein are matched, low-carb and balanced diets produce similar fat loss. The best macro split is the one you can stick to long-term." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I count macros in cooked or raw food?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Weigh meat, rice, and pasta raw (uncooked) for the most accurate tracking — cooking changes water content, which changes weight but not macros. Nutrition labels are usually based on the raw state." }
         },
         {
           "@type": "Question",
@@ -51,6 +61,9 @@
             --muted: #5f6b76;
             --bg: #f4fbf8;
             --border: #e4efe9;
+            --protein: #e63946;
+            --carbs: #f0a500;
+            --fat: #457b9d;
         }
         html { scroll-behavior: smooth; }
         body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
@@ -86,7 +99,7 @@
         .calc-card { background: #fff; border: 1px solid var(--border); border-radius: 24px; padding: 34px; box-shadow: 0 10px 30px rgba(17,153,142,0.08); max-width: 620px; margin: 0 auto; }
         .toggle-label { font-weight: 700; font-size: 0.9em; margin-bottom: 8px; display: block; }
         .unit-toggle { display: flex; background: #eefaf4; border-radius: 999px; padding: 5px; margin-bottom: 20px; }
-        .unit-toggle button { flex: 1; padding: 11px; border: none; border-radius: 999px; font-weight: 700; font-size: 0.9em; cursor: pointer; background: transparent; color: var(--muted); transition: 0.2s; }
+        .unit-toggle button { flex: 1; padding: 11px; border: none; border-radius: 999px; font-weight: 700; font-size: 0.88em; cursor: pointer; background: transparent; color: var(--muted); transition: 0.2s; }
         .unit-toggle button.active { background: linear-gradient(135deg, var(--green), var(--green-light)); color: #fff; box-shadow: 0 4px 10px rgba(17,153,142,0.25); }
         .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
         .input-group label { display: block; font-weight: 700; font-size: 0.9em; margin-bottom: 7px; }
@@ -100,23 +113,24 @@
         .result.show { display: block; }
         .cal-box { text-align: center; padding: 22px; border-radius: 18px; background: #eefaf4; border: 1px solid var(--border); margin-bottom: 18px; }
         .cal-label { color: var(--muted); font-weight: 600; font-size: 0.9em; }
-        .cal-num { font-size: 2.6em; font-weight: 800; background: linear-gradient(135deg, var(--green), var(--green-light)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .cal-num { font-size: 2.4em; font-weight: 800; background: linear-gradient(135deg, var(--green), var(--green-light)); -webkit-background-clip: text; background-clip: text; color: transparent; }
         .cal-sub { color: var(--muted); font-size: 0.85em; }
-        .macro-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px; margin-bottom: 12px; }
-        .macro-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+
+        /* Macro bars */
+        .macro-bars { margin-bottom: 18px; }
+        .macro-row { margin-bottom: 16px; }
+        .macro-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
         .macro-name { font-weight: 700; font-size: 0.95em; }
-        .macro-grams { font-weight: 800; font-size: 1.2em; }
-        .macro-bar { height: 10px; border-radius: 999px; background: #eefaf4; overflow: hidden; }
-        .macro-fill { height: 100%; border-radius: 999px; transition: width 0.6s ease; }
-        .protein-color { color: #11998e; }
-        .protein-fill { background: linear-gradient(90deg, #11998e, #38ef7d); }
-        .carbs-color { color: #f0a500; }
-        .carbs-fill { background: linear-gradient(90deg, #f0a500, #ffd54f); }
-        .fat-color { color: #5b7db1; }
-        .fat-fill { background: linear-gradient(90deg, #5b7db1, #90caf9); }
-        .macro-pct { font-size: 0.78em; color: var(--muted); margin-top: 6px; }
-        .safety-note { display: none; margin-top: 14px; padding: 14px 18px; background: #fdecea; border-radius: 12px; color: #c62828; font-size: 0.88em; font-weight: 600; }
-        .safety-note.show { display: block; }
+        .macro-grams { font-weight: 800; font-size: 1.05em; }
+        .macro-track { height: 12px; background: #eef3f0; border-radius: 999px; overflow: hidden; }
+        .macro-fill { height: 100%; border-radius: 999px; width: 0; transition: width 0.8s ease; }
+        .fill-protein { background: var(--protein); }
+        .fill-carbs { background: var(--carbs); }
+        .fill-fat { background: var(--fat); }
+        .macro-pct { font-size: 0.78em; color: var(--muted); margin-top: 4px; }
+
+        .per-meal { text-align: center; padding: 14px; border-radius: 14px; background: #eefaf4; border: 1px solid var(--border); font-size: 0.9em; color: var(--muted); }
+        .per-meal strong { color: var(--green-dark); }
 
         /* ===== CONTENT ===== */
         .content-card { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 32px; margin-bottom: 22px; }
@@ -178,7 +192,7 @@
                 <a href="/#calculators">Calculators</a>
                 <a href="/about/">About</a>
                 <a href="/contact/">Contact</a>
-                <a href="/bmi-calculator/" class="nav-cta">BMI Calculator</a>
+                <a href="/calorie-calculator/" class="nav-cta">Calorie Calculator</a>
             </div>
         </div>
     </nav>
@@ -188,7 +202,7 @@
         <div class="hero-inner">
             <span class="pill">🥗 Free · Instant · 100% Private</span>
             <h1>Macro <span class="grad">Calculator</span></h1>
-            <p>Get your perfect daily protein, carbs, and fat split — personalized to your body and your goal.</p>
+            <p>Split your daily calories into the perfect protein, carb, and fat targets for your goal.</p>
         </div>
     </header>
 
@@ -206,13 +220,6 @@
             <div class="unit-toggle">
                 <button id="maleBtn" class="active" onclick="setGender('male')">👨 Male</button>
                 <button id="femaleBtn" onclick="setGender('female')">👩 Female</button>
-            </div>
-
-            <span class="toggle-label">Your Goal</span>
-            <div class="unit-toggle">
-                <button id="loseBtn" onclick="setGoal('lose')">📉 Lose</button>
-                <button id="maintainBtn" class="active" onclick="setGoal('maintain')">⚖️ Maintain</button>
-                <button id="gainBtn" onclick="setGoal('gain')">📈 Gain</button>
             </div>
 
             <div class="input-row">
@@ -243,45 +250,61 @@
                 </div>
             </div>
 
+            <span class="toggle-label">Your Goal</span>
+            <div class="unit-toggle">
+                <button id="loseBtn" onclick="setGoal('lose')">📉 Lose Fat</button>
+                <button id="maintainBtn" class="active" onclick="setGoal('maintain')">⚖️ Maintain</button>
+                <button id="gainBtn" onclick="setGoal('gain')">📈 Gain Muscle</button>
+            </div>
+
+            <span class="toggle-label">Diet Style</span>
+            <div class="unit-toggle">
+                <button id="balancedBtn" class="active" onclick="setDiet('balanced')">🍽️ Balanced</button>
+                <button id="lowcarbBtn" onclick="setDiet('lowcarb')">🥩 Low Carb</button>
+                <button id="highproteinBtn" onclick="setDiet('highprotein')">🍗 High Protein</button>
+            </div>
+
             <button class="calc-btn" onclick="calculateMacros()">Calculate My Macros →</button>
 
             <div class="result" id="result">
                 <div class="cal-box">
                     <div class="cal-label">Your Daily Calorie Target</div>
-                    <div class="cal-num" id="calValue">0</div>
-                    <div class="cal-sub">kcal per day · Goal: <span id="goalLabel">Maintain</span></div>
+                    <div class="cal-num"><span id="calValue">0</span> kcal</div>
+                    <div class="cal-sub" id="goalNote">to maintain your weight</div>
                 </div>
 
-                <div class="macro-card">
-                    <div class="macro-head">
-                        <span class="macro-name">🥩 Protein</span>
-                        <span class="macro-grams protein-color"><span id="proteinValue">0</span>g</span>
+                <div class="macro-bars">
+                    <div class="macro-row">
+                        <div class="macro-head">
+                            <span class="macro-name">🍗 Protein</span>
+                            <span class="macro-grams" style="color: var(--protein);"><span id="proteinG">0</span>g</span>
+                        </div>
+                        <div class="macro-track"><div class="macro-fill fill-protein" id="proteinBar"></div></div>
+                        <div class="macro-pct" id="proteinPct">0% of calories</div>
                     </div>
-                    <div class="macro-bar"><div class="macro-fill protein-fill" id="proteinBar" style="width: 0%"></div></div>
-                    <div class="macro-pct" id="proteinPct">0% of calories · builds & repairs muscle</div>
-                </div>
 
-                <div class="macro-card">
-                    <div class="macro-head">
-                        <span class="macro-name">🍚 Carbs</span>
-                        <span class="macro-grams carbs-color"><span id="carbsValue">0</span>g</span>
+                    <div class="macro-row">
+                        <div class="macro-head">
+                            <span class="macro-name">🍚 Carbs</span>
+                            <span class="macro-grams" style="color: var(--carbs);"><span id="carbsG">0</span>g</span>
+                        </div>
+                        <div class="macro-track"><div class="macro-fill fill-carbs" id="carbsBar"></div></div>
+                        <div class="macro-pct" id="carbsPct">0% of calories</div>
                     </div>
-                    <div class="macro-bar"><div class="macro-fill carbs-fill" id="carbsBar" style="width: 0%"></div></div>
-                    <div class="macro-pct" id="carbsPct">0% of calories · your body's main energy source</div>
-                </div>
 
-               
-
- <div class="macro-card">
-                    <div class="macro-head">
-                        <span class="macro-name">🥑 Fat</span>
-                        <span class="macro-grams fat-color"><span id="fatValue">0</span>g</span>
+                    <div class="macro-row">
+                        <div class="macro-head">
+                            <span class="macro-name">🥑 Fat</span>
+                            <span class="macro-grams" style="color: var(--fat);"><span id="fatG">0</span>g</span>
+                        </div>
+                        <div class="macro-track"><div class="macro-fill fill-fat" id="fatBar"></div></div>
+                        <div class="macro-pct" id="fatPct">0% of calories</div>
                     </div>
-                    <div class="macro-bar"><div class="macro-fill fat-fill" id="fatBar" style="width: 0%"></div></div>
-                    <div class="macro-pct" id="fatPct">0% of calories · hormones & nutrient absorption</div>
                 </div>
 
-                <div class="safety-note" id="safetyNote">⚠️ Your calorie target is below the safe minimum. Please consult a healthcare professional before following a very low-calorie diet.</div>
+                <div class="per-meal">
+                    Per meal (4 meals/day): <strong id="perMeal">—</strong>
+                </div>
             </div>
         </div>
     </section>
@@ -290,38 +313,63 @@
     <section class="section">
         <span class="section-tag">Learn</span>
         <h2>Understanding Macros</h2>
-        <p class="section-sub">The building blocks of every diet.</p>
+        <p class="section-sub">Calories decide your weight — macros decide what that weight looks like.</p>
 
         <div class="content-card">
-            <h3>🧮 How Is It Calculated?</h3>
-            <p>First, we calculate your daily calorie target using the <strong>Mifflin-St Jeor equation</strong> (adjusted for your goal). Then we split those calories into macros:</p>
+            <h3>🧮 What Are Macros and Why Do They Matter?</h3>
+            <p>Macronutrients — "macros" — are the three nutrients that provide all your calories:</p>
             <ul>
-                <li><strong>Protein:</strong> 4 kcal per gram</li>
-                <li><strong>Carbs:</strong> 4 kcal per gram</li>
-                <li><strong>Fat:</strong> 9 kcal per gram</li>
+                <li><strong>Protein (4 kcal/g):</strong> Builds and repairs muscle, keeps you full, and has the highest "thermic effect" — your body burns 20–30% of protein calories just digesting it.</li>
+                <li><strong>Carbohydrates (4 kcal/g):</strong> Your body's preferred fuel for training and brain function. Found in grains, fruits, vegetables, and sugars.</li>
+                <li><strong>Fat (9 kcal/g):</strong> Essential for hormones (including testosterone and estrogen), vitamin absorption, and cell health. More than twice as calorie-dense as protein or carbs.</li>
             </ul>
+            <p>Two people eating the same 2,000 calories can look completely different depending on their macro split — one building muscle with high protein, the other losing muscle on a low-protein diet. That's why macros matter.</p>
         </div>
 
         <div class="content-card">
-            <h3>🎯 Macro Splits by Goal</h3>
+            <h3>🍽️ Which Diet Style Should You Choose?</h3>
             <table class="macro-table">
-                <tr><th>Goal</th><th>Protein</th><th>Carbs</th><th>Fat</th></tr>
-                <tr><td>📉 Lose Fat</td><td>40%</td><td>30%</td><td>30%</td></tr>
-                <tr><td>⚖️ Maintain</td><td>30%</td><td>40%</td><td>30%</td></tr>
-                <tr><td>📈 Gain Muscle</td><td>25%</td><td>50%</td><td>25%</td></tr>
+                <tr><th>Diet Style</th><th>Protein</th><th>Carbs</th><th>Fat</th><th>Best For</th></tr>
+                <tr><td>🍽️ Balanced</td><td>30%</td><td>40%</td><td>30%</td><td>Most people — flexible and sustainable</td></tr>
+                <tr><td>🥩 Low Carb</td><td>35%</td><td>25%</td><td>40%</td><td>Those who feel better on fewer carbs</td></tr>
+                <tr><td>🍗 High Protein</td><td>40%</td><td>30%</td><td>30%</td><td>Fat loss + muscle retention, very filling</td></tr>
             </table>
-            <p style="margin-top:12px;"><strong>Why more protein when losing?</strong> Protein keeps you full longer and protects your muscle mass while you're in a calorie deficit.</p>
+            <p style="margin-top:12px;"><strong>Honest truth:</strong> Research shows that when calories and protein are matched, all these splits produce similar results. Pick the one that fits your food preferences — adherence beats perfection.</p>
         </div>
 
         <div class="content-card">
-            <h3>✅ Tips for Hitting Your Macros</h3>
+            <h3>🍗 Why Protein Is the Most Important Macro</h3>
+            <p>If you only track one macro, make it protein. Here's why:</p>
             <ul>
-                <li>Plan your protein first — it's the hardest macro to hit.</li>
-                <li>Use a food tracking app to log meals for the first few weeks.</li>
-                <li>Prep meals in advance so you're never guessing.</li>
-                <li>Don't stress about being perfect — aim within 5–10g of each target.</li>
-                <li>Re-calculate your macros every 4–6 weeks as your weight changes.</li>
+                <li><strong>Muscle protection:</strong> During weight loss, adequate protein (1.6–2.2 g per kg of body weight) ensures the weight you lose is fat, not muscle.</li>
+                <li><strong>Fullness:</strong> Protein is the most satiating macro — high-protein meals naturally reduce how much you eat later.</li>
+                <li><strong>Metabolism:</strong> Digesting protein burns more calories than digesting carbs or fat.</li>
+                <li><strong>Recovery:</strong> Training breaks muscle down; protein builds it back stronger.</li>
             </ul>
+            <p><strong>Easy target:</strong> A palm-sized portion of protein (chicken, fish, eggs, paneer, tofu, Greek yogurt) at every meal gets most people 80% of the way there.</p>
+        </div>
+
+        <div class="content-card">
+            <h3>✅ Practical Tips for Hitting Your Macros</h3>
+            <ul>
+                <li><strong>Prioritize in this order:</strong> Calories first, protein second, then let carbs and fat flex around your preferences.</li>
+                <li><strong>Don't chase perfection:</strong> Being within 5–10 g of each target is excellent. Weekly consistency beats daily precision.</li>
+                <li><strong>Weigh food raw:</strong> Rice, pasta, and meat change weight when cooked due to water — track them uncooked for accuracy.</li>
+                <li><strong>Plan protein first:</strong> Build each meal around a protein source, then add carbs and fats to fill your remaining targets.</li>
+                <li><strong>Use a tracking app:</strong> Apps like MyFitnessPal or Cronometer make daily tracking take just a few minutes.</li>
+            </ul>
+        </div>
+
+        <div class="content-card">
+            <h3>🔄 When to Recalculate Your Macros</h3>
+            <p>Your macro targets aren't permanent. Recalculate when:</p>
+            <ul>
+                <li>Your weight changes by 5 kg or more</li>
+                <li>Your goal changes (cutting → maintaining → bulking)</li>
+                <li>Your activity level changes significantly</li>
+                <li>Progress stalls for 3+ weeks despite honest tracking</li>
+            </ul>
+            <p>Most people do well recalculating every 6–8 weeks during an active fat-loss or muscle-gain phase.</p>
         </div>
     </section>
 
@@ -333,19 +381,27 @@
         <div class="faq-list">
             <details>
                 <summary>What are macros?</summary>
-                <p>Macros (macronutrients) are the three main nutrients your body needs in large amounts: protein, carbohydrates, and fat. Each provides calories — protein and carbs have 4 kcal per gram, fat has 9 kcal per gram.</p>
+                <p>Macros (macronutrients) are the three nutrients that provide calories: protein (4 kcal per gram), carbohydrates (4 kcal per gram), and fat (9 kcal per gram). Your macro split determines how your daily calories are divided among them.</p>
             </details>
             <details>
                 <summary>How much protein do I need per day?</summary>
-                <p>For active people, 1.6–2.2 grams per kg of body weight is a common recommendation. Our calculator sets protein based on your goal — higher for fat loss and muscle gain to protect muscle mass.</p>
+                <p>For active people, research supports 1.6–2.2 g of protein per kg of body weight daily (0.7–1 g per pound). Higher protein protects muscle during weight loss and supports muscle growth when bulking.</p>
             </details>
             <details>
-                <summary>What macro split is best for weight loss?</summary>
-                <p>A higher-protein split like 40% protein, 30% carbs, 30% fat works well for most people. Protein keeps you full and preserves muscle while you lose fat.</p>
+                <summary>What's the best macro split for weight loss?</summary>
+                <p>A higher-protein split works best for most people: around 40% protein, 30% carbs, 30% fat. The extra protein keeps you full and preserves muscle while you lose fat.</p>
             </details>
             <details>
-                <summary>Do I need to hit my macros exactly every day?</summary>
-                <p>No. Aim to be within about 5–10 grams of each target. Consistency over weeks matters far more than perfection on any single day.</p>
+                <summary>Should I hit my macros exactly every day?</summary>
+                <p>No — aim to be within 5–10 grams of each target. Consistency over weeks matters far more than daily perfection. Prioritize hitting your protein and calorie targets first.</p>
+            </details>
+            <details>
+                <summary>Is keto better than a balanced macro split?</summary>
+                <p>Not for most people. Studies show that when calories and protein are matched, low-carb and balanced diets produce similar fat loss. The best macro split is the one you can stick to long-term.</p>
+            </details>
+            <details>
+                <summary>Do I count macros in cooked or raw food?</summary>
+                <p>Weigh meat, rice, and pasta raw (uncooked) for the most accurate tracking — cooking changes water content, which changes weight but not macros. Nutrition labels are usually based on the raw state.</p>
             </details>
             <details>
                 <summary>Is my data saved when I use this calculator?</summary>
@@ -357,9 +413,9 @@
     <!-- CTA -->
     <section class="section">
         <div class="cta">
-            <h2>Don't Forget Hydration 💧</h2>
-            <p>Find out how much water your body needs every day.</p>
-            <a href="/water-intake-calculator/" class="btn-white">Try Water Intake Calculator — Free</a>
+            <h2>Don't Forget Your Water 💧</h2>
+            <p>Hydration affects hunger, energy, and performance. Find your daily water target.</p>
+            <a href="/water-intake-calculator/" class="btn-white">Try Water Calculator — Free</a>
         </div>
     </section>
 
@@ -369,11 +425,14 @@
             <div class="footer-logo">💪 Calc<span>Fitly</span></div>
             <div class="footer-links">
                 <a href="/">Home</a>
-                <a href="/bmi-calculator/">BMI Calculator</a>
-                <a href="/calorie-calculator/">Calorie Calculator</a>
-                <a href="/body-fat-calculator/">Body Fat Calculator</a>
-                <a href="/water-intake-calculator/">Water Intake</a>
-                <a href="/macro-calculator/">Macro Calculator</a>
+                <a href="/bmi-calculator/">BMI</a>
+                <a href="/calorie-calculator/">Calorie</a>
+                <a href="/body-fat-calculator/">Body Fat</a>
+                <a href="/water-intake-calculator/">Water</a>
+                <a href="/macro-calculator/">Macro</a>
+                <a href="/ideal-weight-calculator/">Ideal Weight</a>
+                <a href="/tdee-calculator/">TDEE</a>
+                <a href="/weight-loss-calculator/">Weight Loss</a>
                 <a href="/about/">About</a>
                 <a href="/contact/">Contact</a>
                 <a href="/privacy-policy/">Privacy Policy</a>
@@ -395,6 +454,7 @@
         var currentUnit = 'metric';
         var currentGender = 'male';
         var currentGoal = 'maintain';
+        var currentDiet = 'balanced';
 
         function setUnit(unit) {
             currentUnit = unit;
@@ -424,6 +484,13 @@
             document.getElementById('loseBtn').classList.toggle('active', goal === 'lose');
             document.getElementById('maintainBtn').classList.toggle('active', goal === 'maintain');
             document.getElementById('gainBtn').classList.toggle('active', goal === 'gain');
+        }
+
+        function setDiet(diet) {
+            currentDiet = diet;
+            document.getElementById('balancedBtn').classList.toggle('active', diet === 'balanced');
+            document.getElementById('lowcarbBtn').classList.toggle('active', diet === 'lowcarb');
+            document.getElementById('highproteinBtn').classList.toggle('active', diet === 'highprotein');
         }
 
         // Macro Calculation
@@ -456,52 +523,53 @@
 
             var tdee = bmr * activity;
 
-            // Goal-based calories + macro split
-            var targetCal, pPct, cPct, fPct, goalText;
+            // Adjust for goal
+            var calories, goalNote;
             if (currentGoal === 'lose') {
-                targetCal = tdee - 500;
-                pPct = 0.40; cPct = 0.30; fPct = 0.30;
-                goalText = 'Lose Fat';
+                calories = tdee - 500;
+                goalNote = 'to lose ~0.5 kg per week';
             } else if (currentGoal === 'gain') {
-                targetCal = tdee + 300;
-                pPct = 0.25; cPct = 0.50; fPct = 0.25;
-                goalText = 'Gain Muscle';
+                calories = tdee + 250;
+                goalNote = 'to gain ~0.25 kg per week';
             } else {
-                targetCal = tdee;
-                pPct = 0.30; cPct = 0.40; fPct = 0.30;
-                goalText = 'Maintain';
+                calories = tdee;
+                goalNote = 'to maintain your weight';
             }
 
-            // Grams
-            var proteinG = Math.round((targetCal * pPct) / 4);
-            var carbsG = Math.round((targetCal * cPct) / 4);
-            var fatG = Math.round((targetCal * fPct) / 9);
+            // Macro split by diet style
+            var pPct, cPct, fPct;
+            if (currentDiet === 'balanced')        { pPct = 0.30; cPct = 0.40; fPct = 0.30; }
+            else if (currentDiet === 'lowcarb')    { pPct = 0.35; cPct = 0.25; fPct = 0.40; }
+            else                                   { pPct = 0.40; cPct = 0.30; fPct = 0.30; }
+
+            // Grams: protein 4 kcal/g, carbs 4 kcal/g, fat 9 kcal/g
+            var proteinG = Math.round((calories * pPct) / 4);
+            var carbsG = Math.round((calories * cPct) / 4);
+            var fatG = Math.round((calories * fPct) / 9);
 
             // Display
-            document.getElementById('calValue').textContent = Math.round(targetCal).toLocaleString();
-            document.getElementById('goalLabel').textContent = goalText;
-            document.getElementById('proteinValue').textContent = proteinG;
-            document.getElementById('carbsValue').textContent = carbsG;
-            document.getElementById('fatValue').textContent = fatG;
-            document.getElementById('proteinPct').textContent = Math.round(pPct * 100) + '% of calories · builds & repairs muscle';
-            document.getElementById('carbsPct').textContent = Math.round(cPct * 100) + '% of calories · your body\'s main energy source';
-            document.getElementById('fatPct').textContent = Math.round(fPct * 100) + '% of calories · hormones & nutrient absorption';
+            document.getElementById('calValue').textContent = Math.round(calories).toLocaleString();
+            document.getElementById('goalNote').textContent = goalNote;
 
-            // Animate bars
-            document.getElementById('proteinBar').style.width = (pPct * 100) + '%';
-            document.getElementById('carbsBar').style.width = (cPct * 100) + '%';
-            document.getElementById('fatBar').style.width = (fPct * 100) + '%';
+            document.getElementById('proteinG').textContent = proteinG;
+            document.getElementById('carbsG').textContent = carbsG;
+            document.getElementById('fatG').textContent = fatG;
 
-            // Safety warning
-            var minSafe = (currentGender === 'male') ? 1500 : 1200;
-            var safetyNote = document.getElementById('safetyNote');
-            if (targetCal < minSafe) {
-                safetyNote.classList.add('show');
-            } else {
-                safetyNote.classList.remove('show');
-            }
+            document.getElementById('proteinPct').textContent = Math.round(pPct * 100) + '% of calories · ' + Math.round(calories * pPct).toLocaleString() + ' kcal';
+            document.getElementById('carbsPct').textContent = Math.round(cPct * 100) + '% of calories · ' + Math.round(calories * cPct).toLocaleString() + ' kcal';
+            document.getElementById('fatPct').textContent = Math.round(fPct * 100) + '% of calories · ' + Math.round(calories * fPct).toLocaleString() + ' kcal';
 
+            // Per meal (4 meals)
+            document.getElementById('perMeal').textContent = Math.round(proteinG / 4) + 'g protein · ' + Math.round(carbsG / 4) + 'g carbs · ' + Math.round(fatG / 4) + 'g fat';
+
+            // Show result, then animate bars
             document.getElementById('result').classList.add('show');
+            setTimeout(function () {
+                document.getElementById('proteinBar').style.width = (pPct * 100) + '%';
+                document.getElementById('carbsBar').style.width = (cPct * 100) + '%';
+                document.getElementById('fatBar').style.width = (fPct * 100) + '%';
+            }, 100);
+
             document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
     </script>
