@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ideal Weight Calculator — What's Your Healthy Weight? | CalcFitly</title>
-    <meta name="description" content="Free Ideal Weight Calculator: find your ideal body weight using 4 scientific formulas (Devine, Robinson, Miller, Hamwi) plus healthy BMI range. No sign-up, 100% private.">
+    <title>Ideal Weight Calculator — Healthy Weight Range Free | CalcFitly</title>
+    <meta name="description" content="Free Ideal Weight Calculator: find your healthy weight range using 4 scientific formulas (Devine, Robinson, Miller, Hamwi) plus BMI-based range. No sign-up, 100% private.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💪</text></svg>">
 
     <script type="application/ld+json">
@@ -14,28 +14,38 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is my ideal body weight?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Ideal weight depends on your height and gender. Popular formulas like Devine, Robinson, Miller, and Hamwi give slightly different estimates, which is why a healthy range (based on BMI 18.5–24.9) is often more useful than a single number." }
+          "name": "What is my ideal weight?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Your ideal weight depends on your height, gender, age, and body frame. For most adults, a BMI-based healthy range is the best guide: for someone 175 cm tall, that's roughly 57–76 kg. Use this calculator for your personal range." }
         },
         {
           "@type": "Question",
           "name": "Which ideal weight formula is most accurate?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No single formula is perfect for everyone. The Devine formula is the most widely used in medicine, but all formulas are estimates. The healthy BMI range is generally the best guide for most people." }
+          "acceptedAnswer": { "@type": "Answer", "text": "No single formula is 'most accurate' — they were all developed from population averages. The Devine formula is most widely used in medicine, but the BMI-based healthy range (18.5–24.9) is generally the most practical guide for everyday health." }
         },
         {
           "@type": "Question",
-          "name": "Why do different formulas give different results?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Each formula was developed using different populations and methods. That's why we show all four plus an average — your true ideal weight likely falls somewhere within that cluster." }
+          "name": "Does ideal weight depend on age?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Most formulas don't account for age directly. However, research suggests older adults (65+) may do best at the higher end of the healthy BMI range, as slightly more weight is associated with better outcomes in later life." }
         },
         {
           "@type": "Question",
-          "name": "Does ideal weight account for muscle mass?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. These formulas are based on height and gender only. Muscular people may healthily weigh more than the 'ideal' number. Body fat percentage is a better measure for athletes." }
+          "name": "Why do the formulas give different results?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Each formula was developed using different populations and methods — Devine (1974) for drug dosing, Robinson and Miller as refinements, and Hamwi (1964) for clinical use. The 2–4 kg spread between them shows that 'ideal weight' is a range, not a single magic number." }
+        },
+        {
+          "@type": "Question",
+          "name": "Should muscular people use ideal weight formulas?",
+          "acceptedAnswer": { "@type": "Answer", "text": "With caution. These formulas don't account for muscle mass, so very muscular people may healthily weigh more than their 'ideal.' Body fat percentage is a better guide for athletes and regular gym-goers." }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast can I reach my ideal weight?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A safe rate is 0.25–0.5 kg per week through a modest calorie deficit of 400–500 kcal daily. Losing 10 kg takes roughly 5–10 months at this pace — slower loss is far more likely to stay off permanently." }
         },
         {
           "@type": "Question",
           "name": "Is my data saved when I use this calculator?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. All calculations run entirely in your browser. Your height and results are never stored or sent anywhere." }
+          "acceptedAnswer": { "@type": "Answer", "text": "No. All calculations run entirely in your browser. Your details and results are never stored or sent anywhere." }
         }
       ]
     }
@@ -88,11 +98,11 @@
         .unit-toggle { display: flex; background: #eefaf4; border-radius: 999px; padding: 5px; margin-bottom: 20px; }
         .unit-toggle button { flex: 1; padding: 11px; border: none; border-radius: 999px; font-weight: 700; font-size: 0.9em; cursor: pointer; background: transparent; color: var(--muted); transition: 0.2s; }
         .unit-toggle button.active { background: linear-gradient(135deg, var(--green), var(--green-light)); color: #fff; box-shadow: 0 4px 10px rgba(17,153,142,0.25); }
-        .input-group { margin-bottom: 16px; }
         .input-group label { display: block; font-weight: 700; font-size: 0.9em; margin-bottom: 7px; }
         .input-group input { width: 100%; padding: 13px 15px; border: 2px solid var(--border); border-radius: 12px; font-size: 1em; font-family: inherit; transition: 0.2s; background: #fff; }
         .input-group input:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 4px rgba(17,153,142,0.1); }
         .input-hint { font-size: 0.8em; color: var(--muted); margin-top: 6px; }
+        .input-group { margin-bottom: 16px; }
         .calc-btn { width: 100%; padding: 15px; border: none; border-radius: 999px; background: linear-gradient(135deg, var(--green), var(--green-light)); color: #fff; font-size: 1.05em; font-weight: 800; cursor: pointer; box-shadow: 0 8px 20px rgba(17,153,142,0.3); transition: 0.2s; margin-top: 8px; }
         .calc-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(17,153,142,0.38); }
 
@@ -102,15 +112,11 @@
         .range-box { text-align: center; padding: 26px; border-radius: 18px; background: #eefaf4; border: 1px solid var(--border); margin-bottom: 18px; }
         .range-label { color: var(--muted); font-weight: 600; font-size: 0.9em; }
         .range-num { font-size: 2.2em; font-weight: 800; background: linear-gradient(135deg, var(--green), var(--green-light)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-        .range-sub { color: var(--muted); font-size: 0.85em; margin-top: 6px; }
-        .avg-box { text-align: center; padding: 16px; border-radius: 14px; background: #fff; border: 2px dashed var(--green); margin-bottom: 18px; }
-        .avg-box strong { color: var(--green-dark); font-size: 1.3em; }
-        .avg-box span { color: var(--muted); font-size: 0.85em; }
-        .formula-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+        .range-sub { color: var(--muted); font-size: 0.88em; margin-top: 6px; }
+        .formula-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
         .formula-card { text-align: center; padding: 18px 12px; border-radius: 16px; border: 1px solid var(--border); background: #fff; }
-        .formula-card .f-name { font-weight: 700; font-size: 0.85em; color: var(--muted); margin-bottom: 6px; }
-        .formula-card .f-num { font-size: 1.5em; font-weight: 800; color: var(--green-dark); }
-        .formula-card .f-year { font-size: 0.72em; color: var(--muted); }
+        .formula-card .f-name { font-size: 0.82em; color: var(--muted); font-weight: 600; margin-bottom: 6px; }
+        .formula-card .f-num { font-size: 1.4em; font-weight: 800; color: var(--green-dark); }
 
         /* ===== CONTENT ===== */
         .content-card { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 32px; margin-bottom: 22px; }
@@ -157,7 +163,6 @@
             .nav-links.open { display: flex; }
             .calc-card { padding: 24px; }
             .formula-grid { grid-template-columns: 1fr; }
-            .range-num { font-size: 1.7em; }
         }
     </style>
 </head>
@@ -181,9 +186,9 @@
     <!-- HERO -->
     <header class="hero">
         <div class="hero-inner">
-            <span class="pill">🎯 Free · Instant · 100% Private</span>
+            <span class="pill">⚖️ Free · Instant · 100% Private</span>
             <h1>Ideal Weight <span class="grad">Calculator</span></h1>
-            <p>Discover your healthy weight range using 4 scientific formulas — not just one number, but the full picture.</p>
+            <p>Find your healthy weight range using 4 scientific formulas — plus your BMI-based target.</p>
         </div>
     </header>
 
@@ -194,7 +199,7 @@
             <span class="toggle-label">Units</span>
             <div class="unit-toggle">
                 <button id="metricBtn" class="active" onclick="setUnit('metric')">Metric (cm)</button>
-                <button id="imperialBtn" onclick="setUnit('imperial')">Imperial (inches)</button>
+                <button id="imperialBtn" onclick="setUnit('imperial')">Imperial (in)</button>
             </div>
 
             <span class="toggle-label">Gender</span>
@@ -213,35 +218,27 @@
 
             <div class="result" id="result">
                 <div class="range-box">
-                    <div class="range-label">Your Healthy Weight Range (BMI 18.5–24.9)</div>
-                    <div class="range-num" id="rangeValue">0 – 0 kg</div>
-                    <div class="range-sub">Anywhere in this range is considered healthy for your height</div>
-                </div>
-
-                <div class="avg-box">
-                    <span>Average of 4 formulas: </span><strong id="avgValue">0 kg</strong>
+                    <div class="range-label">Your Healthy Weight Range (BMI-based)</div>
+                    <div class="range-num" id="rangeValue">—</div>
+                    <div class="range-sub">based on the WHO healthy BMI range of 18.5–24.9</div>
                 </div>
 
                 <div class="formula-grid">
                     <div class="formula-card">
-                        <div class="f-name">Devine Formula</div>
-                        <div class="f-num" id="devineValue">0</div>
-                        <div class="f-year">1974 · most used in medicine</div>
+                        <div class="f-name">Devine Formula (1974)</div>
+                        <div class="f-num" id="devineValue">—</div>
                     </div>
                     <div class="formula-card">
-                        <div class="f-name">Robinson Formula</div>
-                        <div class="f-num" id="robinsonValue">0</div>
-                        <div class="f-year">1983 · Devine refinement</div>
+                        <div class="f-name">Robinson Formula (1983)</div>
+                        <div class="f-num" id="robinsonValue">—</div>
                     </div>
                     <div class="formula-card">
-                        <div class="f-name">Miller Formula</div>
-                        <div class="f-num" id="millerValue">0</div>
-                        <div class="f-year">1983 · lean body focus</div>
+                        <div class="f-name">Miller Formula (1983)</div>
+                        <div class="f-num" id="millerValue">—</div>
                     </div>
                     <div class="formula-card">
-                        <div class="f-name">Hamwi Formula</div>
-                        <div class="f-num" id="hamwiValue">0</div>
-                        <div class="f-year">1964 · the original</div>
+                        <div class="f-name">Hamwi Formula (1964)</div>
+                        <div class="f-num" id="hamwiValue">—</div>
                     </div>
                 </div>
             </div>
@@ -252,37 +249,61 @@
     <section class="section">
         <span class="section-tag">Learn</span>
         <h2>Understanding Ideal Weight</h2>
-        <p class="section-sub">Why there's no single "perfect" number.</p>
+        <p class="section-sub">Why "ideal weight" is a range — not a single magic number.</p>
 
         <div class="content-card">
-            <h3>🧮 The 4 Formulas Explained</h3>
-            <p>All formulas start with a base weight at 5 feet tall, then add weight for each additional inch:</p>
+            <h3>🧮 What Are These 4 Formulas?</h3>
+            <p>Each formula was developed by researchers trying to estimate a healthy weight from height alone:</p>
+            <ul>
+                <li><strong>Devine (1974):</strong> The most widely used formula in medicine — originally created to calculate drug dosages. Men: 50 kg + 2.3 kg per inch over 5 feet. Women: 45.5 kg + 2.3 kg per inch over 5 feet.</li>
+                <li><strong>Robinson (1983):</strong> A refinement of Devine based on larger population data, giving slightly lower estimates.</li>
+                <li><strong>Miller (1983):</strong> Another Devine update that tends to give the lowest estimates of the four.</li>
+                <li><strong>Hamwi (1964):</strong> The oldest — developed for clinical dietetics. Men: 48 kg + 2.7 kg per inch over 5 feet. Women: 45.5 kg + 2.2 kg per inch over 5 feet.</li>
+            </ul>
+            <p>The fact that they disagree by 2–4 kg tells you something important: <strong>there is no single perfect weight</strong> — only a healthy range.</p>
+        </div>
+
+        <div class="content-card">
+            <h3>📊 Quick Reference: Healthy Weight by Height</h3>
             <table class="iw-table">
-                <tr><th>Formula</th><th>Men</th><th>Women</th></tr>
-                <tr><td>Devine (1974)</td><td>50 kg + 2.3 kg/inch</td><td>45.5 kg + 2.3 kg/inch</td></tr>
-                <tr><td>Robinson (1983)</td><td>52 kg + 1.9 kg/inch</td><td>49 kg + 1.7 kg/inch</td></tr>
-                <tr><td>Miller (1983)</td><td>56.2 kg + 1.41 kg/inch</td><td>53.1 kg + 1.36 kg/inch</td></tr>
-                <tr><td>Hamwi (1964)</td><td>48 kg + 2.7 kg/inch</td><td>45.5 kg + 2.2 kg/inch</td></tr>
+                <tr><th>Height</th><th>Healthy Range (BMI 18.5–24.9)</th></tr>
+                <tr><td>150 cm (4'11")</td><td>41.6 – 56.0 kg</td></tr>
+                <tr><td>160 cm (5'3")</td><td>47.4 – 63.7 kg</td></tr>
+                <tr><td>170 cm (5'7")</td><td>53.5 – 72.0 kg</td></tr>
+                <tr><td>175 cm (5'9")</td><td>56.7 – 76.3 kg</td></tr>
+                <tr><td>180 cm (5'11")</td><td>59.9 – 80.7 kg</td></tr>
+                <tr><td>190 cm (6'3")</td><td>66.8 – 89.9 kg</td></tr>
             </table>
         </div>
 
         <div class="content-card">
-            <h3>📏 Why the BMI Range Matters More</h3>
-            <p>Single-number formulas can't account for your <strong>frame size, muscle mass, or body composition</strong>. That's why health organizations recommend a <strong>range</strong> instead:</p>
+            <h3>⚠️ What These Formulas Don't Account For</h3>
             <ul>
-                <li>The healthy range = weights where your BMI falls between 18.5 and 24.9</li>
-                <li>It gives you flexibility — anywhere in the range is healthy</li>
-                <li>Muscular? You might healthily sit above the range (check body fat % instead)</li>
+                <li><strong>Muscle mass:</strong> A muscular athlete may healthily weigh 5–10 kg more than any formula suggests. Muscle is denser than fat.</li>
+                <li><strong>Body frame:</strong> People with naturally larger bone structures can carry more weight healthily. A rough check: wrap your thumb and finger around your wrist — if they don't touch, you likely have a larger frame.</li>
+                <li><strong>Age:</strong> Older adults (65+) may do best at the higher end of the healthy range — research links slightly higher weight with better outcomes in later life.</li>
+                <li><strong>Ethnicity:</strong> Health risks begin at different weights for different populations. Asian adults, for example, may face increased risk at the lower end of the "healthy" range.</li>
+            </ul>
+            <p><strong>Bottom line:</strong> Treat your result as a starting target, not a verdict. How you feel, perform, and what your body fat percentage shows matter just as much.</p>
+        </div>
+
+        <div class="content-card">
+            <h3>🎯 Which Number Should You Actually Aim For?</h3>
+            <p>Here's a practical approach:</p>
+            <ul>
+                <li><strong>If you're far from the range:</strong> Aim for the closest edge of your healthy BMI range first — not the middle. Reaching it is a huge health win on its own.</li>
+                <li><strong>If you're inside the range:</strong> You're already in a healthy zone. Focus on body composition (body fat %) and fitness rather than the scale.</li>
+                <li><strong>If you lift weights:</strong> Use body fat percentage as your main guide and treat these formulas as loose references.</li>
+                <li><strong>Set process goals too:</strong> "Walk 8,000 steps daily" is more controllable than "lose 10 kg" — and it gets you there.</li>
             </ul>
         </div>
 
         <div class="content-card">
-            <h3>⚠️ Important Limitations</h3>
+            <h3>🚀 Reaching Your Ideal Weight Safely</h3>
             <ul>
-                <li>These formulas were designed for adults — not children or teens.</li>
-                <li>They don't consider muscle mass, bone density, or body frame.</li>
-                <li>Athletes may weigh more than "ideal" while being very healthy.</li>
-                <li>Use these numbers as a general guide, not a strict target.</li>
+                <li><strong>To lose:</strong> A 400–500 kcal daily deficit produces ~0.5 kg of fat loss per week. At that pace, 10 kg takes about 5 months — and is far more likely to stay off than crash dieting.</li>
+                <li><strong>To gain:</strong> A 250–300 kcal daily surplus with strength training builds roughly 0.25 kg per week, mostly muscle.</li>
+                <li><strong>Either way:</strong> Prioritize protein (1.6–2.2 g per kg daily), lift weights 2–4 times weekly, and sleep 7–9 hours. These three habits do more for your body composition than any number on the scale.</li>
             </ul>
         </div>
     </section>
@@ -294,24 +315,32 @@
         <p class="section-sub">Quick answers to common questions.</p>
         <div class="faq-list">
             <details>
-                <summary>What is my ideal body weight?</summary>
-                <p>Ideal weight depends on your height and gender. Popular formulas like Devine, Robinson, Miller, and Hamwi give slightly different estimates, which is why a healthy range (based on BMI 18.5–24.9) is often more useful than a single number.</p>
+                <summary>What is my ideal weight?</summary>
+                <p>Your ideal weight depends on your height, gender, age, and body frame. For most adults, a BMI-based healthy range is the best guide: for someone 175 cm tall, that's roughly 57–76 kg. Use this calculator for your personal range.</p>
             </details>
             <details>
                 <summary>Which ideal weight formula is most accurate?</summary>
-                <p>No single formula is perfect for everyone. The Devine formula is the most widely used in medicine, but all formulas are estimates. The healthy BMI range is generally the best guide for most people.</p>
+                <p>No single formula is "most accurate" — they were all developed from population averages. The Devine formula is most widely used in medicine, but the BMI-based healthy range (18.5–24.9) is generally the most practical guide for everyday health.</p>
             </details>
             <details>
-                <summary>Why do different formulas give different results?</summary>
-                <p>Each formula was developed using different populations and methods. That's why we show all four plus an average — your true ideal weight likely falls somewhere within that cluster.</p>
+                <summary>Does ideal weight depend on age?</summary>
+                <p>Most formulas don't account for age directly. However, research suggests older adults (65+) may do best at the higher end of the healthy BMI range, as slightly more weight is associated with better outcomes in later life.</p>
             </details>
             <details>
-                <summary>Does ideal weight account for muscle mass?</summary>
-                <p>No. These formulas are based on height and gender only. Muscular people may healthily weigh more than the 'ideal' number. Body fat percentage is a better measure for athletes.</p>
+                <summary>Why do the formulas give different results?</summary>
+                <p>Each formula was developed using different populations and methods — Devine (1974) for drug dosing, Robinson and Miller as refinements, and Hamwi (1964) for clinical use. The 2–4 kg spread between them shows that "ideal weight" is a range, not a single magic number.</p>
+            </details>
+            <details>
+                <summary>Should muscular people use ideal weight formulas?</summary>
+                <p>With caution. These formulas don't account for muscle mass, so very muscular people may healthily weigh more than their "ideal." Body fat percentage is a better guide for athletes and regular gym-goers.</p>
+            </details>
+            <details>
+                <summary>How fast can I reach my ideal weight?</summary>
+                <p>A safe rate is 0.25–0.5 kg per week through a modest calorie deficit of 400–500 kcal daily. Losing 10 kg takes roughly 5–10 months at this pace — slower loss is far more likely to stay off permanently.</p>
             </details>
             <details>
                 <summary>Is my data saved when I use this calculator?</summary>
-                <p>No. All calculations run entirely in your browser. Your height and results are never stored or sent anywhere.</p>
+                <p>No. All calculations run entirely in your browser. Your details and results are never stored or sent anywhere.</p>
             </details>
         </div>
     </section>
@@ -319,9 +348,9 @@
     <!-- CTA -->
     <section class="section">
         <div class="cta">
-            <h2>Plan Your Nutrition 🥗</h2>
-            <p>Get your daily protein, carbs, and fat targets for your goal.</p>
-            <a href="/macro-calculator/" class="btn-white">Try Macro Calculator — Free</a>
+            <h2>Know Your Target? Plan the Journey 📉</h2>
+            <p>See exactly when you'll reach your goal weight with a safe daily calorie plan.</p>
+            <a href="/weight-loss-calculator/" class="btn-white">Try Weight Loss Calculator — Free</a>
         </div>
     </section>
 
@@ -331,12 +360,14 @@
             <div class="footer-logo">💪 Calc<span>Fitly</span></div>
             <div class="footer-links">
                 <a href="/">Home</a>
-                <a href="/bmi-calculator/">BMI Calculator</a>
-                <a href="/calorie-calculator/">Calorie Calculator</a>
-                <a href="/body-fat-calculator/">Body Fat Calculator</a>
-                <a href="/water-intake-calculator/">Water Intake</a>
-                <a href="/macro-calculator/">Macro Calculator</a>
+                <a href="/bmi-calculator/">BMI</a>
+                <a href="/calorie-calculator/">Calorie</a>
+                <a href="/body-fat-calculator/">Body Fat</a>
+                <a href="/water-intake-calculator/">Water</a>
+                <a href="/macro-calculator/">Macro</a>
                 <a href="/ideal-weight-calculator/">Ideal Weight</a>
+                <a href="/tdee-calculator/">TDEE</a>
+                <a href="/weight-loss-calculator/">Weight Loss</a>
                 <a href="/about/">About</a>
                 <a href="/contact/">Contact</a>
                 <a href="/privacy-policy/">Privacy Policy</a>
@@ -388,50 +419,48 @@
                 return;
             }
 
-            // Convert to inches & cm
-            var heightIn = (currentUnit === 'metric') ? height / 2.54 : height;
+            // Convert to cm and inches
             var heightCm = (currentUnit === 'metric') ? height : height * 2.54;
+            var heightIn = heightCm / 2.54;
 
-            if (heightIn < 48 || heightIn > 96) {
-                alert('Please enter a height between 4 ft (122 cm) and 8 ft (244 cm).');
+            if (heightCm < 130 || heightCm > 230) {
+                alert('Please enter a height between 130 and 230 cm (51–91 inches).');
                 return;
             }
 
-            var over5ft = heightIn - 60; // inches above 5 feet (can be negative)
-            var devine, robinson, miller, hamwi;
+            var isMetric = (currentUnit === 'metric');
+            var wUnit = isMetric ? ' kg' : ' lbs';
 
-            if (currentGender === 'male') {
-                devine = 50 + 2.3 * over5ft;
-                robinson = 52 + 1.9 * over5ft;
-                miller = 56.2 + 1.41 * over5ft;
-                hamwi = 48 + 2.7 * over5ft;
-            } else {
-                devine = 45.5 + 2.3 * over5ft;
-                robinson = 49 + 1.7 * over5ft;
-                miller = 53.1 + 1.36 * over5ft;
-                hamwi = 45.5 + 2.2 * over5ft;
+            function fmt(kg) {
+                return isMetric ? kg.toFixed(1) + wUnit : (kg * 2.20462).toFixed(1) + wUnit;
             }
 
-            var avg = (devine + robinson + miller + hamwi) / 4;
-
-            // Healthy BMI range (18.5 - 24.9)
+            // BMI-based healthy range (18.5–24.9)
             var heightM = heightCm / 100;
             var minKg = 18.5 * heightM * heightM;
             var maxKg = 24.9 * heightM * heightM;
+            document.getElementById('rangeValue').textContent = fmt(minKg) + ' – ' + fmt(maxKg);
 
-            // Display in user's unit
-            var isMetric = (currentUnit === 'metric');
-            var u = isMetric ? ' kg' : ' lbs';
-            function disp(kg) {
-                return isMetric ? kg.toFixed(1) : (kg * 2.20462).toFixed(1);
+            // Formulas use inches over 5 feet (60 inches)
+            var inchesOver5ft = heightIn - 60;
+            var devine, robinson, miller, hamwi;
+
+            if (currentGender === 'male') {
+                devine = 50 + 2.3 * inchesOver5ft;
+                robinson = 52 + 1.9 * inchesOver5ft;
+                miller = 56.2 + 1.41 * inchesOver5ft;
+                hamwi = 48 + 2.7 * inchesOver5ft;
+            } else {
+                devine = 45.5 + 2.3 * inchesOver5ft;
+                robinson = 49 + 1.7 * inchesOver5ft;
+                miller = 53.1 + 1.36 * inchesOver5ft;
+                hamwi = 45.5 + 2.2 * inchesOver5ft;
             }
 
-            document.getElementById('rangeValue').textContent = disp(minKg) + ' – ' + disp(maxKg) + u;
-            document.getElementById('avgValue').textContent = disp(avg) + u;
-            document.getElementById('devineValue').textContent = disp(devine) + u;
-            document.getElementById('robinsonValue').textContent = disp(robinson) + u;
-            document.getElementById('millerValue').textContent = disp(miller) + u;
-            document.getElementById('hamwiValue').textContent = disp(hamwi) + u;
+            document.getElementById('devineValue').textContent = fmt(devine);
+            document.getElementById('robinsonValue').textContent = fmt(robinson);
+            document.getElementById('millerValue').textContent = fmt(miller);
+            document.getElementById('hamwiValue').textContent = fmt(hamwi);
 
             document.getElementById('result').classList.add('show');
             document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'center' });
