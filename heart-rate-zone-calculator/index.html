@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Rate Zone Calculator — Training Zones Free | CalcFitly</title>
+    <meta name="description" content="Free Heart Rate Zone Calculator: find your 5 training zones for fat burn, cardio, and peak performance using your max and target heart rate. No sign-up, 100% private.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💪</text></svg>">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is my maximum heart rate?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The most common estimate is 220 minus your age. A 30-year-old has an estimated max heart rate of 190 bpm. This is a population average — individual max heart rates can vary by 10–15 bpm." }
+        },
+        {
+          "@type": "Question",
+          "name": "What heart rate zone burns the most fat?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Zone 2 (60–70% of max heart rate) burns the highest percentage of calories from fat. However, higher zones burn more total calories per minute, so both approaches work for fat loss — total calorie deficit matters most." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a normal resting heart rate?",
+          "acceptedAnswer": { "@type": "Answer", "text": "For most adults, 60–100 bpm is normal. Fit individuals often rest at 50–60 bpm, and elite endurance athletes can be in the 40s. A lower resting heart rate generally indicates better cardiovascular fitness." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long should I train in each zone?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A common guideline is the 80/20 rule: about 80% of your training time in Zones 1–2 (easy) and 20% in Zones 3–5 (moderate to hard). Most beginners do the opposite — too much moderate effort, not enough truly easy work." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the 220-minus-age formula accurate?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It's a reasonable estimate for most people, but it can be off by 10–15 bpm in either direction. If you train seriously, a field test (like a hard 5K effort) or lab test gives a more personal number." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a dangerous heart rate during exercise?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Consistently exceeding your estimated max heart rate, or experiencing chest pain, dizziness, or unusual shortness of breath during exercise, warrants stopping and consulting a doctor. Healthy people training in Zones 1–4 are generally safe." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data saved when I use this calculator?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. All calculations run entirely in your browser. Your details and results are never stored or sent anywhere." }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --green: #11998e;
+            --green-light: #38ef7d;
+            --green-dark: #0d7a72;
+            --ink: #14212b;
+            --muted: #5f6b76;
+            --bg: #f4fbf8;
+            --border: #e4efe9;
+            --z1: #6c9bcf;
+            --z2: #2ecc71;
+            --z3: #f0a500;
+            --z4: #e67e22;
+            --z5: #e63946;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+
+        /* ===== NAVBAR ===== */
+        .navbar { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+        .nav-inner { max-width: 1100px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4em; font-weight: 800; text-decoration: none; color: var(--ink); }
+        .logo span { color: var(--green); }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.95em; }
+        .nav-links a:hover { color: var(--green); }
+        .nav-cta { background: linear-gradient(135deg, var(--green), var(--green-light)); color: #fff !important; padding: 10px 20px; border-radius: 999px; box-shadow: 0 4px 12px rgba(17,153,142,0.25); }
+        .menu-btn { display: none; background: none; border: none; font-size: 1.6em; cursor: pointer; color: var(--ink); }
+
+        /* ===== HERO ===== */
+        .hero { position: relative; overflow: hidden; text-align: center; padding: 60px 20px 50px; background: linear-gradient(180deg, #e9fbf3 0%, var(--bg) 100%); }
+        .hero::before { content: ''; position: absolute; width: 380px; height: 380px; background: radial-gradient(circle, rgba(56,239,125,0.28), transparent 70%); top: -120px; left: -120px; }
+        .hero::after { content: ''; position: absolute; width: 380px; height: 380px; background: radial-gradient(circle, rgba(17,153,142,0.22), transparent 70%); bottom: -140px; right: -120px; }
+        .hero-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+        .pill { display: inline-block; background: #fff; border: 1px solid var(--border); color: var(--green-dark); font-weight: 600; font-size: 0.85em; padding: 8px 18px; border-radius: 999px; box-shadow: 0 2px 8px rgba(17,153,142,0.08); margin-bottom: 20px; }
+        .hero h1 { font-size: clamp(1.9em, 4.5vw, 2.8em); font-weight: 800; letter-spacing: -1px; line-height: 1.15; margin-bottom: 14px; }
+        .grad { background: linear-gradient(135deg, var(--green), var(--green-light)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .hero p { color: var(--muted); font-size: 1.05em; max-width: 580px; margin: 0 auto; }
+
+        /* ===== SECTIONS ===== */
+        .section { max-width: 900px; margin: 0 auto; padding: 55px 20px; }
+        .section-tag { display: block; text-align: center; color: var(--green); font-weight: 700; font-size: 0.82em; text-transform: uppercase; letter-spacing: 2px; }
+        .section h2 { text-align: center; font-size: clamp(1.5em, 3vw, 2em); font-weight: 800; margin: 10px 0 8px; letter-spacing: -0.5px; }
+        .section-sub { text-align: center; color: var(--muted); max-width: 560px; margin: 0 auto 36px; }
+
+        /* ===== CALCULATOR CARD ===== */
+        .calc-card { background: #fff; border: 1px solid var(--border); border-radius: 24px; padding: 34px; box-shadow: 0 10px 30px rgba(17,153,142,0.08); max-width: 620px; margin: 0 auto; }
+        .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .input-group label { display: block; font-weight: 700; font-size: 0.9em; margin-bottom: 7px; }
+        .input-group input { width: 100%; padding: 13px 15px; border: 2px solid var(--border); border-radius: 12px; font-size: 1em; font-family: inherit; transition: 0.2s; background: #fff; }
+        .input-group input:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 4px rgba(17,153,142,0.1); }
+        .input-hint { font-size: 0.8em; color: var(--muted); margin-top: 6px; }
+        .calc-btn { width: 100%; padding: 15px; border: none; border-radius: 999px; background: linear-gradient(135deg, var(--green), var(--green-light)); color: #fff; font-size: 1.05em; font-weight: 800; cursor: pointer; box-shadow: 0 8px 20px rgba(17,153,142,0.3); transition: 0.2s; margin-top: 8px; }
+        .calc-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(17,153,142,0.38); }
+
+        /* ===== RESULT ===== */
+        .result { display: none; margin-top: 28px; }
+        .result.show { display: block; }
+        .hr-box { text-align: center; padding: 26px; border-radius: 18px; background: #eefaf4; border: 1px solid var(--border); margin-bottom: 18px; }
+        .hr-label { color: var(--muted); font-weight: 600; font-size: 0.9em; }
+        .hr-num { font-size: 3em; font-weight: 800; background: linear-gradient(135deg, var(--green), var(--green-light)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .hr-sub { color: var(--muted); font-size: 0.88em; margin-top: 6px; }
+
+        /* Zone rows */
+        .zone-row { display: flex; align-items: center; gap: 12px; padding: 14px; border: 1px solid var(--border); border-radius: 14px; margin-bottom: 10px; background: #fff; }
+        .z-dot { flex: 0 0 14px; height: 14px; border-radius: 50%; }
+        .d1 { background: var(--z1); } .d2 { background: var(--z2); } .d3 { background: var(--z3); } .d4 { background: var(--z4); } .d5 { background: var(--z5); }
+        .z-info { flex: 1; }
+        .z-name { font-weight: 700; font-size: 0.92em; }
+        .z-desc { font-size: 0.78em; color: var(--muted); }
+        .z-bpm { flex: 0 0 auto; text-align: right; font-weight: 800; font-size: 1em; }
+        .b1 { color: var(--z1); } .b2 { color: var(--z2); } .b3 { color: var(--z3); } .b4 { color: var(--z4); } .b5 { color: var(--z5); }
+        .z-pct { font-size: 0.72em; color: var(--muted); font-weight: 600; }
+
+        /* ===== CONTENT ===== */
+        .content-card { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 32px; margin-bottom: 22px; }
+        .content-card h3 { color: var(--green-dark); margin-bottom: 12px; font-size: 1.2em; }
+        .content-card p { color: var(--muted); margin-bottom: 12px; font-size: 0.97em; }
+        .content-card ul { margin: 0 0 12px 22px; color: var(--muted); }
+        .content-card li { margin-bottom: 6px; }
+        .zone-table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 0.95em; }
+        .zone-table th, .zone-table td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+        .zone-table th { background: #eefaf4; color: var(--green-dark); }
+        .zone-table tr:last-child td { border-bottom: none; }
+
+        /* ===== FAQ ===== */
+        .faq-list { max-width: 760px; margin: 0 auto; }
+        details { background: #fff; border: 1px solid var(--border); border-radius: 14px; margin-bottom: 12px; padding: 18px 22px; }
+        summary { cursor: pointer; font-weight: 700; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '+'; color: var(--green); font-size: 1.5em; font-weight: 700; flex-shrink: 0; }
+        details[open] summary::after { content: '−'; }
+        details p { margin-top: 12px; color: var(--muted); font-size: 0.95em; }
+
+        /* ===== CTA ===== */
+        .cta { background: linear-gradient(135deg, var(--green), var(--green-light)); border-radius: 24px; text-align: center; color: #fff; padding: 46px 24px; }
+        .cta h2 { font-size: clamp(1.4em, 3vw, 1.9em); margin-bottom: 10px; }
+        .cta p { opacity: 0.92; margin-bottom: 22px; }
+        .btn-white { display: inline-block; background: #fff; color: var(--green-dark); padding: 14px 30px; border-radius: 999px; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(0,0,0,0.12); transition: 0.2s; }
+        .btn-white:hover { transform: translateY(-2px); }
+
+        /* ===== FOOTER ===== */
+        footer { background: #0e2420; color: #cfe3dd; padding: 46px 20px 26px; margin-top: 60px; }
+        .footer-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+        .footer-logo { font-size: 1.3em; font-weight: 800; color: #fff; margin-bottom: 16px; }
+        .footer-logo span { color: var(--green-light); }
+        .footer-links { margin-bottom: 14px; }
+        footer a { color: #9fe8c9; text-decoration: none; margin: 0 10px; font-weight: 600; }
+        footer a:hover { color: #fff; }
+        .disclaimer { font-size: 0.82em; color: #7fa39a; max-width: 640px; margin: 14px auto 0; }
+        .copyright { margin-top: 16px; font-size: 0.85em; color: #7fa39a; }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 768px) {
+            .menu-btn { display: block; }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; align-items: flex-start; padding: 18px 22px; gap: 16px; border-bottom: 1px solid var(--border); box-shadow: 0 12px 24px rgba(0,0,0,0.07); }
+            .nav-links.open { display: flex; }
+            .input-row { grid-template-columns: 1fr; }
+            .calc-card { padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="/" class="logo">💪 Calc<span>Fitly</span></a>
+            <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+            <div class="nav-links" id="navLinks">
+                <a href="/">Home</a>
+                <a href="/#calculators">Calculators</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+                <a href="/bmi-calculator/" class="nav-cta">BMI Calculator</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-inner">
+            <span class="pill">❤️ Free · Instant · 100% Private</span>
+            <h1>Heart Rate Zone <span class="grad">Calculator</span></h1>
+            <p>Find your 5 training zones — from easy fat burn to maximum effort — and train smarter, not just harder.</p>
+        </div>
+    </header>
+
+    <!-- CALCULATOR -->
+    <section class="section">
+        <div class="calc-card">
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Age (years)</label>
+                    <input type="number" id="age" placeholder="e.g. 30" min="10" max="100">
+                </div>
+                <div class="input-group">
+                    <label>Resting Heart Rate (optional)</label>
+                    <input type="number" id="restingHR" placeholder="e.g. 65" min="30" max="120">
+                    <div class="input-hint">Measure it right after waking up for best accuracy</div>
+                </div>
+            </div>
+
+            <button class="calc-btn" onclick="calculateZones()">Calculate My Zones →</button>
+
+            <div class="result" id="result">
+                <div class="hr-box">
+                    <div class="hr-label">Your Estimated Max Heart Rate</div>
+                    <div class="hr-num"><span id="maxHR">0</span> bpm</div>
+                    <div class="hr-sub" id="methodNote">using the 220 − age formula</div>
+                </div>
+
+                <div class="zone-row">
+                    <span class="z-dot d1"></span>
+                    <div class="z-info">
+                        <div class="z-name">Zone 1 — Recovery</div>
+                        <div class="z-desc">Very easy · warm-ups, cool-downs, active recovery</div>
+                    </div>
+                    <div class="z-bpm b1"><span id="z1min">0</span>–<span id="z1max">0</span><div class="z-pct">50–60%</div></div>
+                </div>
+
+                <div class="zone-row">
+                    <span class="z-dot d2"></span>
+                    <div class="z-info">
+                        <div class="z-name">Zone 2 — Fat Burn</div>
+                        <div class="z-desc">Easy pace · you can hold a full conversation</div>
+                    </div>
+                    <div class="z-bpm b2"><span id="z2min">0</span>–<span id="z2max">0</span><div class="z-pct">60–70%</div></div>
+                </div>
+
+                <div class="zone-row">
+                    <span class="z-dot d3"></span>
+                    <div class="z-info">
+                        <div class="z-name">Zone 3 — Cardio</div>
+                        <div class="z-desc">Moderate · talking becomes harder, steady effort</div>
+                    </div>
+                    <div class="z-bpm b3"><span id="z3min">0</span>–<span id="z3max">0</span><div class="z-pct">70–80%</div></div>
+                </div>
+
+                <div class="zone-row">
+                    <span class="z-dot d4"></span>
+                    <div class="z-info">
+                        <div class="z-name">Zone 4 — Threshold</div>
+                        <div class="z-desc">Hard · short sentences only, sustainable 20–40 min</div>
+                    </div>
+                    <div class="z-bpm b4"><span id="z4min">0</span>–<span id="z4max">0</span><div class="z-pct">80–90%</div></div>
+                </div>
+
+                <div class="zone-row">
+                    <span class="z-dot d5"></span>
+                    <div class="z-info">
+                        <div class="z-name">Zone 5 — Max Effort</div>
+                        <div class="z-desc">All-out · sprints and intervals, seconds to minutes</div>
+                    </div>
+                    <div class="z-bpm b5"><span id="z5min">0</span>–<span id="z5max">0</span><div class="z-pct">90–100%</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEARN -->
+    <section class="section">
+        <span class="section-tag">Learn</span>
+        <h2>Understanding Heart Rate Zones</h2>
+        <p class="section-sub">Train at the right intensity — and stop guessing how hard to push.</p>
+
+        <div class="content-card">
+            <h3>🧮 How Are Heart Rate Zones Calculated?</h3>
+            <p>Your zones are based on your <strong>maximum heart rate (MHR)</strong> — the fastest your heart can beat during all-out effort. The classic estimate is simple:</p>
+            <ul>
+                <li><strong>Max HR = 220 − your age</strong></li>
+                <li>A 30-year-old: 220 − 30 = <strong>190 bpm</strong></li>
+            </ul>
+            <p>Each zone is then a percentage band of that max. If you entered your resting heart rate, this calculator uses the more personalized <strong>Karvonen method</strong>, which factors in your heart rate reserve (max HR − resting HR) — fitter people have lower resting rates and therefore different zone boundaries.</p>
+        </div>
+
+        <div class="content-card">
+            <h3>📊 What Each Zone Does for Your Body</h3>
+            <table class="zone-table">
+                <tr><th>Zone</th><th>Intensity</th><th>Main Benefit</th></tr>
+                <tr><td>Zone 1 · Recovery</td><td>50–60%</td><td>Active recovery, circulation, warm-up</td></tr>
+                <tr><td>Zone 2 · Fat Burn</td><td>60–70%</td><td>Builds aerobic base, burns fat efficiently</td></tr>
+                <tr><td>Zone 3 · Cardio</td><td>70–80%</td><td>Improves endurance and cardiovascular fitness</td></tr>
+                <tr><td>Zone 4 · Threshold</td><td>80–90%</td><td>Raises lactate threshold, race-pace fitness</td></tr>
+                <tr><td>Zone 5 · Max</td><td>90–100%</td><td>Top-end speed and power, VO2 max</td></tr>
+            </table>
+        </div>
+
+        <div class="content-card">
+            <h3>🔥 The Truth About the "Fat Burning Zone"</h3>
+            <p>Zone 2 is famous as the "fat burning zone" — and it's true that a higher <em>percentage</em> of calories come from fat at this intensity. But here's the catch:</p>
+            <ul>
+                <li>At Zone 2, roughly 50–60% of your calories come from fat</li>
+                <li>At Zone 4, only ~25% comes from fat — but you're burning nearly <strong>twice as many total calories per minute</strong></li>
+                <li>Result: you often burn more total fat per hour in higher zones anyway</li>
+            </ul>
+            <p><strong>Bottom line:</strong> For fat loss, your daily calorie deficit matters far more than which zone you train in. Zone 2's real superpower is that it's sustainable — you can do it daily without exhaustion.</p>
+        </div>
+
+        <div class="content-card">
+            <h3>📅 How to Structure Your Training Week</h3>
+            <p>Elite endurance athletes follow the <strong>80/20 rule</strong> — and it works for beginners too:</p>
+            <ul>
+                <li><strong>~80% of your time in Zones 1–2:</strong> Easy walking, jogging, or cycling. This builds your aerobic engine and recovery capacity.</li>
+                <li><strong>~20% in Zones 3–5:</strong> Tempo runs, intervals, hill sprints. This drives fitness gains.</li>
+            </ul>
+            <p>The most common mistake? Living in Zone 3 — the "gray zone" where every workout feels moderately hard but never truly easy or truly challenging. Polarizing your intensity gets better results with less fatigue.</p>
+        </div>
+
+        <div class="content-card">
+            <h3>⌚ Tips for Accurate Heart Rate Training</h3>
+            <ul>
+                <li><strong>Use a chest strap for intervals:</strong> Wrist sensors lag 10–20 seconds during rapid heart rate changes — fine for steady runs, unreliable for sprints.</li>
+                <li><strong>Measure resting HR correctly:</strong> First thing in the morning, before getting out of bed, for 3–5 days and take the average.</li>
+                <li><strong>Expect drift in heat:</strong> Heart rate runs 5–10 bpm higher in hot, humid weather at the same pace — adjust zones or slow down.</li>
+                <li><strong>Watch the trend, not the day:</strong> Poor sleep, stress, caffeine, and illness all raise heart rate. One odd reading means nothing; a rising weekly trend means rest.</li>
+                <li><strong>Re-test every few months:</strong> As fitness improves, your zones shift — recalculate to keep training accurate.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <span class="section-tag">FAQs</span>
+        <h2>Heart Rate Questions, Answered</h2>
+        <p class="section-sub">Quick answers to common questions.</p>
+        <div class="faq-list">
+            <details>
+                <summary>What is my maximum heart rate?</summary>
+                <p>The most common estimate is 220 minus your age. A 30-year-old has an estimated max heart rate of 190 bpm. This is a population average — individual max heart rates can vary by 10–15 bpm.</p>
+            </details>
+            <details>
+                <summary>What heart rate zone burns the most fat?</summary>
+                <p>Zone 2 (60–70% of max heart rate) burns the highest percentage of calories from fat. However, higher zones burn more total calories per minute, so both approaches work for fat loss — total calorie deficit matters most.</p>
+            </details>
+            <details>
+                <summary>What is a normal resting heart rate?</summary>
+                <p>For most adults, 60–100 bpm is normal. Fit individuals often rest at 50–60 bpm, and elite endurance athletes can be in the 40s. A lower resting heart rate generally indicates better cardiovascular fitness.</p>
+            </details>
+            <details>
+                <summary>How long should I train in each zone?</summary>
+                <p>A common guideline is the 80/20 rule: about 80% of your training time in Zones 1–2 (easy) and 20% in Zones 3–5 (moderate to hard). Most beginners do the opposite — too much moderate effort, not enough truly easy work.</p>
+            </details>
+            <details>
+                <summary>Is the 220-minus-age formula accurate?</summary>
+                <p>It's a reasonable estimate for most people, but it can be off by 10–15 bpm in either direction. If you train seriously, a field test (like a hard 5K effort) or lab test gives a more personal number.</p>
+            </details>
+            <details>
+                <summary>What is a dangerous heart rate during exercise?</summary>
+                <p>Consistently exceeding your estimated max heart rate, or experiencing chest pain, dizziness, or unusual shortness of breath during exercise, warrants stopping and consulting a doctor. Healthy people training in Zones 1–4 are generally safe.</p>
+            </details>
+            <details>
+                <summary>Is my data saved when I use this calculator?</summary>
+                <p>No. All calculations run entirely in your browser. Your details and results are never stored or sent anywhere.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+        <div class="cta">
+            <h2>Training Burns Calories — Track Them 🔥</h2>
+            <p>Pair your zone training with the right calorie target for faster results.</p>
+            <a href="/calorie-calculator/" class="btn-white">Try Calorie Calculator — Free</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">💪 Calc<span>Fitly</span></div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/bmi-calculator/">BMI</a>
+                <a href="/calorie-calculator/">Calorie</a>
+                <a href="/body-fat-calculator/">Body Fat</a>
+                <a href="/water-intake-calculator/">Water</a>
+                <a href="/macro-calculator/">Macro</a>
+                <a href="/ideal-weight-calculator/">Ideal Weight</a>
+                <a href="/tdee-calculator/">TDEE</a>
+                <a href="/weight-loss-calculator/">Weight Loss</a>
+                <a href="/protein-calculator/">Protein</a>
+                <a href="/bmr-calculator/">BMR</a>
+                <a href="/heart-rate-zone-calculator/">Heart Rate</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+                <a href="/privacy-policy/">Privacy Policy</a>
+            </div>
+            <p class="disclaimer">CalcFitly provides educational tools only and does not offer medical advice. Always consult a qualified healthcare professional before making health decisions.</p>
+            <p class="copyright">&copy; 2026 CalcFitly. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        var menuBtn = document.getElementById('menuBtn');
+        var navLinks = document.getElementById('navLinks');
+        menuBtn.addEventListener('click', function () {
+            navLinks.classList.toggle('open');
+        });
+
+        // Heart Rate Zone Calculation
+        function calculateZones() {
+            var age = parseFloat(document.getElementById('age').value);
+            var restingHR = parseFloat(document.getElementById('restingHR').value);
+
+            if (!age || age <= 0) {
+                alert('Please enter a valid age.');
+                return;
+            }
+            if (age < 10 || age > 100) {
+                alert('Please enter an age between 10 and 100.');
+                return;
+            }
+
+            var maxHR = 220 - age;
+            var useKarvonen = false;
+
+            // Validate resting HR if provided
+            if (restingHR) {
+                if (restingHR < 30 || restingHR > 120) {
+                    alert('Resting heart rate should be between 30 and 120 bpm.');
+                    return;
+                }
+                if (restingHR >= maxHR) {
+                    alert('Resting heart rate must be lower than your max heart rate.');
+                    return;
+                }
+                useKarvonen = true;
+            }
+
+            // Zone percentages
+            var pcts = [[0.50, 0.60], [0.60, 0.70], [0.70, 0.80], [0.80, 0.90], [0.90, 1.00]];
+            var zones = [];
+
+            for (var i = 0; i < pcts.length; i++) {
+                var lo, hi;
+                if (useKarvonen) {
+                    // Karvonen: Target HR = ((maxHR − restingHR) × %intensity) + restingHR
+                    var hrr = maxHR - restingHR;
+                    lo = Math.round(hrr * pcts[i][0] + restingHR);
+                    hi = Math.round(hrr * pcts[i][1] + restingHR);
+                } else {
+                    lo = Math.round(maxHR * pcts[i][0]);
+                    hi = Math.round(maxHR * pcts[i][1]);
+                }
+                zones.push([lo, hi]);
+            }
+
+            // Display
+            document.getElementById('maxHR').textContent = maxHR;
+            document.getElementById('methodNote').textContent = useKarvonen
+                ? 'using the Karvonen method with your resting HR of ' + restingHR + ' bpm'
+                : 'using the 220 − age formula';
+
+            for (var j = 0; j < 5; j++) {
+                document.getElementById('z' + (j + 1) + 'min').textContent = zones[j][0];
+                document.getElementById('z' + (j + 1) + 'max').textContent = zones[j][1];
+            }
+
+            document.getElementById('result').classList.add('show');
+            document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+
+</body>
+</html>
