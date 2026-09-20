@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Is BMI? Complete Guide for Beginners | CalcFitly</title>
+    <meta name="description" content="What is BMI? Learn what Body Mass Index means, how it's calculated, what the ranges are, and its limitations — in simple, beginner-friendly language.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💪</text></svg>">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "What Is BMI? Complete Guide for Beginners",
+      "description": "Learn what Body Mass Index means, how it's calculated, what the ranges are, and its limitations.",
+      "author": { "@type": "Organization", "name": "CalcFitly" },
+      "publisher": { "@type": "Organization", "name": "CalcFitly" },
+      "datePublished": "2026-09-18",
+      "dateModified": "2026-09-18"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does BMI stand for?",
+          "acceptedAnswer": { "@type": "Answer", "text": "BMI stands for Body Mass Index. It's a simple calculation that uses your height and weight to estimate whether you're underweight, at a healthy weight, overweight, or obese." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good BMI?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A BMI between 18.5 and 24.9 is considered healthy for most adults. Below 18.5 is underweight, 25–29.9 is overweight, and 30 or above is obese." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is BMI accurate for everyone?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. BMI doesn't distinguish between muscle and fat, so muscular people may show as 'overweight' despite being healthy. It also doesn't account for age, gender, ethnicity, or where fat is stored on the body." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate my BMI?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Divide your weight in kilograms by your height in meters squared. For example, 70 kg ÷ (1.75 m × 1.75 m) = 22.9. Or use a free online BMI calculator for instant results." }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --green: #11998e;
+            --green-light: #38ef7d;
+            --green-dark: #0d7a72;
+            --ink: #14212b;
+            --muted: #5f6b76;
+            --bg: #f4fbf8;
+            --border: #e4efe9;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.7; }
+
+        /* ===== NAVBAR ===== */
+        .navbar { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+        .nav-inner { max-width: 1100px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4em; font-weight: 800; text-decoration: none; color: var(--ink); }
+        .logo span { color: var(--green); }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.95em; }
+        .nav-links a:hover { color: var(--green); }
+        .nav-cta { background: linear-gradient(135deg, var(--green), var(--green-light)); color: #fff !important; padding: 10px 20px; border-radius: 999px; box-shadow: 0 4px 12px rgba(17,153,142,0.25); }
+        .menu-btn { display: none; background: none; border: none; font-size: 1.6em; cursor: pointer; color: var(--ink); }
+
+        /* ===== ARTICLE LAYOUT ===== */
+        .article-wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 60px; }
+        .breadcrumb { font-size: 0.85em; color: var(--muted); margin-bottom: 24px; }
+        .breadcrumb a { color: var(--green); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .article-tag { display: inline-block; background: #eefaf4; color: var(--green-dark); font-weight: 700; font-size: 0.78em; padding: 6px 14px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+        h1 { font-size: clamp(1.7em, 4vw, 2.4em); font-weight: 800; letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 14px; }
+        .article-meta { color: var(--muted); font-size: 0.88em; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+
+        /* ===== ARTICLE CONTENT ===== */
+        .article-body h2 { font-size: 1.5em; font-weight: 800; color: var(--green-dark); margin: 36px 0 14px; letter-spacing: -0.3px; }
+        .article-body p { color: #3d4a54; margin-bottom: 16px; font-size: 1.02em; }
+        .article-body ul { margin: 0 0 16px 24px; color: #3d4a54; }
+        .article-body li { margin-bottom: 8px; }
+        .article-body strong { color: var(--ink); }
+        .article-body a { color: var(--green); font-weight: 600; text-decoration: none; }
+        .article-body a:hover { text-decoration: underline; }
+
+        /* BMI table */
+        .bmi-table { width: 100%; border-collapse: collapse; margin: 20px 0 24px; font-size: 0.97em; }
+        .bmi-table th, .bmi-table td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+        .bmi-table th { background: #eefaf4; color: var(--green-dark); }
+        .bmi-table tr:last-child td { border-bottom: none; }
+
+        /* Highlight box */
+        .highlight-box { background: #eefaf4; border-left: 4px solid var(--green); border-radius: 0 14px 14px 0; padding: 18px 22px; margin: 22px 0; }
+        .highlight-box p { margin-bottom: 0; color: var(--green-dark); font-weight: 600; }
+
+        /* Formula box */
+        .formula-box { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 20px 24px; margin: 22px 0; text-align: center; }
+        .formula-box .f-label { font-size: 0.85em; color: var(--muted); font-weight: 600; margin-bottom: 8px; }
+        .formula-box .f-main { font-size: 1.25em; font-weight: 800; color: var(--green-dark); }
+        .formula-box .f-example { font-size: 0.9em; color: var(--muted); margin-top: 10px; }
+
+        /* CTA box */
+        .cta-box { background: linear-gradient(135deg, var(--green), var(--green-light)); border-radius: 20px; text-align: center; color: #fff; padding: 36px 24px; margin: 40px 0; }
+        .cta-box h3 { font-size: 1.4em; margin-bottom: 8px; }
+        .cta-box p { opacity: 0.92; margin-bottom: 20px; color: #fff; }
+        .btn-white { display: inline-block; background: #fff; color: var(--green-dark); padding: 14px 30px; border-radius: 999px; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(0,0,0,0.12); transition: 0.2s; }
+        .btn-white:hover { transform: translateY(-2px); }
+
+        /* FAQ */
+        .faq-section { margin-top: 44px; }
+        .faq-section h2 { font-size: 1.5em; font-weight: 800; color: var(--green-dark); margin-bottom: 18px; }
+        details { background: #fff; border: 1px solid var(--border); border-radius: 14px; margin-bottom: 12px; padding: 18px 22px; }
+        summary { cursor: pointer; font-weight: 700; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '+'; color: var(--green); font-size: 1.5em; font-weight: 700; flex-shrink: 0; }
+        details[open] summary::after { content: '−'; }
+        details p { margin-top: 12px; color: var(--muted); font-size: 0.95em; }
+
+        /* Related articles */
+        .related { margin-top: 44px; }
+        .related h2 { font-size: 1.4em; font-weight: 800; color: var(--green-dark); margin-bottom: 16px; }
+        .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .related-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; text-decoration: none; transition: 0.2s; display: block; }
+        .related-card:hover { border-color: var(--green); box-shadow: 0 6px 16px rgba(17,153,142,0.1); transform: translateY(-2px); }
+        .related-card .r-icon { font-size: 1.4em; margin-bottom: 8px; }
+        .related-card .r-title { font-weight: 700; color: var(--ink); font-size: 0.95em; line-height: 1.4; }
+        .related-card .r-link { color: var(--green); font-size: 0.82em; font-weight: 700; margin-top: 8px; display: block; }
+
+        /* ===== FOOTER ===== */
+        footer { background: #0e2420; color: #cfe3dd; padding: 46px 20px 26px; margin-top: 40px; }
+        .footer-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+        .footer-logo { font-size: 1.3em; font-weight: 800; color: #fff; margin-bottom: 16px; }
+        .footer-logo span { color: var(--green-light); }
+        .footer-links { margin-bottom: 14px; }
+        footer a { color: #9fe8c9; text-decoration: none; margin: 0 10px; font-weight: 600; }
+        footer a:hover { color: #fff; }
+        .disclaimer { font-size: 0.82em; color: #7fa39a; max-width: 640px; margin: 14px auto 0; }
+        .copyright { margin-top: 16px; font-size: 0.85em; color: #7fa39a; }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 768px) {
+            .menu-btn { display: block; }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; align-items: flex-start; padding: 18px 22px; gap: 16px; border-bottom: 1px solid var(--border); box-shadow: 0 12px 24px rgba(0,0,0,0.07); }
+            .nav-links.open { display: flex; }
+            .related-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="/" class="logo">💪 Calc<span>Fitly</span></a>
+            <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+            <div class="nav-links" id="navLinks">
+                <a href="/">Home</a>
+                <a href="/#calculators">Calculators</a>
+                <a href="/blog/">Blog</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+                <a href="/bmi-calculator/" class="nav-cta">BMI Calculator</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ARTICLE -->
+    <article class="article-wrap">
+
+        <div class="breadcrumb">
+            <a href="/">Home</a> → <a href="/blog/">Blog</a> → What Is BMI?
+        </div>
+
+        <span class="article-tag">Health Basics</span>
+        <h1>What Is BMI? Complete Guide for Beginners</h1>
+        <div class="article-meta">📅 September 18, 2026 · ⏱️ 6 min read · ✍️ CalcFitly Team</div>
+
+        <div class="article-body">
+
+            <p>If you've ever visited a doctor, joined a gym, or searched "am I a healthy weight?" online, you've almost certainly come across the term <strong>BMI</strong>. It's one of the most widely used health measurements in the world — yet most people don't really know what it means, how it works, or whether they should trust it.</p>
+            <p>This guide breaks it all down in plain, simple language: what BMI is, how it's calculated, what the numbers mean, and — just as importantly — where it falls short.</p>
+
+            <h2>🧮 What Does BMI Stand For?</h2>
+            <p><strong>BMI stands for Body Mass Index.</strong> It's a single number calculated from just two things: your <strong>weight</strong> and your <strong>height</strong>. The idea is simple — the taller you are, the more you should naturally weigh. BMI puts that relationship into one easy-to-compare number.</p>
+            <p>The concept was developed way back in the 1830s by a Belgian mathematician named Adolphe Quetelet. It wasn't designed to diagnose individuals — it was created to study populations. But because it's so cheap and simple, doctors, insurance companies, and health organizations around the world adopted it as a quick screening tool.</p>
+
+            <h2>📐 How Is BMI Calculated?</h2>
+            <p>The formula is straightforward:</p>
+
+            <div class="formula-box">
+                <div class="f-label">The BMI Formula</div>
+                <div class="f-main">BMI = weight (kg) ÷ height (m)²</div>
+                <div class="f-example">Example: 70 kg ÷ (1.75 m × 1.75 m) = 70 ÷ 3.06 = <strong>BMI 22.9</strong></div>
+            </div>
+
+            <p>If you use pounds and inches, the formula is: <strong>BMI = (weight in lbs ÷ height in inches²) × 703</strong>. Of course, the easiest way is to skip the math entirely and use our <a href="/bmi-calculator/">free BMI calculator</a> — it works in both metric and imperial units and shows your result instantly on a visual scale.</p>
+
+            <h2>📊 What Do the BMI Ranges Mean?</h2>
+            <p>The World Health Organization (WHO) divides BMI into four main categories for adults:</p>
+
+            <table class="bmi-table">
+                <tr><th>BMI Range</th><th>Category</th><th>What It Generally Means</th></tr>
+                <tr><td>Below 18.5</td><td>Underweight</td><td>May indicate malnutrition or other health issues</td></tr>
+                <tr><td>18.5 – 24.9</td><td>Healthy Weight</td><td>Associated with the lowest health risks</td></tr>
+                <tr><td>25.0 – 29.9</td><td>Overweight</td><td>Slightly elevated risk of health problems</td></tr>
+                <tr><td>30.0 and above</td><td>Obese</td><td>Higher risk of diabetes, heart disease, and more</td></tr>
+            </table>
+
+            <p>These ranges exist because large population studies found that health risks — like type 2 diabetes, heart disease, and joint problems — tend to rise as BMI moves outside the healthy zone, in either direction.</p>
+
+            <div class="highlight-box">
+                <p>💡 Quick check: A BMI between 18.5 and 24.9 is considered healthy for most adults. But remember — it's a screening tool, not a diagnosis.</p>
+            </div>
+
+            <h2>⚠️ The Limitations of BMI (This Part Matters)</h2>
+            <p>Here's the honest truth: BMI is useful, but it's far from perfect. It has some well-known blind spots:</p>
+            <ul>
+                <li><strong>It can't tell muscle from fat.</strong> A muscular athlete and a sedentary person can have the exact same BMI. Bodybuilders often register as "overweight" or even "obese" despite having very low body fat.</li>
+                <li><strong>It ignores where fat is stored.</strong> Belly fat (visceral fat) is far more dangerous than fat on the hips and thighs — but BMI treats all weight the same.</li>
+                <li><strong>It doesn't account for age or gender.</strong> Women naturally carry more essential fat than men, and older adults lose muscle over time — BMI sees none of this.</li>
+                <li><strong>Ethnic differences matter.</strong> Research shows health risks begin at lower BMIs for Asian populations, which is why some countries use adjusted cutoffs.</li>
+            </ul>
+            <p>That's why health professionals recommend pairing BMI with other measurements — like <a href="/body-fat-calculator/">body fat percentage</a> and waist circumference — for a complete picture of your health.</p>
+
+            <h2>🎯 So, Should You Care About Your BMI?</h2>
+            <p>Yes — but with the right expectations. Think of BMI as a <strong>smoke detector, not a fire investigation</strong>. It's a fast, free first check that tells you whether it's worth looking deeper.</p>
+            <ul>
+                <li>If your BMI is in the healthy range <em>and</em> you feel fit and energetic — great, keep doing what you're doing.</li>
+                <li>If it's outside the range, don't panic. Use it as a starting point: check your body fat percentage, look at your habits, and consider talking to a healthcare professional.</li>
+                <li>If you're very muscular, BMI may simply not apply well to you — body composition matters more.</li>
+            </ul>
+            <p>And if your goal is to move toward a healthier weight, tools like our <a href="/calorie-calculator/">calorie calculator</a> and <a href="/ideal-weight-calculator/">ideal weight calculator</a> can help you build a realistic, safe plan.</p>
+
+            <!-- CTA -->
+            <div class="cta-box">
+                <h3>Check Your BMI in 10 Seconds 💚</h3>
+                <p>Free, instant, and 100% private — everything runs in your browser.</p>
+                <a href="/bmi-calculator/" class="btn-white">Try the BMI Calculator →</a>
+            </div>
+
+            <!-- FAQ -->
+            <div class="faq-section">
+                <h2>❓ Frequently Asked Questions</h2>
+                <details>
+                    <summary>What does BMI stand for?</summary>
+                    <p>BMI stands for Body Mass Index. It's a simple calculation that uses your height and weight to estimate whether you're underweight, at a healthy weight, overweight, or obese.</p>
+                </details>
+                <details>
+                    <summary>What is a good BMI?</summary>
+                    <p>A BMI between 18.5 and 24.9 is considered healthy for most adults. Below 18.5 is underweight, 25–29.9 is overweight, and 30 or above is obese.</p>
+                </details>
+                <details>
+                    <summary>Is BMI accurate for everyone?</summary>
+                    <p>No. BMI doesn't distinguish between muscle and fat, so muscular people may show as "overweight" despite being healthy. It also doesn't account for age, gender, ethnicity, or where fat is stored on the body.</p>
+                </details>
+                <details>
+                    <summary>How do I calculate my BMI?</summary>
+                    <p>Divide your weight in kilograms by your height in meters squared. For example, 70 kg ÷ (1.75 m × 1.75 m) = 22.9. Or use a free online BMI calculator for instant results.</p>
+                </details>
+            </div>
+
+            <!-- RELATED -->
+            <div class="related">
+                <h2>📚 Keep Reading</h2>
+                <div class="related-grid">
+                    <a href="/bmi-calculator/" class="related-card">
+                        <div class="r-icon">💚</div>
+                        <div class="r-title">BMI Calculator — Check Your Number Free</div>
+                        <span class="r-link">Open Tool →</span>
+                    </a>
+                    <a href="/body-fat-calculator/" class="related-card">
+                        <div class="r-icon">📏</div>
+                        <div class="r-title">Body Fat Calculator — Beyond BMI</div>
+                        <span class="r-link">Open Tool →</span>
+                    </a>
+                    <a href="/ideal-weight-calculator/" class="related-card">
+                        <div class="r-icon">⚖️</div>
+                        <div class="r-title">Ideal Weight Calculator — Find Your Range</div>
+                        <span class="r-link">Open Tool →</span>
+                    </a>
+                    <a href="/calorie-calculator/" class="related-card">
+                        <div class="r-icon">🔥</div>
+                        <div class="r-title">Calorie Calculator — Your Daily Target</div>
+                        <span class="r-link">Open Tool →</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">💪 Calc<span>Fitly</span></div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/bmi-calculator/">BMI</a>
+                <a href="/calorie-calculator/">Calorie</a>
+                <a href="/body-fat-calculator/">Body Fat</a>
+                <a href="/water-intake-calculator/">Water</a>
+                <a href="/macro-calculator/">Macro</a>
+                <a href="/ideal-weight-calculator/">Ideal Weight</a>
+                <a href="/tdee-calculator/">TDEE</a>
+                <a href="/weight-loss-calculator/">Weight Loss</a>
+                <a href="/protein-calculator/">Protein</a>
+                <a href="/bmr-calculator/">BMR</a>
+><a href="/blog/">Blog</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+                <a href="/privacy-policy/">Privacy Policy</a>
+            </div>
+            <p class="disclaimer">CalcFitly provides educational content only and does not offer medical advice. Always consult a qualified healthcare professional before making health decisions.</p>
+            <p class="copyright">&copy; 2026 CalcFitly. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        var menuBtn = document.getElementById('menuBtn');
+        var navLinks = document.getElementById('navLinks');
+        menuBtn.addEventListener('click', function () {
+            navLinks.classList.toggle('open');
+        });
+    </script>
+
+</body>
+</html>
