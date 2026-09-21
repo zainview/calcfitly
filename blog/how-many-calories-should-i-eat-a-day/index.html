@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How Many Calories Should I Eat a Day? | CalcFitly</title>
-    <meta name="description" content="How many calories should you eat a day? Learn your daily calorie needs by age, gender, and activity — plus how to adjust for weight loss or muscle gain.">
+    <title>How Many Calories Should I Eat a Day? Daily Calorie Needs | CalcFitly</title>
+    <meta name="description" content="How many calories should you eat a day? Daily calorie needs for women and men, safe calorie deficit for weight loss, minimum intake, and breakfast-lunch meal splits.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💪</text></svg>">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "How Many Calories Should I Eat a Day?",
-      "description": "Learn your daily calorie needs by age, gender, and activity — plus how to adjust for weight loss or muscle gain.",
+      "headline": "How Many Calories Should I Eat a Day? Daily Calorie Needs for Weight Loss",
+      "description": "Daily calorie needs for women and men, safe calorie deficit for weight loss, minimum calorie intake, and how to split calories across breakfast, lunch and dinner.",
       "author": { "@type": "Organization", "name": "CalcFitly" },
       "publisher": { "@type": "Organization", "name": "CalcFitly" },
       "datePublished": "2026-09-19",
-      "dateModified": "2026-09-19"
+      "dateModified": "2026-09-21"
     }
     </script>
 
@@ -27,28 +27,33 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How many calories should I eat a day to lose weight?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Eat about 400–500 calories below your TDEE (maintenance calories). For most women that's roughly 1,400–1,700 per day; for most men, 1,800–2,200. This pace loses about 0.5 kg per week while protecting muscle and energy." }
+          "name": "How many calories should a female eat per day?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Most adult females need 1,600–2,400 calories daily depending on age and activity level. For weight loss, a moderate deficit of 300–500 calories per day is usually recommended — but never below 1,200 calories without medical supervision." }
         },
         {
           "@type": "Question",
-          "name": "Is 1,200 calories a day enough?",
-          "acceptedAnswer": { "@type": "Answer", "text": "For most adults, no. 1,200 calories is below the basal metabolic rate of many people and can cause muscle loss, fatigue, nutrient deficiencies, and metabolic slowdown. Only short, medically supervised diets should go this low." }
+          "name": "Is eating 500 calories a day safe?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Eating only 500 calories a day is dangerous for most adults. It can cause muscle loss, nutrient deficiencies, fatigue, and a slowed metabolism. The minimum safe intake is generally 1,200 calories for women and 1,500 for men, unless a doctor supervises a very-low-calorie diet." }
         },
         {
           "@type": "Question",
-          "name": "How many calories should a woman eat per day?",
-          "acceptedAnswer": { "@type": "Answer", "text": "General guidelines suggest 1,600–2,000 calories daily for sedentary to moderately active women, and up to 2,400 for very active women. Your exact number depends on your age, weight, height, and activity level." }
+          "name": "How much weight can I lose in a month?",
+          "acceptedAnswer": { "@type": "Answer", "text": "With a daily calorie deficit of 500 calories, most people lose about 0.5 kg (1 lb) of fat per week — roughly 2 kg (4–5 lbs) per month. Faster loss is possible early on due to water weight, but slow and steady is healthier and easier to maintain." }
         },
         {
           "@type": "Question",
-          "name": "How many calories should a man eat per day?",
-          "acceptedAnswer": { "@type": "Answer", "text": "General guidelines suggest 2,000–2,500 calories daily for sedentary to moderately active men, and up to 3,000 for very active men. Individual needs vary with body size, age, and activity." }
+          "name": "What is a calorie deficit?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A calorie deficit means eating fewer calories than your body burns each day. When your body doesn't get enough energy from food, it burns stored fat instead — that's how weight loss happens." }
         },
         {
           "@type": "Question",
-          "name": "Do calorie needs decrease with age?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes, mostly because muscle mass declines with age and people tend to move less. Needs typically drop by roughly 100–200 calories per decade after age 30. Strength training helps prevent this decline." }
+          "name": "How many calories should breakfast and lunch be?",
+          "acceptedAnswer": { "@type": "Answer", "text": "On a 1,800-calorie day, a common split is: breakfast 300–450 calories, lunch 500–550, dinner 500–550, and snacks 200–300. A 300-calorie breakfast could be oatmeal with berries, or two eggs with whole-grain toast." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do children have the same calorie needs as adults?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. A child's calorie needs are different and change rapidly with age and growth — typically 1,000–2,000+ calories daily. Children should never follow adult weight-loss diets. Always consult a pediatrician about a child's diet." }
         }
       ]
     }
@@ -68,7 +73,6 @@
         html { scroll-behavior: smooth; }
         body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.7; }
 
-        /* ===== NAVBAR ===== */
         .navbar { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
         .nav-inner { max-width: 1100px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
         .logo { font-size: 1.4em; font-weight: 800; text-decoration: none; color: var(--ink); }
@@ -79,7 +83,6 @@
         .nav-cta { background: linear-gradient(135deg, var(--green), var(--green-light)); color: #fff !important; padding: 10px 20px; border-radius: 999px; box-shadow: 0 4px 12px rgba(17,153,142,0.25); }
         .menu-btn { display: none; background: none; border: none; font-size: 1.6em; cursor: pointer; color: var(--ink); }
 
-        /* ===== ARTICLE LAYOUT ===== */
         .article-wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 60px; }
         .breadcrumb { font-size: 0.85em; color: var(--muted); margin-bottom: 24px; }
         .breadcrumb a { color: var(--green); text-decoration: none; }
@@ -88,7 +91,6 @@
         h1 { font-size: clamp(1.7em, 4vw, 2.4em); font-weight: 800; letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 14px; }
         .article-meta { color: var(--muted); font-size: 0.88em; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
 
-        /* ===== ARTICLE CONTENT ===== */
         .article-body h2 { font-size: 1.5em; font-weight: 800; color: var(--green-dark); margin: 36px 0 14px; letter-spacing: -0.3px; }
         .article-body p { color: #3d4a54; margin-bottom: 16px; font-size: 1.02em; }
         .article-body ul { margin: 0 0 16px 24px; color: #3d4a54; }
@@ -97,34 +99,23 @@
         .article-body a { color: var(--green); font-weight: 600; text-decoration: none; }
         .article-body a:hover { text-decoration: underline; }
 
-        /* Table */
-        .cal-table { width: 100%; border-collapse: collapse; margin: 20px 0 24px; font-size: 0.97em; }
-        .cal-table th, .cal-table td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); }
-        .cal-table th { background: #eefaf4; color: var(--green-dark); }
-        .cal-table tr:last-child td { border-bottom: none; }
+        .bmi-table { width: 100%; border-collapse: collapse; margin: 20px 0 24px; font-size: 0.97em; }
+        .bmi-table th, .bmi-table td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+        .bmi-table th { background: #eefaf4; color: var(--green-dark); }
+        .bmi-table tr:last-child td { border-bottom: none; }
 
-        /* Highlight box */
         .highlight-box { background: #eefaf4; border-left: 4px solid var(--green); border-radius: 0 14px 14px 0; padding: 18px 22px; margin: 22px 0; }
         .highlight-box p { margin-bottom: 0; color: var(--green-dark); font-weight: 600; }
 
-        /* Warning box */
-        .warning-box { background: #fff5f5; border-left: 4px solid #e63946; border-radius: 0 14px 14px 0; padding: 18px 22px; margin: 22px 0; }
-        .warning-box p { margin-bottom: 0; color: #b02a37; font-weight: 600; }
+        .warning-box { background: #fff5f0; border-left: 4px solid #e06c4f; border-radius: 0 14px 14px 0; padding: 18px 22px; margin: 22px 0; }
+        .warning-box p { margin-bottom: 0; color: #a34a32; font-weight: 600; }
 
-        /* Formula box */
-        .formula-box { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 20px 24px; margin: 22px 0; text-align: center; }
-        .formula-box .f-label { font-size: 0.85em; color: var(--muted); font-weight: 600; margin-bottom: 8px; }
-        .formula-box .f-main { font-size: 1.15em; font-weight: 800; color: var(--green-dark); }
-        .formula-box .f-example { font-size: 0.9em; color: var(--muted); margin-top: 10px; }
-
-        /* CTA box */
         .cta-box { background: linear-gradient(135deg, var(--green), var(--green-light)); border-radius: 20px; text-align: center; color: #fff; padding: 36px 24px; margin: 40px 0; }
         .cta-box h3 { font-size: 1.4em; margin-bottom: 8px; }
         .cta-box p { opacity: 0.92; margin-bottom: 20px; color: #fff; }
         .btn-white { display: inline-block; background: #fff; color: var(--green-dark); padding: 14px 30px; border-radius: 999px; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(0,0,0,0.12); transition: 0.2s; }
         .btn-white:hover { transform: translateY(-2px); }
 
-        /* FAQ */
         .faq-section { margin-top: 44px; }
         .faq-section h2 { font-size: 1.5em; font-weight: 800; color: var(--green-dark); margin-bottom: 18px; }
         details { background: #fff; border: 1px solid var(--border); border-radius: 14px; margin-bottom: 12px; padding: 18px 22px; }
@@ -134,7 +125,6 @@
         details[open] summary::after { content: '−'; }
         details p { margin-top: 12px; color: var(--muted); font-size: 0.95em; }
 
-        /* Related articles */
         .related { margin-top: 44px; }
         .related h2 { font-size: 1.4em; font-weight: 800; color: var(--green-dark); margin-bottom: 16px; }
         .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
@@ -144,7 +134,6 @@
         .related-card .r-title { font-weight: 700; color: var(--ink); font-size: 0.95em; line-height: 1.4; }
         .related-card .r-link { color: var(--green); font-size: 0.82em; font-weight: 700; margin-top: 8px; display: block; }
 
-        /* ===== FOOTER ===== */
         footer { background: #0e2420; color: #cfe3dd; padding: 46px 20px 26px; margin-top: 40px; }
         .footer-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
         .footer-logo { font-size: 1.3em; font-weight: 800; color: #fff; margin-bottom: 16px; }
@@ -155,7 +144,6 @@
         .disclaimer { font-size: 0.82em; color: #7fa39a; max-width: 640px; margin: 14px auto 0; }
         .copyright { margin-top: 16px; font-size: 0.85em; color: #7fa39a; }
 
-        /* ===== MOBILE ===== */
         @media (max-width: 768px) {
             .menu-btn { display: block; }
             .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; align-items: flex-start; padding: 18px 22px; gap: 16px; border-bottom: 1px solid var(--border); box-shadow: 0 12px 24px rgba(0,0,0,0.07); }
@@ -190,91 +178,104 @@
         </div>
 
         <span class="article-tag">Nutrition Basics</span>
-        <h1>How Many Calories Should I Eat a Day?</h1>
-        <div class="article-meta">📅 September 19, 2026 · ⏱️ 7 min read · ✍️ CalcFitly Team</div>
+        <h1>How Many Calories Should I Eat a Day? Daily Needs Explained</h1>
+        <div class="article-meta">📅 September 19, 2026 · Updated September 21, 2026 · ⏱️ 8 min read · ✍️ CalcFitly Team</div>
 
         <div class="article-body">
 
-            <p>It's the most Googled nutrition question in the world — and for good reason. Whether you want to <strong>lose weight, gain muscle, or simply stay healthy</strong>, everything starts with one number: how many calories your body actually needs each day.</p>
-            <p>The honest answer? <strong>It depends on you</strong> — your age, gender, size, and how much you move. But don't worry. By the end of this guide, you'll know exactly how to find your personal number (and how to adjust it for your goal).</p>
+            <p>"How many calories should I eat a day?" is one of the most searched health questions on the internet — and for good reason. Whether your goal is to <strong>lose weight</strong>, gain muscle, or simply stay <strong>healthy</strong>, everything starts with knowing your <strong>daily calorie needs</strong>.</p>
+            <p>The honest answer? It depends on your age, gender, height, weight, and activity level. But don't worry — by the end of this guide, you'll know exactly how to find your number, how a <strong>calorie deficit</strong> works for weight loss, what the safe <strong>minimum</strong> intake is, and how to split your calories across <strong>breakfast, lunch, and dinner</strong>.</p>
 
-            <h2>⚡ First, What Is a Calorie?</h2>
-            <p>A calorie is simply a <strong>unit of energy</strong>. Your body burns calories for everything — breathing, thinking, walking, digesting food, even sleeping. The food you eat is the fuel; your daily life is the engine burning it.</p>
+            <h2>🔥 First, What Exactly Is a Calorie?</h2>
+            <p>A calorie is simply a unit of energy. Your body burns calories every second — to keep your heart beating, your brain working, and your body moving. The <strong>food</strong> you eat is the fuel that supplies that energy.</p>
             <ul>
-                <li>Eat <strong>more</strong> calories than you burn → your body stores the extra (weight gain)</li>
-                <li>Eat <strong>fewer</strong> calories than you burn → your body uses stored energy (weight loss)</li>
-                <li>Eat <strong>about the same</strong> → your weight stays stable (maintenance)</li>
+                <li>Eat <strong>more</strong> calories than you burn → your body stores the extra as <strong>fat</strong> (weight gain)</li>
+                <li>Eat <strong>fewer calories</strong> than you burn → your body burns stored fat (weight loss)</li>
+                <li>Eat roughly the same → your weight stays stable (maintenance)</li>
             </ul>
-            <p>This is called <strong>energy balance</strong>, and it's the foundation of every diet that has ever worked.</p>
+            <p>That's the entire foundation of every diet on the planet. Keto, intermittent fasting, low-carb — they all work only when they help you eat fewer calories.</p>
 
-            <h2>📊 The Short Answer: Average Daily Calorie Needs</h2>
-            <p>Health organizations publish general guidelines based on age, gender, and activity level. Here's the quick-reference table:</p>
+            <h2>📊 Daily Calorie Needs: The Average Numbers</h2>
+            <p>Here's a quick look at average <strong>daily calorie intake</strong> needs, based on guidelines from health authorities:</p>
 
-            <table class="cal-table">
-                <tr><th>Group</th><th>Sedentary</th><th>Moderately Active</th><th>Very Active</th></tr>
-                <tr><td>Women (19–30)</td><td>1,800–2,000</td><td>2,000–2,200</td><td>2,400</td></tr>
-                <tr><td>Women (31–50)</td><td>1,800</td><td>2,000</td><td>2,200</td></tr>
-                <tr><td>Men (19–30)</td><td>2,400</td><td>2,600–2,800</td><td>3,000</td></tr>
-                <tr><td>Men (31–50)</td><td>2,200</td><td>2,400–2,600</td><td>2,800–3,000</td></tr>
+            <table class="bmi-table">
+                <tr><th>Group</th><th>Daily Calories (Approx.)</th></tr>
+                <tr><td>Adult women (female)</td><td>1,600 – 2,400</td></tr>
+                <tr><td>Adult men</td><td>2,000 – 3,000</td></tr>
+                <tr><td>Children (varies by age)</td><td>1,000 – 2,000+</td></tr>
             </table>
 
-            <p><strong>Important:</strong> these are population averages. A 110 kg man and a 60 kg man of the same age need very different amounts of food. That's why calculating your <em>personal</em> number matters — more on that below.</p>
+            <p>These are broad ranges. A 25-year-old active man needs far more food than a 60-year-old sedentary woman. To get your personal number in seconds, use our <a href="/calorie-calculator/">free calorie calculator</a> — it uses the Mifflin-St Jeor equation, the same formula used by dietitians.</p>
 
-            <h2>🧬 What Determines Your Calorie Needs?</h2>
-            <p>Five main factors decide how much energy your body burns daily:</p>
+            <div class="highlight-box">
+                <p>💡 Note for parents: A <strong>child's</strong> calorie needs change rapidly with age and growth, and children should never follow adult weight-loss diets. Always talk to a pediatrician about your child's diet.</p>
+            </div>
+
+            <h2>👩 Calorie Needs for Women (Female)</h2>
+            <p>Women generally need fewer calories than men because they tend to be smaller and carry less muscle mass. Here's a more detailed breakdown of <strong>female calorie needs</strong> by age and activity:</p>
+
+            <table class="bmi-table">
+                <tr><th>Age</th><th>Sedentary</th><th>Moderately Active</th><th>Active</th></tr>
+                <tr><td>19–30</td><td>1,800–2,000</td><td>2,000–2,200</td><td>2,400</td></tr>
+                <tr><td>31–50</td><td>1,800</td><td>2,000</td><td>2,200</td></tr>
+                <tr><td>51+</td><td>1,600</td><td>1,800</td><td>2,000–2,200</td></tr>
+            </table>
+
+            <p>Pregnancy and breastfeeding increase calorie needs significantly — that's a conversation to have with your doctor, not a calculator.</p>
+
+            <h2>📉 How to Lose Weight: The Calorie Deficit</h2>
+            <p>To <strong>lose weight</strong>, you need a <strong>calorie deficit</strong> — meaning you eat fewer calories than your body burns daily. When that happens, your body makes up the difference by burning stored fat. Simple as that.</p>
+            <p>Here's the math that matters:</p>
             <ul>
-                <li><strong>Body size:</strong> Bigger bodies burn more — more cells to power. Weight is the biggest single factor.</li>
-                <li><strong>Muscle mass:</strong> Muscle burns more calories than fat, even at rest. Two people at the same weight can have different needs.</li>
-                <li><strong>Age:</strong> Needs typically drop 100–200 calories per decade after 30, mainly due to muscle loss.</li>
-                <li><strong>Gender:</strong> Men generally need more calories due to larger bodies and higher muscle mass.</li>
-                <li><strong>Activity level:</strong> The most controllable factor. A desk worker and a construction worker of the same size can differ by 600+ calories a day.</li>
+                <li><strong>500 calorie deficit per day</strong> → about 0.5 kg (1 lb) of fat loss per week → roughly <strong>2 kg per month</strong></li>
+                <li><strong>300 calorie deficit per day</strong> → slower but easier: about 1.2 kg per month</li>
+                <li><strong>1,000 calorie deficit per day</strong> → about 1 kg per week — only suitable for some people, and hard to sustain</li>
             </ul>
+            <p>For most people, a moderate deficit of <strong>300–500 calories a day</strong> is the sweet spot: steady fat loss without feeling miserable. Cutting down too aggressively almost always backfires — you lose muscle, feel exhausted, and rebound.</p>
+            <p>Want a full timeline for your goal? Our <a href="/weight-loss-calculator/">weight loss calculator</a> shows exactly when you'll reach your target weight at a safe pace. Not sure what weight to aim for? Check your <a href="/ideal-weight-calculator/">ideal weight and healthy weight range</a> first — it gives you a realistic target based on your height.</p>
 
-            <h2>🧮 How to Calculate YOUR Number (2 Steps)</h2>
-            <p>Finding your personal calorie target takes two steps:</p>
-
-            <div class="formula-box">
-                <div class="f-label">Step 1 — Find your BMR (calories burned at rest)</div>
-                <div class="f-main">BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age + 5 (men) or − 161 (women)</div>
-                <div class="f-example">This is the Mifflin-St Jeor equation — the most accurate formula for most people</div>
-            </div>
-
-            <div class="formula-box">
-                <div class="f-label">Step 2 — Multiply by your activity level</div>
-                <div class="f-main">TDEE = BMR × 1.2 (sedentary) up to × 1.9 (very active)</div>
-                <div class="f-example">Example: BMR 1,600 × 1.375 (light exercise) = <strong>2,200 calories/day to maintain</strong></div>
-            </div>
-
-            <p>The result is your <strong>TDEE (Total Daily Energy Expenditure)</strong> — the number of calories you need to <em>maintain</em> your current weight. Our <a href="/calorie-calculator/">free calorie calculator</a> does both steps instantly, and you can dive deeper with our <a href="/tdee-calculator/">TDEE calculator</a> and <a href="/bmr-calculator/">BMR calculator</a>.</p>
-
-            <h2>📉 Calories for Weight Loss</h2>
-            <p>To lose weight, eat <strong>below</strong> your TDEE. The sweet spot for most people:</p>
+            <h2>⚠️ Is Eating 500 Calories a Day Safe?</h2>
+            <p>This is one of the most common questions people ask — and the answer is a firm <strong>no</strong>. Eating only 500 calories a day is a form of crash dieting, and it can seriously harm your health:</p>
             <ul>
-                <li><strong>Deficit of 400–500 calories/day</strong> → lose roughly 0.5 kg (1 lb) per week</li>
-                <li>This pace is slow enough to protect muscle, keep energy stable, and actually stick to</li>
+                <li><strong>Muscle loss</strong> — your body burns muscle along with fat, slowing your metabolism</li>
+                <li><strong>Nutrient deficiencies</strong> — it's nearly impossible to get enough vitamins, minerals, and protein on 500 calories</li>
+                <li><strong>Fatigue, hair loss, and gallstones</strong> — all well-documented effects of very-low-calorie diets</li>
+                <li><strong>Rebound weight gain</strong> — extreme restriction almost always leads to binge eating later</li>
             </ul>
 
             <div class="warning-box">
-                <p>⚠️ Avoid going below 1,200 calories (women) or 1,500 calories (men) without medical supervision. Crash dieting causes muscle loss, fatigue, and rebound weight gain.</p>
+                <p>🚨 Safe minimums: Never go below <strong>1,200 calories per day (women)</strong> or <strong>1,500 calories per day (men)</strong> unless a doctor is supervising a very-low-calorie diet. Slower weight loss is healthier weight loss.</p>
             </div>
 
-            <p>Want a full timeline for your goal? Our <a href="/weight-loss-calculator/">weight loss calculator</a> shows exactly when you'll reach your target weight at a safe pace.</p>
+            <h2>🍽️ How to Split Calories: Breakfast, Lunch & Dinner</h2>
+            <p>Once you know your daily number, the next question is how to spread it across your <strong>meals</strong>. There's no single perfect split, but here's a balanced template for a 1,800-calorie day:</p>
 
-            <h2>📈 Calories for Muscle Gain</h2>
-            <p>Building muscle requires eating <strong>above</strong> your TDEE — but not by much:</p>
+            <table class="bmi-table">
+                <tr><th>Meal</th><th>Calories</th><th>Example</th></tr>
+                <tr><td>Breakfast</td><td>300 – 450</td><td>Oatmeal with berries, or 2 eggs + whole-grain toast</td></tr>
+                <tr><td>Lunch</td><td>500 – 550</td><td>Grilled chicken, rice, and a big salad</td></tr>
+                <tr><td>Dinner</td><td>500 – 550</td><td>Fish or lentils, vegetables, and whole grains</td></tr>
+                <tr><td>Snacks</td><td>200 – 300</td><td>Greek yogurt, fruit, or a handful of nuts</td></tr>
+            </table>
+
+            <p>A <strong>300-calorie breakfast</strong> is a great light start — think Greek yogurt with fruit, or a vegetable omelet. Some people prefer a bigger breakfast and lighter dinner; others do the opposite. What matters most is your <strong>total daily intake</strong>, not the clock.</p>
+
+            <h2>🥗 Food Quality: Why All Calories Aren't Equal</h2>
+            <p>Technically, you could lose weight eating nothing but junk food in a calorie deficit. But you'd feel terrible — hungry, tired, and craving more. The <strong>quality</strong> of your food decides how easy your diet feels:</p>
             <ul>
-                <li><strong>Surplus of 200–300 calories/day</strong> is enough for steady muscle growth</li>
-                <li>Bigger surpluses mostly add fat, not extra muscle</li>
-                <li>Pair your surplus with adequate protein (1.6–2.2 g per kg) — our <a href="/protein-calculator/">protein calculator</a> gives you your exact target</li>
+                <li><strong>Protein</strong> (eggs, chicken, lentils, paneer) keeps you full longest and protects muscle while you lose fat. Our <a href="/protein-calculator/">protein calculator</a> shows your daily target.</li>
+                <li><strong>Fiber</strong> (vegetables, fruits, whole grains) fills your stomach for very few calories.</li>
+                <li><strong>Highly processed food</strong> (chips, soda, sweets) packs huge calories into tiny portions — the easiest way to blow your budget without noticing.</li>
             </ul>
+            <p>The simplest healthy diet rule: build each meal around protein, add plenty of vegetables, and let everything else fit around that.</p>
 
-            <div class="highlight-box">
-                <p>💡 Remember: your calorie needs change as your weight changes. Recalculate every 4–6 weeks, or after every 2–3 kg lost or gained.</p>
-            </div>
+            <h2>🎯 Your Next Step</h2>
+            <p>Reading about calories is step one. Step two is finding <em>your</em> number. It takes about 30 seconds: enter your age, gender, height, weight, and activity level into our calorie calculator, and you'll get your maintenance calories plus a safe target for weight loss — all free, all private, right in your browser.</p>
+            <p>New to all of this? Start with our beginner guide on <a href="/blog/what-is-bmi/">what BMI is</a> to understand where your current weight stands on the health scale.</p>
 
             <!-- CTA -->
             <div class="cta-box">
-                <h3>Get Your Personal Number in 10 Seconds 🔥</h3>
+                <h3>Find Your Daily Calorie Needs 🔥</h3>
                 <p>Free, instant, and 100% private — everything runs in your browser.</p>
                 <a href="/calorie-calculator/" class="btn-white">Try the Calorie Calculator →</a>
             </div>
@@ -283,24 +284,28 @@
             <div class="faq-section">
                 <h2>❓ Frequently Asked Questions</h2>
                 <details>
-                    <summary>How many calories should I eat a day to lose weight?</summary>
-                    <p>Eat about 400–500 calories below your TDEE (maintenance calories). For most women that's roughly 1,400–1,700 per day; for most men, 1,800–2,200. This pace loses about 0.5 kg per week while protecting muscle and energy.</p>
+                    <summary>How many calories should a female eat per day?</summary>
+                    <p>Most adult females need 1,600–2,400 calories daily depending on age and activity level. For weight loss, a moderate deficit of 300–500 calories per day is usually recommended — but never below 1,200 calories without medical supervision.</p>
                 </details>
                 <details>
-                    <summary>Is 1,200 calories a day enough?</summary>
-                    <p>For most adults, no. 1,200 calories is below the basal metabolic rate of many people and can cause muscle loss, fatigue, nutrient deficiencies, and metabolic slowdown. Only short, medically supervised diets should go this low.</p>
+                    <summary>Is eating 500 calories a day safe?</summary>
+                    <p>No. Eating only 500 calories a day is dangerous for most adults. It can cause muscle loss, nutrient deficiencies, fatigue, and a slowed metabolism. The minimum safe intake is generally 1,200 calories for women and 1,500 for men, unless a doctor supervises a very-low-calorie diet.</p>
                 </details>
                 <details>
-                    <summary>How many calories should a woman eat per day?</summary>
-                    <p>General guidelines suggest 1,600–2,000 calories daily for sedentary to moderately active women, and up to 2,400 for very active women. Your exact number depends on your age, weight, height, and activity level.</p>
+                    <summary>How much weight can I lose in a month?</summary>
+                    <p>With a daily calorie deficit of 500 calories, most people lose about 0.5 kg (1 lb) of fat per week — roughly 2 kg (4–5 lbs) per month. Faster loss is possible early on due to water weight, but slow and steady is healthier and easier to maintain.</p>
                 </details>
                 <details>
-                    <summary>How many calories should a man eat per day?</summary>
-                    <p>General guidelines suggest 2,000–2,500 calories daily for sedentary to moderately active men, and up to 3,000 for very active men. Individual needs vary with body size, age, and activity.</p>
+                    <summary>What is a calorie deficit?</summary>
+                    <p>A calorie deficit means eating fewer calories than your body burns each day. When your body doesn't get enough energy from food, it burns stored fat instead — that's how weight loss happens.</p>
                 </details>
                 <details>
-                    <summary>Do calorie needs decrease with age?</summary>
-                    <p>Yes, mostly because muscle mass declines with age and people tend to move less. Needs typically drop by roughly 100–200 calories per decade after age 30. Strength training helps prevent this decline.</p>
+                    <summary>How many calories should breakfast and lunch be?</summary>
+                    <p>On a 1,800-calorie day, a common split is: breakfast 300–450 calories, lunch 500–550, dinner 500–550, and snacks 200–300. A 300-calorie breakfast could be oatmeal with berries, or two eggs with whole-grain toast.</p>
+                </details>
+                <details>
+                    <summary>Do children have the same calorie needs as adults?</summary>
+                    <p>No. A child's calorie needs are different and change rapidly with age and growth — typically 1,000–2,000+ calories daily. Children should never follow adult weight-loss diets. Always consult a pediatrician about a child's diet.</p>
                 </details>
             </div>
 
@@ -310,22 +315,22 @@
                 <div class="related-grid">
                     <a href="/calorie-calculator/" class="related-card">
                         <div class="r-icon">🔥</div>
-                        <div class="r-title">Calorie Calculator — Your Daily Target</div>
-                        <span class="r-link">Open Tool →</span>
-                    </a>
-                    <a href="/tdee-calculator/" class="related-card">
-                        <div class="r-icon">⚡</div>
-                        <div class="r-title">TDEE Calculator — Total Daily Burn</div>
+                        <div class="r-title">Calorie Calculator — Find Your Daily Number</div>
                         <span class="r-link">Open Tool →</span>
                     </a>
                     <a href="/blog/what-is-bmi/" class="related-card">
                         <div class="r-icon">💚</div>
-                        <div class="r-title">What Is BMI? Complete Guide for Beginners</div>
+                        <div class="r-title">What Is BMI? Formula, Scale & Ranges</div>
                         <span class="r-link">Read Article →</span>
                     </a>
                     <a href="/weight-loss-calculator/" class="related-card">
                         <div class="r-icon">📉</div>
-                        <div class="r-title">Weight Loss Calculator — Your Timeline</div>
+                        <div class="r-title">Weight Loss Calculator — See Your Timeline</div>
+                        <span class="r-link">Open Tool →</span>
+                    </a>
+                    <a href="/ideal-weight-calculator/" class="related-card">
+                        <div class="r-icon">⚖️</div>
+                        <div class="r-title">Ideal Weight Calculator — Find Your Range</div>
                         <span class="r-link">Open Tool →</span>
                     </a>
                 </div>
