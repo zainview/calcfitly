@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Height Weight Chart: Ideal Weight by Height (Men & Women) | CalcFitly</title>
+    <meta name="description" content="Height weight chart for men and women — find your ideal weight by height in kg and lbs. Healthy weight ranges, BMI-based tables, and how to use them.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💪</text></svg>">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Height Weight Chart: Ideal Weight by Height for Men & Women",
+      "description": "Complete height weight chart showing healthy and ideal weight ranges for every height, for men and women, in kg and lbs.",
+      "author": { "@type": "Organization", "name": "CalcFitly" },
+      "publisher": { "@type": "Organization", "name": "CalcFitly" },
+      "datePublished": "2026-09-21",
+      "dateModified": "2026-09-21"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What should my weight be for my height?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Your healthy weight depends on your height. For example, someone 5'4\" (163 cm) should weigh roughly 49–66 kg, and someone 5'10\" (178 cm) should weigh roughly 59–79 kg. These ranges are based on the healthy BMI range of 18.5–24.9." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the ideal weight for 5'6\" (168 cm)?",
+          "acceptedAnswer": { "@type": "Answer", "text": "For a height of 5'6\" (168 cm), the healthy weight range is approximately 52–70 kg (115–154 lbs). The midpoint, around 60–62 kg, is often considered the ideal weight for a medium body frame." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the height weight chart different for men and women?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The healthy weight range based on BMI is the same for both, but men typically carry more muscle mass, so their ideal weight often sits at the higher end of the range, while women's ideal weight often sits toward the middle or lower end." }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate is a height weight chart?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A height weight chart is a useful starting point, but it doesn't account for muscle mass, body frame size, age, or fat distribution. Athletes and muscular people may healthily weigh more than the chart suggests. Pair it with body fat percentage for a complete picture." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the height weight chart apply to children?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Children and teens are still growing, so their healthy weight is assessed using age-and-gender-specific growth charts (BMI-for-age percentiles), not adult charts. Always consult a pediatrician about a child's weight." }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my weight is outside the healthy range?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Don't panic. Use it as a starting point: check your BMI and body fat percentage, look at your daily calorie intake, and aim for gradual change — 0.5 kg per week is a safe, sustainable pace. Consult a healthcare professional for personalized advice." }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --green: #11998e;
+            --green-light: #38ef7d;
+            --green-dark: #0d7a72;
+            --ink: #14212b;
+            --muted: #5f6b76;
+            --bg: #f4fbf8;
+            --border: #e4efe9;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.7; }
+
+        .navbar { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+        .nav-inner { max-width: 1100px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4em; font-weight: 800; text-decoration: none; color: var(--ink); }
+        .logo span { color: var(--green); }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.95em; }
+        .nav-links a:hover { color: var(--green); }
+        .nav-cta { background: linear-gradient(135deg, var(--green), var(--green-light)); color: #fff !important; padding: 10px 20px; border-radius: 999px; box-shadow: 0 4px 12px rgba(17,153,142,0.25); }
+        .menu-btn { display: none; background: none; border: none; font-size: 1.6em; cursor: pointer; color: var(--ink); }
+
+        .article-wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 60px; }
+        .breadcrumb { font-size: 0.85em; color: var(--muted); margin-bottom: 24px; }
+        .breadcrumb a { color: var(--green); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .article-tag { display: inline-block; background: #eefaf4; color: var(--green-dark); font-weight: 700; font-size: 0.78em; padding: 6px 14px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+        h1 { font-size: clamp(1.7em, 4vw, 2.4em); font-weight: 800; letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 14px; }
+        .article-meta { color: var(--muted); font-size: 0.88em; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+
+        .article-body h2 { font-size: 1.5em; font-weight: 800; color: var(--green-dark); margin: 36px 0 14px; letter-spacing: -0.3px; }
+        .article-body p { color: #3d4a54; margin-bottom: 16px; font-size: 1.02em; }
+        .article-body ul { margin: 0 0 16px 24px; color: #3d4a54; }
+        .article-body li { margin-bottom: 8px; }
+        .article-body strong { color: var(--ink); }
+        .article-body a { color: var(--green); font-weight: 600; text-decoration: none; }
+        .article-body a:hover { text-decoration: underline; }
+
+        .bmi-table { width: 100%; border-collapse: collapse; margin: 20px 0 24px; font-size: 0.97em; }
+        .bmi-table th, .bmi-table td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+        .bmi-table th { background: #eefaf4; color: var(--green-dark); }
+        .bmi-table tr:last-child td { border-bottom: none; }
+
+        .highlight-box { background: #eefaf4; border-left: 4px solid var(--green); border-radius: 0 14px 14px 0; padding: 18px 22px; margin: 22px 0; }
+        .highlight-box p { margin-bottom: 0; color: var(--green-dark); font-weight: 600; }
+
+        .cta-box { background: linear-gradient(135deg, var(--green), var(--green-light)); border-radius: 20px; text-align: center; color: #fff; padding: 36px 24px; margin: 40px 0; }
+        .cta-box h3 { font-size: 1.4em; margin-bottom: 8px; }
+        .cta-box p { opacity: 0.92; margin-bottom: 20px; color: #fff; }
+        .btn-white { display: inline-block; background: #fff; color: var(--green-dark); padding: 14px 30px; border-radius: 999px; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(0,0,0,0.12); transition: 0.2s; }
+        .btn-white:hover { transform: translateY(-2px); }
+
+        .faq-section { margin-top: 44px; }
+        .faq-section h2 { font-size: 1.5em; font-weight: 800; color: var(--green-dark); margin-bottom: 18px; }
+        details { background: #fff; border: 1px solid var(--border); border-radius: 14px; margin-bottom: 12px; padding: 18px 22px; }
+        summary { cursor: pointer; font-weight: 700; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '+'; color: var(--green); font-size: 1.5em; font-weight: 700; flex-shrink: 0; }
+        details[open] summary::after { content: '−'; }
+        details p { margin-top: 12px; color: var(--muted); font-size: 0.95em; }
+
+        .related { margin-top: 44px; }
+        .related h2 { font-size: 1.4em; font-weight: 800; color: var(--green-dark); margin-bottom: 16px; }
+        .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .related-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; text-decoration: none; transition: 0.2s; display: block; }
+        .related-card:hover { border-color: var(--green); box-shadow: 0 6px 16px rgba(17,153,142,0.1); transform: translateY(-2px); }
+        .related-card .r-icon { font-size: 1.4em; margin-bottom: 8px; }
+        .related-card .r-title { font-weight: 700; color: var(--ink); font-size: 0.95em; line-height: 1.4; }
+        .related-card .r-link { color: var(--green); font-size: 0.82em; font-weight: 700; margin-top: 8px; display: block; }
+
+        footer { background: #0e2420; color: #cfe3dd; padding: 46px 20px 26px; margin-top: 40px; }
+        .footer-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+        .footer-logo { font-size: 1.3em; font-weight: 800; color: #fff; margin-bottom: 16px; }
+        .footer-logo span { color: var(--green-light); }
+        .footer-links { margin-bottom: 14px; }
+        footer a { color: #9fe8c9; text-decoration: none; margin: 0 10px; font-weight: 600; }
+        footer a:hover { color: #fff; }
+        .disclaimer { font-size: 0.82em; color: #7fa39a; max-width: 640px; margin: 14px auto 0; }
+        .copyright { margin-top: 16px; font-size: 0.85em; color: #7fa39a; }
+
+        @media (max-width: 768px) {
+            .menu-btn { display: block; }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; align-items: flex-start; padding: 18px 22px; gap: 16px; border-bottom: 1px solid var(--border); box-shadow: 0 12px 24px rgba(0,0,0,0.07); }
+            .nav-links.open { display: flex; }
+            .related-grid { grid-template-columns: 1fr; }
+            .bmi-table { font-size: 0.88em; }
+            .bmi-table th, .bmi-table td { padding: 10px 8px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="/" class="logo">💪 Calc<span>Fitly</span></a>
+            <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+            <div class="nav-links" id="navLinks">
+                <a href="/">Home</a>
+                <a href="/#calculators">Calculators</a>
+                <a href="/blog/">Blog</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+                <a href="/ideal-weight-calculator/" class="nav-cta">Ideal Weight Tool</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ARTICLE -->
+    <article class="article-wrap">
+
+        <div class="breadcrumb">
+            <a href="/">Home</a> → <a href="/blog/">Blog</a> → Height Weight Chart
+        </div>
+
+        <span class="article-tag">Weight Guide</span>
+        <h1>Height Weight Chart: Ideal Weight by Height (Men & Women)</h1>
+        <div class="article-meta">📅 September 21, 2026 · ⏱️ 6 min read · ✍️ CalcFitly Team</div>
+
+        <div class="article-body">
+
+            <p>Wondering <strong>"what should my weight be for my height?"</strong> You're not alone — it's one of the most asked health questions in the world. The quick answer: a healthy weight for your height is the range where your BMI falls between 18.5 and 24.9. For example, if you're <strong>5'6" (168 cm)</strong>, your healthy weight range is roughly <strong>52–70 kg</strong>.</p>
+            <p>Below you'll find the complete <strong>height weight chart</strong> for adults — in both kilograms and pounds — plus how to use it, where it falls short, and how to find your personal <strong>ideal weight</strong>.</p>
+
+            <h2>📊 Height Weight Chart (Kilograms)</h2>
+            <p>This chart shows the <strong>healthy weight range for each height</strong>, based on the World Health Organization's healthy BMI range (18.5–24.9):</p>
+
+            <table class="bmi-table">
+                <tr><th>Height (ft/in)</th><th>Height (cm)</th><th>Healthy Weight (kg)</th></tr>
+                <tr><td>4'10"</td><td>147 cm</td><td>40 – 53 kg</td></tr>
+                <tr><td>4'11"</td><td>150 cm</td><td>42 – 56 kg</td></tr>
+                <tr><td>5'0"</td><td>152 cm</td><td>43 – 57 kg</td></tr>
+                <tr><td>5'1"</td><td>155 cm</td><td>44 – 60 kg</td></tr>
+                <tr><td>5'2"</td><td>157 cm</td><td>46 – 61 kg</td></tr>
+                <tr><td>5'3"</td><td>160 cm</td><td>47 – 64 kg</td></tr>
+                <tr><td>5'4"</td><td>163 cm</td><td>49 – 66 kg</td></tr>
+                <tr><td>5'5"</td><td>165 cm</td><td>51 – 68 kg</td></tr>
+                <tr><td>5'6"</td><td>168 cm</td><td>52 – 70 kg</td></tr>
+                <tr><td>5'7"</td><td>170 cm</td><td>54 – 72 kg</td></tr>
+                <tr><td>5'8"</td><td>173 cm</td><td>55 – 74 kg</td></tr>
+                <tr><td>5'9"</td><td>175 cm</td><td>57 – 76 kg</td></tr>
+                <tr><td>5'10"</td><td>178 cm</td><td>59 – 79 kg</td></tr>
+                <tr><td>5'11"</td><td>180 cm</td><td>60 – 81 kg</td></tr>
+                <tr><td>6'0"</td><td>183 cm</td><td>62 – 83 kg</td></tr>
+                <tr><td>6'1"</td><td>185 cm</td><td>64 – 85 kg</td></tr>
+                <tr><td>6'2"</td><td>188 cm</td><td>65 – 88 kg</td></tr>
+                <tr><td>6'3"</td><td>191 cm</td><td>67 – 90 kg</td></tr>
+                <tr><td>6'4"</td><td>193 cm</td><td>69 – 92 kg</td></tr>
+            </table>
+
+            <h2>⚖️ Height Weight Chart (Pounds)</h2>
+            <p>Prefer pounds? Here's the same chart in lbs:</p>
+
+            <table class="bmi-table">
+                <tr><th>Height (ft/in)</th><th>Healthy Weight (lbs)</th></tr>
+                <tr><td>4'10"</td><td>88 – 117 lbs</td></tr>
+                <tr><td>5'0"</td><td>95 – 126 lbs</td></tr>
+                <tr><td>5'2"</td><td>101 – 135 lbs</td></tr>
+                <tr><td>5'4"</td><td>108 – 146 lbs</td></tr>
+                <tr><td>5'6"</td><td>115 – 154 lbs</td></tr>
+                <tr><td>5'8"</td><td>121 – 163 lbs</td></tr>
+                <tr><td>5'10"</td><td>130 – 174 lbs</td></tr>
+                <tr><td>6'0"</td><td>137 – 183 lbs</td></tr>
+                <tr><td>6'2"</td><td>143 – 194 lbs</td></tr>
+                <tr><td>6'4"</td><td>152 – 203 lbs</td></tr>
+            </table>
+
+            <div class="highlight-box">
+                <p>💡 Quick answer: If you're 5'6" (168 cm), a healthy weight is 52–70 kg (115–154 lbs). Find your height in the chart above for your personal range.</p>
+            </div>
+
+            <h2>👨‍👩 Is the Chart Different for Men and Women?</h2>
+            <p>The <strong>healthy range itself is the same</strong> for men and women — it's based purely on height. But where your <strong>ideal weight</strong> sits <em>within</em> that range often differs:</p>
+            <ul>
+                <li><strong>Men</strong> naturally carry more muscle mass and bone density, so their ideal weight typically sits toward the <strong>higher end</strong> of the range.</li>
+                <li><strong>Women</strong> naturally carry a higher percentage of essential body fat, so their ideal weight often sits toward the <strong>middle</strong> of the range.</li>
+                <li><strong>Body frame matters too:</strong> someone with a large frame (broader shoulders, thicker wrists) can healthily weigh 5–8% more than someone with a small frame at the same height.</li>
+            </ul>
+            <p>For a number tailored to your gender, age, and frame, use our <a href="/ideal-weight-calculator/">ideal weight calculator</a> — it combines multiple scientific formulas instead of relying on one generic chart.</p>
+
+            <h2>🧮 How Is the Height Weight Chart Calculated?</h2>
+            <p>The chart is built on the <strong>BMI formula</strong>: weight (kg) ÷ height (m)². Health authorities define a healthy BMI as 18.5–24.9, so the chart simply works backwards:</p>
+            <ul>
+                <li><strong>Lower end</strong> = height² × 18.5 (the lightest healthy weight)</li>
+                <li><strong>Upper end</strong> = height² × 24.9 (the heaviest healthy weight)</li>
+            </ul>
+            <p>Want to see exactly where you fall on the scale right now? Check your number with our <a href="/bmi-calculator/">free BMI calculator</a>, and read our guide on <a href="/blog/what-is-bmi/">what BMI is and how the BMI scale works</a> for the full picture.</p>
+
+            <h2>⚠️ Where the Height Weight Chart Falls Short</h2>
+            <p>The chart is a great starting point — but it's not the final word. Here's what it <strong>doesn't</strong> see:</p>
+            <ul>
+                <li><strong>Muscle vs fat:</strong> Muscle is denser than fat, so fit, muscular people can exceed the "healthy" range while being in excellent shape.</li>
+                <li><strong>Body composition:</strong> Two people at the same height and weight can look completely different. That's why your <a href="/body-fat-calculator/">body fat percentage</a> tells a deeper story than weight alone.</li>
+                <li><strong>Age:</strong> We naturally lose muscle and gain fat as we age, even at the same weight.</li>
+                <li><strong>Children and teens:</strong> Kids are still growing, so adult charts don't apply to them. A child's healthy weight is measured with age-specific growth charts — always check with a pediatrician.</li>
+            </ul>
+
+            <h2>🎯 Found Your Range? Here's What to Do Next</h2>
+            <p><strong>If you're inside the healthy range:</strong> Great! Focus on maintaining — eat at your <a href="/calorie-calculator/">daily calorie needs</a>, stay active, and keep an eye on body composition.</p>
+            <p><strong>If you're above the range:</strong> A gentle calorie deficit of 300–500 calories a day leads to safe fat loss of about 0.5 kg per week. Our guide on <a href="/blog/how-many-calories-should-i-eat-a-day/">how many calories you should eat a day</a> walks you through it step by step, and the <a href="/weight-loss-calculator/">weight loss calculator</a> shows your personal timeline.</p>
+            <p><strong>If you're below the range:</strong> Focus on a modest calorie surplus with plenty of protein — our <a href="/protein-calculator/">protein calculator</a> can help you set a daily target for healthy weight gain.</p>
+
+            <!-- CTA -->
+            <div class="cta-box">
+                <h3>Find YOUR Ideal Weight in Seconds ⚖️</h3>
+                <p>Personalized for your height, age, and gender — free and 100% private.</p>
+                <a href="/ideal-weight-calculator/" class="btn-white">Try the Ideal Weight Calculator →</a>
+            </div>
+
+            <!-- FAQ -->
+            <div class="faq-section">
+                <h2>❓ Frequently Asked Questions</h2>
+                <details>
+                    <summary>What should my weight be for my height?</summary>
+                    <p>Your healthy weight depends on your height. For example, someone 5'4" (163 cm) should weigh roughly 49–66 kg, and someone 5'10" (178 cm) should weigh roughly 59–79 kg. These ranges are based on the healthy BMI range of 18.5–24.9.</p>
+                </details>
+                <details>
+                    <summary>What is the ideal weight for 5'6" (168 cm)?</summary>
+                    <p>For a height of 5'6" (168 cm), the healthy weight range is approximately 52–70 kg (115–154 lbs). The midpoint, around 60–62 kg, is often considered the ideal weight for a medium body frame.</p>
+                </details>
+                <details>
+                    <summary>Is the height weight chart different for men and women?</summary>
+                    <p>The healthy weight range based on BMI is the same for both, but men typically carry more muscle mass, so their ideal weight often sits at the higher end of the range, while women's ideal weight often sits toward the middle or lower end.</p>
+                </details>
+                <details>
+                    <summary>How accurate is a height weight chart?</summary>
+                    <p>A height weight chart is a useful starting point, but it doesn't account for muscle mass, body frame size, age, or fat distribution. Athletes and muscular people may healthily weigh more than the chart suggests. Pair it with body fat percentage for a complete picture.</p>
+                </details>
+                <details>
+                    <summary>Does the height weight chart apply to children?</summary>
+                    <p>No. Children and teens are still growing, so their healthy weight is assessed using age-and-gender-specific growth charts (BMI-for-age percentiles), not adult charts. Always consult a pediatrician about a child's weight.</p>
+                </details>
+                <details>
+                    <summary>What if my weight is outside the healthy range?</summary>
+                    <p>Don't panic. Use it as a starting point: check your BMI and body fat percentage, look at your daily calorie intake, and aim for gradual change — 0.5 kg per week is a safe, sustainable pace. Consult a healthcare professional for personalized advice.</p>
+                </details>
+            </div>
+
+            <!-- RELATED -->
+            <div class="related">
+                <h2>📚 Keep Reading</h2>
+                <div class="related-grid">
+                    <a href="/ideal-weight-calculator/" class="related-card">
+                        <div class="r-icon">⚖️</div>
+                        <div class="r-title">Ideal Weight Calculator — Personal Number</div>
+                        <span class="r-link">Open Tool →</span>
+                    </a>
+                    <a href="/blog/what-is-bmi/" class="related-card">
+                        <div class="r-icon">💚</div>
+                        <div class="r-title">What Is BMI? Formula, Scale & Ranges</div>
+                        <span class="r-link">Read Article →</span>
+                    </a>
+                    <a href="/blog/how-many-calories-should-i-eat-a-day/" class="related-card">
+                        <div class="r-icon">🔥</div>
+                        <div class="r-title">How Many Calories Should I Eat a Day?</div>
+                        <span class="r-link">Read Article →</span>
+                    </a>
+                    <a href="/body-fat-calculator/" class="related-card">
+                        <div class="r-icon">📏</div>
+                        <div class="r-title">Body Fat Calculator — Beyond Weight</div>
+                        <span class="r-link">Open Tool →</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">💪 Calc<span>Fitly</span></div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/bmi-calculator/">BMI</a>
+                <a href="/calorie-calculator/">Calorie</a>
+                <a href="/body-fat-calculator/">Body Fat</a>
+                <a href="/water-intake-calculator/">Water</a>
+                <a href="/macro-calculator/">Macro</a>
+                <a href="/ideal-weight-calculator/">Ideal Weight</a>
+                <a href="/tdee-calculator/">TDEE</a>
+                <a href="/weight-loss-calculator/">Weight Loss</a>
+                <a href="/protein-calculator/">Protein</a>
+                <a href="/bmr-calculator/">BMR</a>
+                <a href="/blog/">Blog</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+                <a href="/privacy-policy/">Privacy Policy</a>
+            </div>
+            <p class="disclaimer">CalcFitly provides educational content only and does not offer medical advice. Always consult a qualified healthcare professional before making health decisions.</p>
+            <p class="copyright">&copy; 2026 CalcFitly. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        var menuBtn = document.getElementById('menuBtn');
+        var navLinks = document.getElementById('navLinks');
+        menuBtn.addEventListener('click', function () {
+            navLinks.classList.toggle('open');
+        });
+    </script>
+
+</body>
+</html>
