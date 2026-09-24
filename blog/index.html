@@ -99,6 +99,14 @@
         }
         html { scroll-behavior: smooth; }
         body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+        /* ===== IMAGE CARD ===== */
+.img-card { display: block; background: #fff; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; text-decoration: none; transition: 0.2s; margin: 26px 0; }
+.img-card:hover { border-color: var(--green); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(17,153,142,0.1); }
+.img-card img { width: 100%; height: auto; display: block; }
+.img-card-body { padding: 18px 22px 20px; }
+.img-card-tag { display: inline-block; background: #eefaf4; color: var(--green-dark); font-weight: 700; font-size: 0.68em; padding: 4px 10px; border-radius: 999px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+.img-card-title { display: block; font-weight: 800; color: var(--ink); font-size: 1.05em; line-height: 1.35; margin-bottom: 8px; }
+.img-card-meta { font-size: 0.82em; color: var(--muted); }
 
         /* ===== NAVBAR ===== */
         .navbar { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
@@ -206,18 +214,18 @@
         </header>
 
         <!-- Featured Article (Latest) -->
-        <a href="/blog/is-bmi-accurate/" class="featured-card">
-            <img src="/images/is-bmi-accurate-og.webp"
-                 alt="Is BMI accurate - 7 BMI limitations explained"
-                 width="1200" height="630">
-            <div class="featured-body">
-                <span class="featured-badge">⭐ Latest Guide</span>
-                <h2>Is BMI Accurate? 7 BMI Limitations You Should Know</h2>
-                <p>BMI is the world's most popular health screening tool — but it has real blind spots. Here's when it works, when it fails, and what to measure instead.</p>
-                <span class="card-meta">📅 Sep 23, 2026 · ⏱️ 7 min read</span>
-            </div>
-        </a>
-
+       <!-- Related Article Image Card -->
+<a href="/blog/is-bmi-accurate/" class="img-card">
+    <img src="/images/is-bmi-accurate-og.webp"
+         alt="Is BMI accurate - 7 BMI limitations explained"
+         width="1200" height="630"
+         loading="lazy">
+    <div class="img-card-body">
+        <span class="img-card-tag">Health Basics</span>
+        <span class="img-card-title">Is BMI Accurate? 7 BMI Limitations You Should Know</span>
+        <span class="img-card-meta">⏱️ 7 min read · Read guide →</span>
+    </div>
+</a>
         <!-- All Articles Grid -->
         <div class="blog-grid">
 
