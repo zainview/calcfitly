@@ -131,7 +131,16 @@
       <image:title>Is BMI Accurate? 7 BMI Limitations You Should Know</image:title>
     </image:image>
   </url>
-
+  <url>
+    <loc>https://calcfitly.com/blog/what-is-body-fat-percentage/</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://calcfitly.com/images/what-is-body-fat-percentage-og.webp</image:loc>
+      <image:title>What Is Body Fat Percentage? Healthy Ranges &amp; How to Measure</image:title>
+    </image:image>
+  </url>
   <!-- ===== STATIC PAGES ===== -->
   <url>
     <loc>https://calcfitly.com/about/</loc>
