@@ -151,6 +151,16 @@
       <image:title>What Is BMR? Basal Metabolic Rate Explained + How to Calculate</image:title>
     </image:image>
   </url>
+          <url>
+    <loc>https://calcfitly.com/blog/what-is-tdee/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://calcfitly.com/images/what-is-tdee-og.webp</image:loc>
+      <image:title>What Is TDEE? Total Daily Energy Expenditure Explained</image:title>
+    </image:image>
+  </url>
   <!-- ===== STATIC PAGES ===== -->
   <url>
     <loc>https://calcfitly.com/about/</loc>
