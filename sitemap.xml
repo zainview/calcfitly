@@ -171,6 +171,16 @@
       <image:title>BMI for Women: Chart, Healthy Ranges & What Your Number Means</image:title>
     </image:image>
   </url>
+          <url>
+    <loc>https://calcfitly.com/blog/bmi-for-men/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://calcfitly.com/images/bmi-for-men-og.webp</image:loc>
+      <image:title>BMI for Men: Chart, Healthy Ranges & The Muscle Problem</image:title>
+    </image:image>
+  </url>
   <!-- ===== STATIC PAGES ===== -->
   <url>
     <loc>https://calcfitly.com/about/</loc>
