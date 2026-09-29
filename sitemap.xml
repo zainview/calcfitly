@@ -181,6 +181,16 @@
       <image:title>BMI for Men: Chart, Healthy Ranges & The Muscle Problem</image:title>
     </image:image>
   </url>
+          <url>
+    <loc>https://calcfitly.com/blog/how-to-lose-weight-safely/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://calcfitly.com/images/how-to-lose-weight-safely-og.webp</image:loc>
+      <image:title>How to Lose Weight Safely: A Simple Science-Backed Guide</image:title>
+    </image:image>
+  </url>
   <!-- ===== STATIC PAGES ===== -->
   <url>
     <loc>https://calcfitly.com/about/</loc>
