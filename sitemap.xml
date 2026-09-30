@@ -191,6 +191,16 @@
       <image:title>How to Lose Weight Safely: A Simple Science-Backed Guide</image:title>
     </image:image>
   </url>
+          <url>
+    <loc>https://calcfitly.com/blog/how-many-calories-should-i-eat/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://calcfitly.com/images/how-many-calories-should-i-eat-og.webp</image:loc>
+      <image:title>How Many Calories Should I Eat a Day? (By Age, Gender & Goal)</image:title>
+    </image:image>
+  </url>
   <!-- ===== STATIC PAGES ===== -->
   <url>
     <loc>https://calcfitly.com/about/</loc>
