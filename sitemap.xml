@@ -88,7 +88,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://calcfitly.com/images/what-is-bmi-og.webp</image:loc>
-      <image:title>What Is BMI? BMI Formula, Scale &ampamp; Healthy Ranges Explained</image:title>
+      <image:title>What Is BMI? BMI Formula, Scale &amp; Healthy Ranges Explained</image:title>
     </image:image>
   </url>
   <url>
@@ -138,7 +138,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://calcfitly.com/images/what-is-body-fat-percentage-og.webp</image:loc>
-      <image:title>What Is Body Fat Percentage? Healthy Ranges &ampamp; How to Measure</image:title>
+      <image:title>What Is Body Fat Percentage? Healthy Ranges &amp; How to Measure</image:title>
     </image:image>
   </url>
           <url>
@@ -191,34 +191,34 @@
       <image:title>How to Lose Weight Safely: A Simple Science-Backed Guide</image:title>
     </image:image>
   </url>
-          <url>
+            <url>
     <loc>https://calcfitly.com/blog/how-many-calories-should-i-eat/</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://calcfitly.com/images/how-many-calories-should-i-eat-og.webp</image:loc>
-      <image:title>How Many Calories Should I Eat a Day? (By Age, Gender &amp Goal)</image:title>
+      <image:title>How Many Calories Should I Eat a Day? (By Age, Gender &amp; Goal)</image:title>
     </image:image>
   </url>
-          <url>
+            <url>
     <loc>https://calcfitly.com/blog/how-much-water-should-you-drink/</loc>
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://calcfitly.com/images/how-much-water-should-you-drink-og.webp</image:loc>
-      <image:title>How Much Water Should You Drink a Day? (By Weight &amp Activity)</image:title>
+      <image:title>How Much Water Should You Drink a Day? (By Weight &amp; Activity)</image:title>
     </image:image>
   </url>
-          <url>
+            <url>
     <loc>https://calcfitly.com/blog/how-much-protein-do-you-need/</loc>
     <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://calcfitly.com/images/how-much-protein-do-you-need-og.webp</image:loc>
-      <image:title>How Much Protein Do You Need a Day? (By Weight &amp Goal)</image:title>
+      <image:title>How Much Protein Do You Need a Day? (By Weight &amp; Goal)</image:title>
     </image:image>
   </url>
   <!-- ===== STATIC PAGES ===== -->
