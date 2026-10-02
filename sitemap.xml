@@ -211,6 +211,16 @@
       <image:title>How Much Water Should You Drink a Day? (By Weight & Activity)</image:title>
     </image:image>
   </url>
+          <url>
+    <loc>https://calcfitly.com/blog/how-much-protein-do-you-need/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://calcfitly.com/images/how-much-protein-do-you-need-og.webp</image:loc>
+      <image:title>How Much Protein Do You Need a Day? (By Weight & Goal)</image:title>
+    </image:image>
+  </url>
   <!-- ===== STATIC PAGES ===== -->
   <url>
     <loc>https://calcfitly.com/about/</loc>
