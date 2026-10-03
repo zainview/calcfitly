@@ -221,6 +221,16 @@
       <image:title>How Much Protein Do You Need a Day? (By Weight &amp; Goal)</image:title>
     </image:image>
   </url>
+        <url>
+  <loc>https://calcfitly.com/blog/macros-explained/</loc>
+  <lastmod>2026-10-03</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/macros-explained-og.webp</image:loc>
+    <image:title>Macros Explained: What Are Macronutrients? (Simple Guide)</image:title>
+  </image:image>
+</url>
   <!-- ===== STATIC PAGES ===== -->
   <url>
     <loc>https://calcfitly.com/about/</loc>
