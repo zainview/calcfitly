@@ -222,6 +222,16 @@
     <image:title>Macros Explained: What Are Macronutrients? (Simple Guide)</image:title>
   </image:image>
 </url>
+        <url>
+  <loc>https://calcfitly.com/blog/heart-rate-zones-explained/</loc>
+  <lastmod>2026-10-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/heart-rate-zones-explained-og.webp</image:loc>
+    <image:title>Heart Rate Zones Explained: What Are the 5 Zones?</image:title>
+  </image:image>
+</url>
   <!-- ===== STATIC PAGES ===== -->
   <url>
     <loc>https://calcfitly.com/about/</loc>
