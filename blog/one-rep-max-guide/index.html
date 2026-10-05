@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CR7V1W5TSZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CR7V1W5TSZ');
+</script>
+
+<title>How to Calculate Your One Rep Max (1RM): Formulas & Chart | CalcFitly</title>
+<meta name="description" content="Learn how to calculate your one rep max using the Epley and Brzycki formulas. Includes a rep-max chart, safety tips, and how to use your 1RM for training.">
+<link rel="canonical" href="https://calcfitly.com/blog/one-rep-max-guide/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💪</text></svg>">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Calculate Your One Rep Max (1RM): Formulas & Chart">
+<meta property="og:description" content="Learn how to calculate your one rep max with the Epley and Brzycki formulas — plus a rep-max chart, safety tips, and training percentages.">
+<meta property="og:url" content="https://calcfitly.com/blog/one-rep-max-guide/">
+<meta property="og:image" content="https://calcfitly.com/images/one-rep-max-guide-og.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://calcfitly.com/images/one-rep-max-guide-og.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Calculate Your One Rep Max (1RM): Formulas & Chart",
+  "description": "Learn how to calculate your one rep max using the Epley and Brzycki formulas. Includes a rep-max chart, safety tips, and how to use your 1RM for training.",
+  "datePublished": "2026-10-05",
+  "dateModified": "2026-10-05",
+  "author": { "@type": "Organization", "name": "CalcFitly" },
+  "publisher": { "@type": "Organization", "name": "CalcFitly" },
+  "mainEntityOfPage": "https://calcfitly.com/blog/one-rep-max-guide/"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a one rep max (1RM)?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Your one rep max (1RM) is the maximum amount of weight you can lift for exactly one repetition of an exercise with proper form. It is the standard measure of strength used to program workouts and track progress." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate my one rep max without testing it?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use a submaximal set: lift a weight you can do for 2-10 reps to near failure, then apply a formula. The most common is the Epley formula: 1RM = weight × (1 + reps ÷ 30). For example, 100 kg for 5 reps gives an estimated 1RM of about 116.7 kg." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which 1RM formula is the most accurate?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The Epley and Brzycki formulas are the most widely used and give similar results for rep ranges of 2-10. Epley (weight × (1 + reps/30)) is slightly more common. Accuracy drops beyond 10 reps, so use sets of 3-6 reps for the best estimate." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe to test your actual one rep max?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Testing a true 1RM carries higher injury risk, especially for beginners. Estimating from a 3-5 rep set is safer and accurate enough for most people. If you do test, warm up thoroughly, use a spotter or safety pins, and never attempt a 1RM alone." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I use my 1RM to plan my workouts?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Training programs use percentages of your 1RM. For strength, lift 85-95% for 1-5 reps. For muscle growth (hypertrophy), use 65-85% for 6-12 reps. For endurance, use 50-65% for 12-20 reps. Adjust as your 1RM improves over time." }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I retest my one rep max?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Retest every 4-8 weeks, or whenever your training weights start feeling noticeably easier. Frequent 1RM testing can interfere with training and recovery, so estimated 1RM from your regular workouts is often the better approach." }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcfitly.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://calcfitly.com/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "How to Calculate Your One Rep Max", "item": "https://calcfitly.com/blog/one-rep-max-guide/" }
+  ]
+}
+</script>
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --green: #11998e;
+  --green-light: #38ef7d;
+  --green-dark: #0d7a72;
+  --ink: #14212b;
+  --muted: #5f6b76;
+  --bg: #f4fbf8;
+  --border: #e4efe9;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+/* ===== NAVBAR ===== */
+.navbar { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+.nav-inner { max-width: 1100px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-size: 1.4em; font-weight: 800; text-decoration: none; color: var(--ink); }
+.logo span { color: var(--green); }
+.nav-links { display: flex; align-items: center; gap: 24px; }
+.nav-links a { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.95em; }
+.nav-links a:hover { color: var(--green); }
+.nav-cta { background: linear-gradient(135deg, var(--green), var(--green-light)); color: #fff !important; padding: 10px 20px; border-radius: 999px; box-shadow: 0 4px 12px rgba(17,153,142,0.25); }
+.menu-btn { display: none; background: none; font-size: 1.6em; cursor: pointer; color: var(--ink); border: none; }
+/* ===== ARTICLE LAYOUT ===== */
+.article-wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 60px; }
+.breadcrumb { font-size: 0.85em; color: var(--muted); margin-bottom: 24px; }
+.breadcrumb a { color: var(--green); text-decoration: none; font-weight: 600; }
+.breadcrumb a:hover { text-decoration: underline; }
+.a-hero { margin-bottom: 30px; }
+.a-tag { display: inline-block; background: #eefaf4; color: var(--green-dark); font-weight: 700; font-size: 0.72em; padding: 5px 12px; border-radius: 999px; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 1px; }
+.a-hero h1 { font-size: clamp(1.7em, 4vw, 2.4em); font-weight: 900; letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 14px; }
+.a-hero .intro { color: var(--muted); font-size: 1.08em; }
+.a-info { display: flex; gap: 14px; align-items: center; margin-top: 16px; padding: 12px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); color: var(--muted); font-size: 0.85em; flex-wrap: wrap; }
+/* ===== TOC ===== */
+.toc { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 22px 26px; margin: 28px 0 36px; }
+.toc strong { display: block; margin-bottom: 10px; font-size: 0.95em; }
+.toc a { display: block; color: var(--muted); text-decoration: none; padding: 5px 0; font-size: 0.92em; }
+.toc a:hover { color: var(--green); }
+.toc a::before { content: '→ '; color: var(--green); }
+/* ===== CONTENT ===== */
+.content h2 { font-size: 1.5em; font-weight: 800; margin: 42px 0 14px; letter-spacing: -0.3px; }
+.content h3 { font-size: 1.15em; font-weight: 700; margin: 28px 0 10px; }
+.content p { margin-bottom: 16px; color: #2c3a45; }
+.content ul, .content ol { margin: 0 0 18px 22px; color: #2c3a45; }
+.content li { margin-bottom: 8px; }
+.content a { color: var(--green-dark); font-weight: 600; }
+.content strong { color: var(--ink); }
+/* ===== FORMULA BOX ===== */
+.formula-box { background: linear-gradient(135deg, #eefaf4, #e3f8ef); border: 1px solid var(--border); border-left: 4px solid var(--green); border-radius: 14px; padding: 22px 26px; margin: 22px 0; }
+.formula-box .f-label { font-size: 0.78em; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--green-dark); margin-bottom: 8px; }
+.formula-box .f-main { font-size: 1.25em; font-weight: 800; color: var(--ink); font-family: 'Courier New', monospace; }
+.formula-box .f-note { font-size: 0.88em; color: var(--muted); margin-top: 8px; }
+/* ===== EXAMPLE BOX ===== */
+.example-box { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 22px 26px; margin: 22px 0; }
+.example-box .e-title { font-weight: 800; margin-bottom: 12px; color: var(--green-dark); }
+.example-box .step { padding: 8px 0; border-bottom: 1px dashed var(--border); font-size: 0.95em; }
+.example-box .step:last-child { border-bottom: none; }
+.example-box .step b { color: var(--ink); }
+.example-box .result { margin-top: 12px; background: #eefaf4; border-radius: 10px; padding: 12px 16px; font-weight: 700; color: var(--green-dark); }
+/* ===== TABLE ===== */
+.table-wrap { overflow-x: auto; margin: 22px 0; border-radius: 14px; border: 1px solid var(--border); }
+table { width: 100%; border-collapse: collapse; background: #fff; font-size: 0.93em; }
+th { background: var(--green); color: #fff; text-align: left; padding: 13px 16px; font-weight: 700; }
+td { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) { background: #f7fcfa; }
+/* ===== CALC CTA BOX ===== */
+.calc-cta { background: linear-gradient(135deg, var(--green), var(--green-light)); border-radius: 18px; padding: 30px 26px; text-align: center; color: #fff; margin: 36px 0; }
+.calc-cta h3 { color: #fff; margin: 0 0 8px; font-size: 1.3em; }
+.calc-cta p { color: rgba(255,255,255,0.92); margin-bottom: 18px; }
+.btn-white { display: inline-block; background: #fff; color: var(--green-dark); padding: 13px 28px; border-radius: 999px; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(0,0,0,0.12); transition: 0.2s; }
+.btn-white:hover { transform: translateY(-2px); }
+/* ===== FAQ ===== */
+.faq-item { background: #fff; border: 1px solid var(--border); border-radius: 14px; margin-bottom: 12px; overflow: hidden; }
+.faq-q { width: 100%; text-align: left; background: none; border: none; padding: 18px 22px; font-size: 1em; font-weight: 700; color: var(--ink); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: inherit; }
+.faq-q span { color: var(--green); font-size: 1.3em; transition: 0.2s; }
+.faq-item.open .faq-q span { transform: rotate(45deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.faq-a p { padding: 0 22px 18px; margin: 0; color: var(--muted); font-size: 0.95em; }
+/* ===== RELATED ===== */
+.related { margin-top: 46px; }
+.related h2 { font-size: 1.3em; font-weight: 800; margin-bottom: 16px; }
+.related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.related-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; text-decoration: none; transition: 0.2s; display: block; }
+.related-card:hover { border-color: var(--green); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(17,153,142,0.1); }
+.related-card .r-icon { font-size: 1.5em; margin-bottom: 8px; }
+.related-card .r-title { font-weight: 700; color: var(--ink); font-size: 0.95em; line-height: 1.4; }
+/* ===== NOTE ===== */
+.note { background: #fff8e6; border: 1px solid #f0e2b6; border-left: 4px solid #e8b93d; border-radius: 12px; padding: 16px 20px; font-size: 0.9em; color: #6b5a23; margin: 26px 0; }
+/* ===== FOOTER ===== */
+footer { background: #0e2420; color: #cfe3dd; padding: 46px 20px 26px; margin-top: 60px; }
+.footer-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+.footer-logo { font-size: 1.3em; font-weight: 800; color: #fff; margin-bottom: 16px; }
+.footer-logo span { color: var(--green-light); }
+.footer-links { margin-bottom: 14px; }
+footer a { color: #9fe8c9; text-decoration: none; margin: 0 10px; font-weight: 600; }
+footer a:hover { color: #fff; }
+.disclaimer { font-size: 0.82em; color: #7fa39a; max-width: 640px; margin: 14px auto 0; }
+.copyright { margin-top: 16px; font-size: 0.85em; color: #7fa39a; }
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .menu-btn { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; align-items: flex-start; padding: 18px 22px; gap: 16px; border-bottom: 1px solid var(--border); box-shadow: 0 12px 24px rgba(0,0,0,0.07); }
+  .nav-links.open { display: flex; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="/" class="logo">💪 Calc<span>Fitly</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/#calculators">Calculators</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/bmi-calculator/" class="nav-cta">BMI Calculator</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ARTICLE -->
+<article class="article-wrap">
+
+  <nav class="breadcrumb">
+    <a href="/">Home</a> → <a href="/blog/">Blog</a> → How to Calculate Your One Rep Max
+  </nav>
+
+  <header class="a-hero">
+    <span class="a-tag">Strength</span>
+    <h1>How to Calculate Your One Rep Max (1RM): Formulas & Chart</h1>
+    <p class="intro">Your one rep max is the gold standard for measuring strength — but testing it directly is risky. Here's how to estimate it safely, plus how to use it to plan every workout.</p>
+    <div class="a-info">
+      <span>📅 Oct 5, 2026</span>
+      <span>⏱️ 8 min read</span>
+      <span>✍️ CalcFitly Team</span>
+    </div>
+  </header>
+
+  <!-- Hero Image -->
+  <figure style="margin: 0 0 30px;">
+    <img src="/images/one-rep-max-guide-og.webp"
+         alt="How to calculate your one rep max - formulas, rep-max chart, and training percentages"
+         width="1200"
+         height="630"
+         style="width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--border); display: block;">
+  </figure>
+
+  <!-- TOC -->
+  <div class="toc">
+    <strong>In this guide:</strong>
+    <a href="#what-is-1rm">What is a one rep max?</a>
+    <a href="#formulas">The formulas (Epley, Brzycki & more)</a>
+    <a href="#chart">Rep-max chart: estimate at a glance</a>
+    <a href="#how-to-use">How to use your 1RM for training</a>
+    <a href="#safety">Safety tips for testing</a>
+    <a href="#retest">How often should you retest?</a>
+    <a href="#faq">FAQs</a>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <p>If you lift weights — or want to start — you'll keep hearing one term: <strong>one rep max</strong> (or 1RM). It's the number that tells you how strong you really are, and it's the foundation of every serious training program.</p>
+
+    <p>The best part? You don't need to risk injury by attempting your absolute max. You can estimate it accurately from your regular workouts — and this guide will show you exactly how.</p>
+
+    <h2 id="what-is-1rm">What Is a One Rep Max (1RM)?</h2>
+
+    <p>Your <strong>one rep max</strong> is the maximum amount of weight you can lift for <strong>exactly one repetition</strong> of an exercise — with proper form, no cheating, and no help from a spotter.</p>
+
+    <p>It's the most common way to:</p>
+
+    <ul>
+      <li>Measure your absolute strength on exercises like the bench press, squat, and deadlift</li>
+      <li>Program workouts (most programs prescribe weights as percentages of your 1RM)</li>
+      <li>Track progress over weeks and months</li>
+    </ul>
+
+    <p><strong>Example:</strong> If your bench press 1RM is 80 kg, that means 80 kg is the heaviest weight you can press once with good form. You couldn't do 80.5 kg — not even for one rep.</p>
+
+    <h2 id="formulas">The Formulas: Epley, Brzycki & More</h2>
+
+    <p>Testing a true 1RM is stressful on your joints and nervous system. So researchers developed formulas that estimate your 1RM from a <strong>submaximal set</strong> — a weight you can lift for multiple reps (usually 2–10) before failure.</p>
+
+    <p>Here are the most popular ones:</p>
+
+    <div class="formula-box">
+      <div class="f-label">Epley Formula (Most Popular)</div>
+      <div class="f-main">1RM = Weight × (1 + Reps ÷ 30)</div>
+      <div class="f-note">Best for rep ranges of 1–10. Used by most apps and calculators.</div>
+    </div>
+
+    <div class="example-box">
+      <div class="e-title">📐 Example: 80 kg for 5 reps (Epley)</div>
+      <div class="step"><b>Step 1:</b> Reps ÷ 30 = 5 ÷ 30 = <b>0.167</b></div>
+      <div class="step"><b>Step 2:</b> 1 + 0.167 = <b>1.167</b></div>
+      <div class="step"><b>Step 3:</b> 80 × 1.167 = <b>93.3 kg</b></div>
+      <div class="result">✅ Your estimated 1RM ≈ 93 kg</div>
+    </div>
+
+    <div class="formula-box">
+      <div class="f-label">Brzycki Formula</div>
+      <div class="f-main">1RM = Weight × 36 ÷ (37 − Reps)</div>
+      <div class="f-note">Very similar to Epley. Slightly more conservative for higher reps.</div>
+    </div>
+
+    <div class="example-box">
+      <div class="e-title">📐 Example: 80 kg for 5 reps (Brzycki)</div>
+      <div class="step"><b>Step 1:</b> 37 − 5 = <b>32</b></div>
+      <div class="step"><b>Step 2:</b> 36 ÷ 32 = <b>1.125</b></div>
+      <div class="step"><b>Step 3:</b> 80 × 1.125 = <b>90 kg</b></div>
+      <div class="result">✅ Estimated 1RM ≈ 90 kg (vs 93 with Epley)</div>
+    </div>
+
+    <h3>Other Formulas (Quick Reference)</h3>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Formula</th>
+            <th>Equation</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Epley</strong></td>
+            <td>Weight × (1 + Reps ÷ 30)</td>
+            <td>Most popular. Best for 1–10 reps.</td>
+          </tr>
+          <tr>
+            <td><strong>Brzycki</strong></td>
+            <td>Weight × 36 ÷ (37 − Reps)</td>
+            <td>Similar to Epley. Slightly lower estimates.</td>
+          </tr>
+          <tr>
+            <td><strong>Lander</strong></td>
+            <td>(100 × Weight) ÷ (101.3 − 2.67123 × Reps)</td>
+            <td>Less common. Similar results.</td>
+          </tr>
+          <tr>
+            <td><strong>Lombardi</strong></td>
+            <td>Weight × Reps<sup>0.10</sup></td>
+            <td>Good for very low rep ranges (1–5).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Which one should you use?</strong> For practical purposes, Epley and Brzycki are the best. They give nearly identical results for sets of 3–6 reps, which is the sweet spot for accuracy.</p>
+
+    <div class="calc-cta">
+      <h3>Calculate Your 1RM Instantly 🏋️</h3>
+      <p>Enter your weight and reps — get your estimated one rep max using multiple formulas, plus your training percentages.</p>
+      <a href="/one-rep-max-calculator/" class="btn-white">Calculate My 1RM →</a>
+    </div>
+
+    <h2 id="chart">Rep-Max Chart: Estimate at a Glance</h2>
+
+    <p>If you don't want to do the math, this chart gives you a quick reference. It assumes you lifted to near failure:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Reps Completed</th>
+            <th>% of 1RM</th>
+            <th>Example: 100 kg × 5 reps</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1</strong></td>
+            <td>100%</td>
+            <td>100 kg = your true 1RM</td>
+          </tr>
+          <tr>
+            <td><strong>2</strong></td>
+            <td>95%</td>
+            <td>105 kg estimated 1RM</td>
+          </tr>
+          <tr>
+            <td><strong>3</strong></td>
+            <td>93%</td>
+            <td>108 kg estimated 1RM</td>
+          </tr>
+          <tr>
+            <td><strong>4</strong></td>
+            <td>90%</td>
+            <td>111 kg estimated 1RM</td>
+          </tr>
+          <tr>
+            <td><strong>5</strong></td>
+            <td>87%</td>
+            <td>115 kg estimated 1RM</td>
+          </tr>
+          <tr>
+            <td><strong>6</strong></td>
+            <td>85%</td>
+            <td>118 kg estimated 1RM</td>
+          </tr>
+          <tr>
+            <td><strong>8</strong></td>
+            <td>80%</td>
+            <td>125 kg estimated 1RM</td>
+          </tr>
+          <tr>
+            <td><strong>10</strong></td>
+            <td>75%</td>
+            <td>133 kg estimated 1RM</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Note:</strong> Accuracy decreases as reps increase. For the most reliable estimate, use sets of 2–6 reps.</p>
+
+    <h2 id="how-to-use">How to Use Your 1RM for Training</h2>
+
+    <p>Once you know your 1RM, training becomes simple math. Most programs prescribe weights as a percentage of your 1RM, depending on your goal:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Goal</th>
+            <th>% of 1RM</th>
+            <th>Reps per Set</th>
+            <th>Example (1RM = 100 kg)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Max Strength</strong></td>
+            <td>85–95%</td>
+            <td>1–5</td>
+            <td>85–95 kg</td>
+          </tr>
+          <tr>
+            <td><strong>Muscle Growth</strong></td>
+            <td>65–85%</td>
+            <td>6–12</td>
+            <td>65–85 kg</td>
+          </tr>
+          <tr>
+            <td><strong>Endurance</strong></td>
+            <td>50–65%</td>
+            <td>12–20</td>
+            <td>50–65 kg</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Example:</strong> Your squat 1RM is 120 kg. For muscle growth, you'd train with 78–102 kg for 6–12 reps per set. Simple!</p>
+
+    <p>This is why tracking your 1RM matters — it turns random gym sessions into structured, progressive training. Combined with proper <a href="/blog/how-much-protein-do-i-need/">protein intake</a> and <a href="/blog/macros-explained/">macro balance</a>, you've got everything you need to build strength efficiently.</p>
+
+    <h2 id="safety">Safety Tips for Testing Your 1RM</h2>
+
+    <p>Estimating from submaximal sets is <strong>much safer</strong> than attempting a true 1RM. But if you do want to test it directly, follow these rules:</p>
+
+    <ol>
+      <li><strong>Never test alone.</strong> Always have a spotter or use safety pins on a power rack.</li>
+      <li><strong>Warm up thoroughly.</strong> Start with 50% of your estimated 1RM for 5–8 reps, then 70% for 3–5 reps, then 85% for 1–2 reps.</li>
+      <li><strong>Rest 3–5 minutes</strong> between attempts. Your nervous system needs full recovery.</li>
+      <li><strong>Increase by small amounts.</strong> Add 2.5–5 kg per attempt, not 10 kg jumps.</li>
+      <li><strong>Stop at failure.</strong> If form breaks down or the bar slows significantly, that's your max. Don't force it.</li>
+      <li><strong>Beginners: skip true 1RM testing.</strong> Stick to estimation until you've lifted consistently for 6+ months.</li>
+    </ol>
+
+    <div class="note">
+      <strong>⚠️ Important:</strong> One rep max testing is not recommended for beginners, people recovering from injury, or anyone with joint or cardiovascular issues. If in doubt, estimate from a 3–5 rep set instead. Always consult a qualified trainer or healthcare provider if you're unsure.
+    </div>
+
+    <h2 id="retest">How Often Should You Retest Your 1RM?</h2>
+
+    <p>Retesting too often can interfere with your training and recovery. Here's a sensible schedule:</p>
+
+    <ul>
+      <li><strong>Beginners (first 6–12 months):</strong> Every 6–8 weeks, or just estimate from your regular workouts</li>
+      <li><strong>Intermediate lifters:</strong> Every 4–6 weeks</li>
+      <li><strong>Advanced lifters:</strong> Every 8–12 weeks (or before a competition)</li>
+    </ul>
+
+    <p><strong>Pro tip:</strong> You don't need to test every exercise. Pick 2–3 main lifts (like squat, bench, deadlift) and track those. The rest will follow.</p>
+
+    <!-- FAQ -->
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-q">What is a one rep max (1RM)? <span>+</span></button>
+      <div class="faq-a"><p>Your one rep max (1RM) is the maximum amount of weight you can lift for exactly one repetition of an exercise with proper form. It is the standard measure of strength used to program workouts and track progress.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">How do I calculate my one rep max without testing it? <span>+</span></button>
+      <div class="faq-a"><p>Use a submaximal set: lift a weight you can do for 2-10 reps to near failure, then apply a formula. The most common is the Epley formula: 1RM = weight × (1 + reps ÷ 30). For example, 100 kg for 5 reps gives an estimated 1RM of about 116.7 kg.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Which 1RM formula is the most accurate? <span>+</span></button>
+      <div class="faq-a"><p>The Epley and Brzycki formulas are the most widely used and give similar results for rep ranges of 2-10. Epley (weight × (1 + reps/30)) is slightly more common. Accuracy drops beyond 10 reps, so use sets of 3-6 reps for the best estimate.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Is it safe to test your actual one rep max? <span>+</span></button>
+      <div class="faq-a"><p>Testing a true 1RM carries higher injury risk, especially for beginners. Estimating from a 3-5 rep set is safer and accurate enough for most people. If you do test, warm up thoroughly, use a spotter or safety pins, and never attempt a 1RM alone.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">How do I use my 1RM to plan my workouts? <span>+</span></button>
+      <div class="faq-a"><p>Training programs use percentages of your 1RM. For strength, lift 85-95% for 1-5 reps. For muscle growth (hypertrophy), use 65-85% for 6-12 reps. For endurance, use 50-65% for 12-20 reps. Adjust as your 1RM improves over time.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">How often should I retest my one rep max? <span>+</span></button>
+      <div class="faq-a"><p>Retest every 4-8 weeks, or whenever your training weights start feeling noticeably easier. Frequent 1RM testing can interfere with training and recovery, so estimated 1RM from your regular workouts is often the better approach.</p></div>
+    </div>
+
+  </div>
+
+  <!-- RELATED -->
+  <div class="related">
+    <h2>Keep Reading 📚</h2>
+    <div class="related-grid">
+      <a href="/blog/macros-explained/" class="related-card">
+        <div class="r-icon">🥗</div>
+        <div class="r-title">Macros Explained: What Are Macronutrients? (Simple Guide)</div>
+      </a>
+      <a href="/blog/how-much-protein-do-i-need/" class="related-card">
+        <div class="r-icon">🍗</div>
+        <div class="r-title">How Much Protein Do I Need? Daily Targets Made Simple</div>
+      </a>
+      <a href="/blog/what-is-tdee/" class="related-card">
+        <div class="r-icon">⚡</div>
+        <div class="r-title">What Is TDEE? Total Daily Energy Expenditure Explained</div>
+      </a>
+    </div>
+  </div>
+
+</article>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">💪 Calc<span>Fitly</span></div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/bmi-calculator/">BMI</a>
+      <a href="/calorie-calculator/">Calorie</a>
+      <a href="/body-fat-calculator/">Body Fat</a>
+      <a href="/water-intake-calculator/">Water</a>
+      <a href="/macro-calculator/">Macro</a>
+      <a href="/ideal-weight-calculator/">Ideal Weight</a>
+      <a href="/tdee-calculator/">TDEE</a>
+      <a href="/weight-loss-calculator/">Weight Loss</a>
+      <a href="/protein-calculator/">Protein</a>
+      <a href="/bmr-calculator/">BMR</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/privacy-policy/">Privacy Policy</a>
+    </div>
+    <p class="disclaimer">CalcFitly provides educational content only and does not offer medical advice. Always consult a qualified healthcare professional before making health decisions.</p>
+    <p class="copyright">&copy; 2026 CalcFitly. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+// Mobile menu
+var menuBtn = document.getElementById('menuBtn');
+var navLinks = document.getElementById('navLinks');
+menuBtn.addEventListener('click', function () {
+  navLinks.classList.toggle('open');
+});
+
+// FAQ accordion
+var faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(function (item) {
+  var btn = item.querySelector('.faq-q');
+  var answer = item.querySelector('.faq-a');
+  btn.addEventListener('click', function () {
+    var isOpen = item.classList.contains('open');
+    faqItems.forEach(function (i) {
+      i.classList.remove('open');
+      i.querySelector('.faq-a').style.maxHeight = null;
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  });
+});
+</script>
+
+</body>
+</html>
