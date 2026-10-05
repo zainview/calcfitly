@@ -232,6 +232,16 @@
     <image:title>Heart Rate Zones Explained: What Are the 5 Zones?</image:title>
   </image:image>
 </url>
+        <url>
+  <loc>https://calcfitly.com/blog/one-rep-max-guide/</loc>
+  <lastmod>2026-10-05</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/one-rep-max-guide-og.webp</image:loc>
+    <image:title>How to Calculate Your One Rep Max (1RM): Formulas &amp; Chart</image:title>
+  </image:image>
+</url>
   <!-- ===== STATIC PAGES ===== -->
   <url>
     <loc>https://calcfitly.com/about/</loc>
