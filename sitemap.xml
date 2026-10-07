@@ -252,6 +252,16 @@
     <image:title>How Much Should I Weigh? 4 Ideal Weight Formulas Explained</image:title>
   </image:image>
 </url>
+        <url>
+  <loc>https://calcfitly.com/blog/bmi-vs-body-fat/</loc>
+  <lastmod>2026-10-07</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/bmi-vs-body-fat-og.webp</image:loc>
+    <image:title>BMI vs Body Fat Percentage: Which One Actually Matters?</image:title>
+  </image:image>
+</url>
   <!-- ===== STATIC PAGES ===== -->
   <url>
     <loc>https://calcfitly.com/about/</loc>
