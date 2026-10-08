@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR7V1W5TSZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CR7V1W5TSZ');
+  </script>
+
+  <title>BMR vs TDEE: What's the Difference? (Simple Guide) | CalcFitly</title>
+  <meta name="description" content="BMR vs TDEE explained simply: what each number measures, how they relate, a side-by-side comparison, and which one to use for weight loss or gain.">
+  <link rel="canonical" href="https://calcfitly.com/blog/bmr-vs-tdee/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💪</text></svg>">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="BMR vs TDEE: What's the Difference? (Simple Guide)">
+  <meta property="og:description" content="BMR and TDEE are closely related but constantly confused. Here's the clear difference — and which number to actually use for your diet.">
+  <meta property="og:url" content="https://calcfitly.com/blog/bmr-vs-tdee/">
+  <meta property="og:image" content="https://calcfitly.com/images/bmr-vs-tdee-og.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://calcfitly.com/images/bmr-vs-tdee-og.webp">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "BMR vs TDEE: What's the Difference? (Simple Guide)",
+    "description": "BMR vs TDEE explained simply: what each number measures, how they relate, a side-by-side comparison, and which one to use for weight loss or gain.",
+    "datePublished": "2026-10-08",
+    "dateModified": "2026-10-08",
+    "author": { "@type": "Organization", "name": "CalcFitly" },
+    "publisher": { "@type": "Organization", "name": "CalcFitly" },
+    "mainEntityOfPage": "https://calcfitly.com/blog/bmr-vs-tdee/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is BMR or TDEE more important?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For practical dieting, TDEE matters more because it reflects your real daily calorie burn. BMR is still important as the foundation — TDEE is calculated from it — and as a safety floor you should not eat below for extended periods." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I eat below my BMR to lose weight faster?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Short periods are generally fine for healthy adults, but eating below your BMR for weeks or months raises the risk of muscle loss, fatigue, nutrient deficiencies, and metabolic slowdown. A safer approach is eating 400-500 calories below your TDEE." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is my TDEE so much higher than my BMR?",
+        "acceptedAnswer": { "@type": "Answer", "text": "TDEE includes your BMR plus all movement: walking, working, exercising, digesting food, and daily activities. Depending on your activity level, TDEE is typically 20% to 90% higher than BMR." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to recalculate my BMR and TDEE?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Both numbers change as your weight, age, and activity level change. Recalculate every 4-6 weeks during a diet, or after every 5 kg of weight change, to keep your targets accurate." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is BMR the same as RMR?",
+        "acceptedAnswer": { "@type": "Answer", "text": "They are close cousins. BMR is measured under strict lab conditions after a full night of rest, while RMR (Resting Metabolic Rate) is measured under looser conditions and is usually slightly higher. In everyday fitness use, the terms are often used interchangeably." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I use BMR or TDEE for weight loss?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Always use TDEE. Calculate your TDEE, then subtract 400-500 calories for a sustainable deficit of roughly 0.5 kg of fat loss per week. Using BMR as your target would create an unnecessarily aggressive deficit." }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcfitly.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://calcfitly.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "BMR vs TDEE", "item": "https://calcfitly.com/blog/bmr-vs-tdee/" }
+    ]
+  }
+  </script>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --green: #11998e;
+      --green-light: #38ef7d;
+      --green-dark: #0d7a72;
+      --ink: #14212b;
+      --muted: #5f6b76;
+      --bg: #f4fbf8;
+      --border: #e4efe9;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+
+    .navbar { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-size: 1.4em; font-weight: 800; text-decoration: none; color: var(--ink); }
+    .logo span { color: var(--green); }
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-links a { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.95em; }
+    .nav-links a:hover { color: var(--green); }
+    .nav-cta { background: linear-gradient(135deg, var(--green), var(--green-light)); color: #fff !important; padding: 10px 20px; border-radius: 999px; box-shadow: 0 4px 12px rgba(17,153,142,0.25); }
+    .menu-btn { display: none; background: none; font-size: 1.6em; cursor: pointer; color: var(--ink); border: none; }
+
+    .article-wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 60px; }
+    .breadcrumb { font-size: 0.85em; color: var(--muted); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--green); text-decoration: none; font-weight: 600; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .a-hero { margin-bottom: 30px; }
+    .a-tag { display: inline-block; background: #eefaf4; color: var(--green-dark); font-weight: 700; font-size: 0.72em; padding: 5px 12px; border-radius: 999px; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 1px; }
+    .a-hero h1 { font-size: clamp(1.7em, 4vw, 2.4em); font-weight: 900; letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 14px; }
+    .a-hero .intro { color: var(--muted); font-size: 1.08em; }
+    .a-info { display: flex; gap: 14px; align-items: center; margin-top: 16px; padding: 12px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); color: var(--muted); font-size: 0.85em; flex-wrap: wrap; }
+
+    .toc { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 22px 26px; margin: 28px 0 36px; }
+    .toc strong { display: block; margin-bottom: 10px; font-size: 0.95em; }
+    .toc a { display: block; color: var(--muted); text-decoration: none; padding: 5px 0; font-size: 0.92em; }
+    .toc a:hover { color: var(--green); }
+    .toc a::before { content: '→ '; color: var(--green); }
+
+    .content h2 { font-size: 1.5em; font-weight: 800; margin: 42px 0 14px; letter-spacing: -0.3px; }
+    .content h3 { font-size: 1.15em; font-weight: 700; margin: 28px 0 10px; }
+    .content p { margin-bottom: 16px; color: #2c3a45; }
+    .content ul, .content ol { margin: 0 0 18px 22px; color: #2c3a45; }
+    .content li { margin-bottom: 8px; }
+    .content a { color: var(--green-dark); font-weight: 600; }
+    .content strong { color: var(--ink); }
+
+    .formula-box { background: linear-gradient(135deg, #eefaf4, #e3f8ef); border: 1px solid var(--border); border-left: 4px solid var(--green); border-radius: 14px; padding: 22px 26px; margin: 22px 0; }
+    .formula-box .f-label { font-size: 0.78em; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--green-dark); margin-bottom: 8px; }
+    .formula-box .f-main { font-size: 1.2em; font-weight: 800; color: var(--ink); font-family: 'Courier New', monospace; }
+    .formula-box .f-note { font-size: 0.88em; color: var(--muted); margin-top: 8px; }
+
+    .example-box { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 22px 26px; margin: 22px 0; }
+    .example-box .e-title { font-weight: 800; margin-bottom: 12px; color: var(--green-dark); }
+    .example-box .step { padding: 8px 0; border-bottom: 1px dashed var(--border); font-size: 0.95em; }
+    .example-box .step:last-child { border-bottom: none; }
+    .example-box .step b { color: var(--ink); }
+    .example-box .result { margin-top: 12px; background: #eefaf4; border-radius: 10px; padding: 12px 16px; font-weight: 700; color: var(--green-dark); }
+
+    .table-wrap { overflow-x: auto; margin: 22px 0; border-radius: 14px; border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; background: #fff; font-size: 0.93em; }
+    th { background: var(--green); color: #fff; text-align: left; padding: 13px 16px; font-weight: 700; }
+    td { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+    tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) { background: #f7fcfa; }
+
+    .calc-cta { background: linear-gradient(135deg, var(--green), var(--green-light)); border-radius: 18px; padding: 30px 26px; text-align: center; color: #fff; margin: 36px 0; }
+    .calc-cta h3 { color: #fff; margin: 0 0 8px; font-size: 1.3em; }
+    .calc-cta p { color: rgba(255,255,255,0.92); margin-bottom: 18px; }
+    .btn-white { display: inline-block; background: #fff; color: var(--green-dark); padding: 13px 28px; border-radius: 999px; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(0,0,0,0.12); transition: 0.2s; }
+    .btn-white:hover { transform: translateY(-2px); }
+
+    .faq-item { background: #fff; border: 1px solid var(--border); border-radius: 14px; margin-bottom: 12px; overflow: hidden; }
+    .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 18px 22px; font-size: 1em; font-weight: 700; color: var(--ink); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: inherit; }
+    .faq-q span { color: var(--green); font-size: 1.3em; transition: 0.2s; }
+    .faq-item.open .faq-q span { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .faq-a p { padding: 0 22px 18px; margin: 0; color: var(--muted); font-size: 0.95em; }
+
+    .related { margin-top: 46px; }
+    .related h2 { font-size: 1.3em; font-weight: 800; margin-bottom: 16px; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+    .related-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; text-decoration: none; transition: 0.2s; display: block; }
+    .related-card:hover { border-color: var(--green); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(17,153,142,0.1); }
+    .related-card .r-icon { font-size: 1.5em; margin-bottom: 8px; }
+    .related-card .r-title { font-weight: 700; color: var(--ink); font-size: 0.95em; line-height: 1.4; }
+
+    .note { background: #fff8e6; border: 1px solid #f0e2b6; border-left: 4px solid #e8b93d; border-radius: 12px; padding: 16px 20px; font-size: 0.9em; color: #6b5a23; margin: 26px 0; }
+
+    footer { background: #0e2420; color: #cfe3dd; padding: 46px 20px 26px; margin-top: 60px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+    .footer-logo { font-size: 1.3em; font-weight: 800; color: #fff; margin-bottom: 16px; }
+    .footer-logo span { color: var(--green-light); }
+    .footer-links { margin-bottom: 14px; }
+    footer a { color: #9fe8c9; text-decoration: none; margin: 0 10px; font-weight: 600; }
+    footer a:hover { color: #fff; }
+    .disclaimer { font-size: 0.82em; color: #7fa39a; max-width: 640px; margin: 14px auto 0; }
+    .copyright { margin-top: 16px; font-size: 0.85em; color: #7fa39a; }
+
+    @media (max-width: 768px) {
+      .menu-btn { display: block; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; align-items: flex-start; padding: 18px 22px; gap: 16px; border-bottom: 1px solid var(--border); box-shadow: 0 12px 24px rgba(0,0,0,0.07); }
+      .nav-links.open { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="/" class="logo">💪 Calc<span>Fitly</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="/">Home</a>
+        <a href="/#calculators">Calculators</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/bmi-calculator/" class="nav-cta">BMI Calculator</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE -->
+  <article class="article-wrap">
+
+    <nav class="breadcrumb">
+      <a href="/">Home</a> → <a href="/blog/">Blog</a> → BMR vs TDEE
+    </nav>
+
+    <header class="a-hero">
+      <span class="a-tag">Comparison</span>
+      <h1>BMR vs TDEE: What's the Difference? (Simple Guide)</h1>
+      <p class="intro">They sound similar, they're closely related — and confusing them can quietly sabotage your entire diet. Here's the clear difference between the two most important numbers in fitness.</p>
+      <div class="a-info">
+        <span>📅 Oct 8, 2026</span>
+        <span>⏱️ 8 min read</span>
+        <span>✍️ CalcFitly Team</span>
+      </div>
+    </header>
+
+    <!-- Hero Image -->
+    <figure style="margin: 0 0 30px;">
+      <img src="/images/bmr-vs-tdee-og.webp"
+        alt="BMR vs TDEE - the difference between basal metabolic rate and total daily energy expenditure"
+        width="1200"
+        height="630"
+        style="width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--border); display: block;">
+    </figure>
+
+    <!-- TOC -->
+    <div class="toc">
+      <strong>In this guide:</strong>
+      <a href="#what-is-bmr">What is BMR? (quick recap)</a>
+      <a href="#what-is-tdee">What is TDEE? (quick recap)</a>
+      <a href="#relationship">How the two numbers connect</a>
+      <a href="#comparison">BMR vs TDEE: side-by-side table</a>
+      <a href="#which-to-use">Which number should you use?</a>
+      <a href="#example">A worked example</a>
+      <a href="#mistakes">5 common mistakes</a>
+      <a href="#faq">FAQs</a>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+      <p>Start any fitness journey and two numbers will show up almost immediately: <strong>BMR</strong> and <strong>TDEE</strong>. They sound alike. They're mathematically connected. And they are constantly mixed up — sometimes with painful results.</p>
+      <p>Eating at your BMR when you meant to eat at your TDEE, for example, means accidentally crash-dieting: exhausted, hungry, and losing muscle instead of fat. Let's make sure that never happens to you.</p>
+
+      <h2 id="what-is-bmr">What Is BMR? (The Quick Version)</h2>
+      <p><strong>BMR stands for Basal Metabolic Rate</strong> — the number of calories your body burns at complete rest, just to keep you alive. Think of it like a car idling at a red light: the engine is on, fuel is burning, but the car isn't going anywhere.</p>
+      <p>Your BMR covers the essentials:</p>
+      <ul>
+        <li>Heart beating and blood circulating</li>
+        <li>Lungs breathing</li>
+        <li>Brain and organs functioning</li>
+        <li>Body temperature regulation</li>
+        <li>Cell repair and basic maintenance</li>
+      </ul>
+      <p>For most adults, BMR falls somewhere between <strong>1,200 and 2,000 calories per day</strong>. It's calculated from your age, sex, height, and weight — we covered the full math in our guide: <a href="/blog/what-is-bmr/">What Is BMR? Basal Metabolic Rate Explained</a>. You can also get yours instantly with the <a href="/bmr-calculator/">free BMR calculator</a>.</p>
+
+      <h2 id="what-is-tdee">What Is TDEE? (The Quick Version)</h2>
+      <p><strong>TDEE stands for Total Daily Energy Expenditure</strong> — the total calories your body burns in a full, real day. It takes your BMR and adds everything else:</p>
+      <ul>
+        <li>Walking, standing, and general daily movement</li>
+        <li>Your workouts and sports</li>
+        <li>Digesting and processing food</li>
+        <li>Fidgeting, chores, and all the small stuff</li>
+      </ul>
+      <p>Because it includes real life, your TDEE is always higher than your BMR — typically by 20% to 90%, depending on how active you are. Full breakdown here: <a href="/blog/what-is-tdee/">What Is TDEE? Total Daily Energy Expenditure Explained</a>.</p>
+
+      <h2 id="relationship">How the Two Numbers Connect</h2>
+      <p>Here's the key insight most people miss: <strong>TDEE is built from BMR.</strong> They aren't two unrelated numbers — one is the foundation of the other.</p>
+
+      <div class="formula-box">
+        <div class="f-label">The Master Formula</div>
+        <div class="f-main">TDEE = BMR × Activity Factor</div>
+        <div class="f-note">Your resting burn, multiplied by how much you actually move.</div>
+      </div>
+
+      <p>The activity factor works like this:</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Activity Level</th>
+              <th>Multiplier</th>
+              <th>Typical Lifestyle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Sedentary</td><td>× 1.2</td><td>Desk job, little or no exercise</td></tr>
+            <tr><td>Light</td><td>× 1.375</td><td>Exercise 1–3 days per week</td></tr>
+            <tr><td>Moderate</td><td>× 1.55</td><td>Exercise 3–5 days per week</td></tr>
+            <tr><td>Active</td><td>× 1.725</td><td>Hard exercise 6–7 days per week</td></tr>
+            <tr><td>Very Active</td><td>× 1.9</td><td>Physical job plus daily training</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="comparison">BMR vs TDEE — Side-by-Side Comparison</h2>
+      <p>This table sums up everything in one view:</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>BMR</th>
+              <th>TDEE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Stands for</strong></td>
+              <td>Basal Metabolic Rate</td>
+              <td>Total Daily Energy Expenditure</td>
+            </tr>
+            <tr>
+              <td><strong>What it measures</strong></td>
+              <td>Calories burned at complete rest</td>
+              <td>All calories burned in a real day</td>
+            </tr>
+            <tr>
+              <td><strong>Includes activity?</strong></td>
+              <td>❌ No</td>
+              <td>✅ Yes — that's the point</td>
+            </tr>
+            <tr>
+              <td><strong>Typical range</strong></td>
+              <td>1,200 – 2,000 kcal/day</td>
+              <td>1,600 – 3,000+ kcal/day</td>
+            </tr>
+            <tr>
+              <td><strong>How it's calculated</strong></td>
+              <td>Mifflin-St Jeor equation</td>
+              <td>BMR × activity multiplier</td>
+            </tr>
+            <tr>
+              <td><strong>Best use</strong></td>
+              <td>Understanding your metabolism's floor</td>
+              <td>Setting real diet and calorie targets</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="which-to-use">Which Number Should You Actually Use?</h2>
+      <p>Simple rule: <strong>plan with TDEE, respect BMR as your floor.</strong></p>
+      <ul>
+        <li><strong>Setting your daily calories?</strong> Always start from TDEE. It's the only number that reflects your actual life.</li>
+        <li><strong>Losing weight?</strong> Eat 400–500 kcal below your TDEE — this gives roughly 0.5 kg of fat loss per week, safely. More detail in our guide on <a href="/blog/how-to-lose-weight-safely/">how to lose weight safely</a>.</li>
+        <li><strong>Gaining muscle?</strong> Eat 250–300 kcal above your TDEE.</li>
+        <li><strong>Maintaining?</strong> Eat at your TDEE.</li>
+      </ul>
+      <p>And where does BMR fit in? As a <strong>safety boundary</strong>. Consistently eating below your BMR means your body isn't getting enough energy for its most basic functions — that's when muscle loss, fatigue, and metabolic slowdown creep in.</p>
+
+      <h2 id="example">A Worked Example: Same Person, Both Numbers</h2>
+      <p>Let's take Ahmed — 25 years old, 175 cm, 70 kg, who trains moderately 3–5 days a week:</p>
+
+      <div class="example-box">
+        <div class="e-title">📐 Step-by-Step Calculation</div>
+        <div class="step"><b>Step 1 — BMR (Mifflin-St Jeor):</b> (10 × 70) + (6.25 × 175) − (5 × 25) + 5 = <b>1,674 kcal</b></div>
+        <div class="step"><b>Step 2 — Activity multiplier:</b> Moderate = <b>× 1.55</b></div>
+        <div class="step"><b>Step 3 — TDEE:</b> 1,674 × 1.55 = <b>2,595 kcal</b></div>
+        <div class="step"><b>Step 4 — Weight loss target:</b> 2,595 − 500 = <b>2,095 kcal</b></div>
+        <div class="result">✅ Ahmed's BMR: 1,674 · TDEE: 2,595 · Diet target: ~2,095 kcal/day</div>
+      </div>
+
+      <p>Notice what happens if Ahmed had confused the two numbers: eating at his BMR of 1,674 instead of his proper target of 2,095 would mean an accidental 920-calorie deficit — nearly double what's safe. That's the mix-up this article exists to prevent.</p>
+
+      <div class="calc-cta">
+        <h3>Know Both Numbers in 10 Seconds 🔥</h3>
+        <p>Our free calculator shows your BMR and your TDEE at every activity level — no math required.</p>
+        <a href="/tdee-calculator/" class="btn-white">Calculate My TDEE →</a>
+      </div>
+
+      <h2 id="mistakes">5 Common BMR and TDEE Mistakes</h2>
+      <ol>
+        <li><strong>Dieting at your BMR instead of below your TDEE.</strong> The most common and most damaging error — it creates an extreme deficit without you realizing it.</li>
+        <li><strong>Overestimating your activity level.</strong> Three gym sessions a week is "Moderate," not "Active." When in doubt, pick one level lower and adjust based on results.</li>
+        <li><strong>Eating below BMR for months.</strong> Occasional low days are fine; chronic under-eating costs you muscle, energy, and hormones.</li>
+        <li><strong>Never recalculating.</strong> Lost 5 kg? Your BMR and TDEE both dropped. Recalculate every 4–6 weeks during a diet.</li>
+        <li><strong>Treating TDEE as exact truth.</strong> It's a well-researched estimate, not gospel. Track your real-world results for 2–3 weeks and adjust by 100–200 kcal if needed.</li>
+      </ol>
+
+      <h2>The Bottom Line</h2>
+      <p><strong>BMR is your survival number. TDEE is your real-life number.</strong> BMR tells you what your body needs just to exist; TDEE tells you what it actually uses living your life. Plan your diet around TDEE, and treat BMR as the floor you don't cross for long.</p>
+      <p>Once you know your TDEE, the next step is turning it into a real eating plan — our guide on <a href="/blog/how-many-calories-should-i-eat-a-day/">how many calories you should eat a day</a> walks you through exactly that.</p>
+
+      <div class="note">
+        <strong>⚠️ A quick note:</strong> This article is for educational purposes only and is not medical advice. If you have a health condition or are planning a major diet change, consult a qualified healthcare professional first.
+      </div>
+
+      <!-- FAQ -->
+      <h2 id="faq">Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <button class="faq-q">Is BMR or TDEE more important? <span>+</span></button>
+        <div class="faq-a"><p>For practical dieting, TDEE matters more because it reflects your real daily calorie burn. BMR is still important as the foundation — TDEE is calculated from it — and as a safety floor you should not eat below for extended periods.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Can I eat below my BMR to lose weight faster? <span>+</span></button>
+        <div class="faq-a"><p>Short periods are generally fine for healthy adults, but eating below your BMR for weeks or months raises the risk of muscle loss, fatigue, nutrient deficiencies, and metabolic slowdown. A safer approach is eating 400-500 calories below your TDEE.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Why is my TDEE so much higher than my BMR? <span>+</span></button>
+        <div class="faq-a"><p>TDEE includes your BMR plus all movement: walking, working, exercising, digesting food, and daily activities. Depending on your activity level, TDEE is typically 20% to 90% higher than BMR.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Do I need to recalculate my BMR and TDEE? <span>+</span></button>
+        <div class="faq-a"><p>Yes. Both numbers change as your weight, age, and activity level change. Recalculate every 4-6 weeks during a diet, or after every 5 kg of weight change, to keep your targets accurate.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Is BMR the same as RMR? <span>+</span></button>
+        <div class="faq-a"><p>They are close cousins. BMR is measured under strict lab conditions after a full night of rest, while RMR (Resting Metabolic Rate) is measured under looser conditions and is usually slightly higher. In everyday fitness use, the terms are often used interchangeably.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Should I use BMR or TDEE for weight loss? <span>+</span></button>
+        <div class="faq-a"><p>Always use TDEE. Calculate your TDEE, then subtract 400-500 calories for a sustainable deficit of roughly 0.5 kg of fat loss per week. Using BMR as your target would create an unnecessarily aggressive deficit.</p></div>
+      </div>
+
+    </div>
+
+    <!-- RELATED -->
+    <div class="related">
+      <h2>Keep Reading 📚</h2>
+      <div class="related-grid">
+        <a href="/blog/what-is-bmr/" class="related-card">
+          <div class="r-icon">⚡</div>
+          <div class="r-title">What Is BMR? Basal Metabolic Rate Explained</div>
+        </a>
+        <a href="/blog/what-is-tdee/" class="related-card">
+          <div class="r-icon">🔥</div>
+          <div class="r-title">What Is TDEE? Total Daily Energy Expenditure Explained</div>
+        </a>
+        <a href="/blog/how-many-calories-should-i-eat-a-day/" class="related-card">
+          <div class="r-icon">🍽️</div>
+          <div class="r-title">How Many Calories Should I Eat a Day?</div>
+        </a>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">💪 Calc<span>Fitly</span></div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/bmi-calculator/">BMI</a>
+        <a href="/calorie-calculator/">Calorie</a>
+        <a href="/body-fat-calculator/">Body Fat</a>
+        <a href="/water-intake-calculator/">Water</a>
+        <a href="/macro-calculator/">Macro</a>
+        <a href="/ideal-weight-calculator/">Ideal Weight</a>
+        <a href="/tdee-calculator/">TDEE</a>
+        <a href="/weight-loss-calculator/">Weight Loss</a>
+        <a href="/protein-calculator/">Protein</a>
+        <a href="/bmr-calculator/">BMR</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+      </div>
+      <p class="disclaimer">CalcFitly provides educational content only and does not offer medical advice. Always consult a qualified healthcare professional before making health decisions.</p>
+      <p class="copyright">&copy; 2026 CalcFitly. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    var menuBtn = document.getElementById('menuBtn');
+    var navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', function () {
+      navLinks.classList.toggle('open');
+    });
+
+    var faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(function (item) {
+      var btn = item.querySelector('.faq-q');
+      var answer = item.querySelector('.faq-a');
+      btn.addEventListener('click', function () {
+        var isOpen = item.classList.contains('open');
+        faqItems.forEach(function (i) {
+          i.classList.remove('open');
+          i.querySelector('.faq-a').style.maxHeight = null;
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
