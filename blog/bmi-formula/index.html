@@ -32,9 +32,9 @@
       "@context": "https://schema.org",
       "@type": "Article",
       "headline": "BMI Formula: How to Calculate BMI (With Examples)",
-      "description": "Learn the BMI formula in kg and pounds. Step-by-step examples, the metric and imperial BMI calculation, a full BMI chart, and common mistakes to avoid.",
+      "description": "Learn the BMI formula in kg and pounds. Step-by-step examples, the metric and imperial BMI calculation, a full BMI chart, and common  to avoid.",
       "datePublished": "2026-09-22",
-      "dateModified": "2026-09-22",
+      "dateModified": "2026-10-08",
       "author": { "@type": "Organization", "name": "CalcFitly" },
       "publisher": { "@type": "Organization", "name": "CalcFitly" },
         "image": "https://calcfitly.com/images/bmi-formula-og.webp",
@@ -270,6 +270,9 @@
             <a href="#chart">BMI chart: what your number means</a>
             <a href="#why-703">Why does the imperial formula use 703?</a>
             <a href="#mistakes">5 common BMI calculation mistakes</a>
+                  <a href="#history">The surprising history of BMI</a>
+      <a href="#mental-math">Estimate BMI without a calculator</a>
+      <a href="#excel">BMI formula in Excel and Sheets</a>
             <a href="#faq">FAQs</a>
         </div>
 
@@ -419,7 +422,64 @@
             </ol>
 
             <p>Made any of these? No judgment — that's exactly why we built the <a href="/bmi-calculator/">BMI calculator</a>. It handles all conversions automatically.</p>
+      <h2 id="history">The Surprising History of the BMI Formula</h2>
+      <p>Here's something most people never learn: the BMI formula was <strong>never designed to measure individual health.</strong></p>
+      <p>In the 1830s, a Belgian mathematician named <strong>Adolphe Quetelet</strong> was studying population statistics — not medicine. He wanted a simple way to describe the "average man" using math, and noticed that weight tended to scale with height squared. His formula was called the <strong>Quetelet Index</strong>, and for over a century, almost nobody used it for health at all.</p>
+      <p>That changed in 1972, when American physiologist <strong>Ancel Keys</strong> compared several weight-to-height formulas in a study and found Quetelet's version worked best for comparing populations. He renamed it the <strong>Body Mass Index</strong> — and the name stuck.</p>
+      <p>The twist? Keys himself warned that BMI was useful for <em>population studies</em>, not for diagnosing individuals. Two hundred years of history explain why the formula is so popular (it's brilliantly simple) — and also why it has real blind spots, which we cover in detail in <a href="/blog/is-bmi-accurate/">Is BMI Accurate? 7 Limitations You Should Know</a>.</p>
 
+      <h2 id="mental-math">How to Estimate BMI Without a Calculator</h2>
+      <p>No calculator, no phone, no problem. These three mental-math tricks get you surprisingly close:</p>
+
+      <h3>Trick 1: The Divide-Twice Method</h3>
+      <p>Take your weight in kg and divide it by your height in meters — then divide by your height <em>again</em>. That's literally the formula: weight ÷ height ÷ height.</p>
+      <div class="example-box">
+        <div class="e-title">📐 Quick Example</div>
+        <div class="step"><b>Weight:</b> 72 kg · <b>Height:</b> 1.8 m</div>
+        <div class="step"><b>First divide:</b> 72 ÷ 1.8 = <b>40</b></div>
+        <div class="step"><b>Divide again:</b> 40 ÷ 1.8 = <b>22.2</b></div>
+        <div class="result">✅ BMI ≈ 22.2 — right in the healthy range</div>
+      </div>
+
+      <h3>Trick 2: The "22 Trick" for Healthy Weight</h3>
+      <p>Want to know a healthy weight for your height instead? Flip the formula. A BMI of 22 sits right in the middle of the healthy range, so:</p>
+      <div class="formula-box">
+        <div class="f-label">Reverse BMI Trick</div>
+        <div class="f-main">Healthy weight ≈ 22 × height (m)²</div>
+        <div class="f-note">Example: 1.75 m → 22 × 3.06 ≈ 67 kg as a mid-healthy target.</div>
+      </div>
+
+      <h3>Trick 3: The Range Check</h3>
+      <p>For your full healthy range, multiply your height squared by 18.5 (bottom) and 25 (top):</p>
+      <ul>
+        <li><strong>Minimum healthy:</strong> 18.5 × height² → 1.75 m = ~57 kg</li>
+        <li><strong>Maximum healthy:</strong> 25 × height² → 1.75 m = ~77 kg</li>
+      </ul>
+      <p>These tricks won't beat a calculator for precision, but they're perfect for quick sanity checks. For a full height-by-height breakdown, see our <a href="/blog/height-weight-chart/">height weight chart</a>.</p>
+
+      <h2 id="excel">The BMI Formula in Excel and Google Sheets</h2>
+      <p>Tracking BMI for your family, clients, or a fitness group? Spreadsheets make it effortless. Here's the exact formula to paste:</p>
+
+      <div class="formula-box">
+        <div class="f-label">Metric Version (kg and meters)</div>
+        <div class="f-main">=A2/(B2^2)</div>
+        <div class="f-note">Put weight (kg) in cell A2 and height (m) in cell B2.</div>
+      </div>
+
+      <div class="formula-box">
+        <div class="f-label">Imperial Version (pounds and inches)</div>
+        <div class="f-main">=703*A2/(B2^2)</div>
+        <div class="f-note">Put weight (lb) in cell A2 and height (inches) in cell B2.</div>
+      </div>
+
+      <h3>Bonus: Auto-Label the Category</h3>
+      <p>Want the sheet to tell you the category automatically? Add this formula in another cell (assuming BMI is in cell C2):</p>
+      <div class="formula-box">
+        <div class="f-label">Category Formula</div>
+        <div class="f-main">=IF(C2&lt;18.5,"Underweight",IF(C2&lt;25,"Healthy",IF(C2&lt;30,"Overweight","Obese")))</div>
+        <div class="f-note">Copy it exactly — it checks each range in order and prints the matching category.</div>
+      </div>
+      <p>Set it up once, and you can track dozens of people with zero math. Just remember the same rule applies in a spreadsheet as everywhere else: <a href="/blog/what-is-bmi/">BMI is a starting point, not a diagnosis</a>.</p>
             <h2>What BMI Doesn't Tell You</h2>
             <p>The BMI formula only uses two inputs — weight and height. That makes it fast, but also limited. It can't tell the difference between <strong>muscle and fat</strong>. A muscular athlete and a sedentary person with the same height and weight get the same BMI, even though their body compositions are completely different.</p>
             <p>That's why BMI works best as a <strong>starting point</strong>, not a final verdict. For a fuller picture, pair it with your <a href="/body-fat-calculator/">body fat percentage</a>, and use our <a href="/tdee-calculator/">TDEE calculator</a> to understand your daily energy needs. We cover this in more detail in <a href="/blog/what-is-bmi/">What Is BMI? Complete Guide for Beginners</a>.</p>
