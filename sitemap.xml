@@ -262,6 +262,16 @@
     <image:title>BMI vs Body Fat Percentage: Which One Actually Matters?</image:title>
   </image:image>
 </url>
+        <url>
+  <loc>https://calcfitly.com/blog/bmr-vs-tdee/</loc>
+  <lastmod>2026-10-08</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/bmr-vs-tdee-og.webp</image:loc>
+    <image:title>BMR vs TDEE: What's the Difference? (Simple Guide)</image:title>
+  </image:image>
+</url>
   <!-- ===== STATIC PAGES ===== -->
   <url>
     <loc>https://calcfitly.com/about/</loc>
