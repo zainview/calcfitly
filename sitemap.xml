@@ -272,6 +272,16 @@
     <image:title>BMR vs TDEE: What's the Difference? (Simple Guide)</image:title>
   </image:image>
 </url>
+        <url>
+  <loc>https://calcfitly.com/blog/what-is-a-calorie-deficit/</loc>
+  <lastmod>2026-10-09</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/what-is-a-calorie-deficit-og.webp</image:loc>
+    <image:title>What Is a Calorie Deficit? How to Create One Safely</image:title>
+  </image:image>
+</url>
   <!-- ===== STATIC PAGES ===== -->
   <url>
     <loc>https://calcfitly.com/about/</loc>
