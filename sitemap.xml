@@ -282,6 +282,16 @@
     <image:title>What Is a Calorie Deficit? How to Create One Safely</image:title>
   </image:image>
 </url>
+        <url>
+  <loc>https://calcfitly.com/blog/weight-loss-vs-fat-loss/</loc>
+  <lastmod>2026-10-11</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/weight-loss-vs-fat-loss-og.webp</image:loc>
+    <image:title>Weight Loss vs Fat Loss: What's the Difference?</image:title>
+  </image:image>
+</url>
   <!-- ===== STATIC PAGES ===== -->
   <url>
     <loc>https://calcfitly.com/about/</loc>
