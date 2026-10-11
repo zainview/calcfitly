@@ -75,7 +75,7 @@
   <!-- ===== BLOG INDEX ===== -->
   <url>
     <loc>https://calcfitly.com/blog/</loc>
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -290,6 +290,16 @@
   <image:image>
     <image:loc>https://calcfitly.com/images/weight-loss-vs-fat-loss-og.webp</image:loc>
     <image:title>Weight Loss vs Fat Loss: What's the Difference?</image:title>
+  </image:image>
+</url>
+        <url>
+  <loc>https://calcfitly.com/blog/health-metrics-guide/</loc>
+  <lastmod>2026-10-12</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/health-metrics-guide-og.webp</image:loc>
+    <image:title>Complete Guide to Health Metrics: Every Number That Matters</image:title>
   </image:image>
 </url>
   <!-- ===== STATIC PAGES ===== -->
