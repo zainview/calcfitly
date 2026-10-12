@@ -302,6 +302,16 @@
     <image:title>Complete Guide to Health Metrics: Every Number That Matters</image:title>
   </image:image>
 </url>
+        <url>
+  <loc>https://calcfitly.com/blog/body-recomposition/</loc>
+  <lastmod>2026-10-13</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/body-recomposition-og.webp</image:loc>
+    <image:title>Body Recomposition: How to Lose Fat and Build Muscle Together</image:title>
+  </image:image>
+</url>
   <!-- ===== STATIC PAGES ===== -->
   <url>
     <loc>https://calcfitly.com/about/</loc>
