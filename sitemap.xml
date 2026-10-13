@@ -312,6 +312,16 @@
     <image:title>Body Recomposition: How to Lose Fat and Build Muscle Together</image:title>
   </image:image>
 </url>
+        <url>
+  <loc>https://calcfitly.com/blog/sleep-and-weight-loss/</loc>
+  <lastmod>2026-10-14</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/sleep-and-weight-loss-og.webp</image:loc>
+    <image:title>Sleep and Weight Loss: How Poor Sleep Sabotages Fat Loss</image:title>
+  </image:image>
+</url>
   <!-- ===== STATIC PAGES ===== -->
   <url>
     <loc>https://calcfitly.com/about/</loc>
