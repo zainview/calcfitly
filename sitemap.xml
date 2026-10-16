@@ -75,7 +75,7 @@
   <!-- ===== BLOG INDEX ===== -->
   <url>
     <loc>https://calcfitly.com/blog/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -330,6 +330,16 @@
   <image:image>
     <image:loc>https://calcfitly.com/images/intermittent-fasting-for-beginners-og.webp</image:loc>
     <image:title>Intermittent Fasting for Beginners: The Complete Guide</image:title>
+  </image:image>
+</url>
+        <url>
+  <loc>https://calcfitly.com/blog/walking-for-weight-loss/</loc>
+  <lastmod>2026-10-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/walking-for-weight-loss-og.webp</image:loc>
+    <image:title>Walking for Weight Loss: How Many Steps a Day Actually Work</image:title>
   </image:image>
 </url>
   <!-- ===== STATIC PAGES ===== -->
