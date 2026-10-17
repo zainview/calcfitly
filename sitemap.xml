@@ -67,7 +67,7 @@
   </url>
   <url>
     <loc>https://calcfitly.com/bmr-calculator/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -340,6 +340,16 @@
   <image:image>
     <image:loc>https://calcfitly.com/images/walking-for-weight-loss-og.webp</image:loc>
     <image:title>Walking for Weight Loss: How Many Steps a Day Actually Work</image:title>
+  </image:image>
+</url>
+        <url>
+  <loc>https://calcfitly.com/blog/stress-and-weight-gain/</loc>
+  <lastmod>2026-10-17</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/stress-and-weight-gain-og.webp</image:loc>
+    <image:title>Stress and Weight Gain: How Cortisol Sabotages Fat Loss</image:title>
   </image:image>
 </url>
   <!-- ===== STATIC PAGES ===== -->
