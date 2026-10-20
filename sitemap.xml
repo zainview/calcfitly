@@ -75,7 +75,7 @@
   <!-- ===== BLOG INDEX ===== -->
   <url>
     <loc>https://calcfitly.com/blog/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -360,6 +360,16 @@
   <image:image>
     <image:loc>https://calcfitly.com/images/how-to-calculate-one-rep-max-og.webp</image:loc>
     <image:title>How to Calculate Your One Rep Max (1RM): Formulas, Chart &amp; Guide</image:title>
+  </image:image>
+</url>
+        <url>
+  <loc>https://calcfitly.com/blog/progressive-overload/</loc>
+  <lastmod>2026-10-20</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/progressive-overload-og.webp</image:loc>
+    <image:title>Progressive Overload Explained: The #1 Rule of Building Muscle</image:title>
   </image:image>
 </url>
   <!-- ===== STATIC PAGES ===== -->
