@@ -75,7 +75,7 @@
   <!-- ===== BLOG INDEX ===== -->
   <url>
     <loc>https://calcfitly.com/blog/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -370,6 +370,16 @@
   <image:image>
     <image:loc>https://calcfitly.com/images/progressive-overload-og.webp</image:loc>
     <image:title>Progressive Overload Explained: The #1 Rule of Building Muscle</image:title>
+  </image:image>
+</url>
+        <url>
+  <loc>https://calcfitly.com/blog/cardio-vs-weights-for-fat-loss/</loc>
+  <lastmod>2026-10-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/cardio-vs-weights-for-fat-loss-og.webp</image:loc>
+    <image:title>Cardio vs Weights for Fat Loss: Which Is Actually Better?</image:title>
   </image:image>
 </url>
   <!-- ===== STATIC PAGES ===== -->
