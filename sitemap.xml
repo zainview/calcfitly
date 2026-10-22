@@ -75,7 +75,7 @@
   <!-- ===== BLOG INDEX ===== -->
   <url>
     <loc>https://calcfitly.com/blog/</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -380,6 +380,16 @@
   <image:image>
     <image:loc>https://calcfitly.com/images/cardio-vs-weights-for-fat-loss-og.webp</image:loc>
     <image:title>Cardio vs Weights for Fat Loss: Which Is Actually Better?</image:title>
+  </image:image>
+</url>
+        <url>
+  <loc>https://calcfitly.com/blog/strength-training-for-beginners/</loc>
+  <lastmod>2026-10-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/strength-training-for-beginners-og.webp</image:loc>
+    <image:title>Strength Training for Beginners: The Complete Starter Guide</image:title>
   </image:image>
 </url>
   <!-- ===== STATIC PAGES ===== -->
