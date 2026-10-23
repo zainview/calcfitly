@@ -75,7 +75,7 @@
   <!-- ===== BLOG INDEX ===== -->
   <url>
     <loc>https://calcfitly.com/blog/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -390,6 +390,16 @@
   <image:image>
     <image:loc>https://calcfitly.com/images/strength-training-for-beginners-og.webp</image:loc>
     <image:title>Strength Training for Beginners: The Complete Starter Guide</image:title>
+  </image:image>
+</url>
+        <url>
+  <loc>https://calcfitly.com/blog/how-to-maintain-weight-loss/</loc>
+  <lastmod>2026-10-23</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/how-to-maintain-weight-loss-og.webp</image:loc>
+    <image:title>How to Maintain Weight After Losing It (Without Regaining)</image:title>
   </image:image>
 </url>
   <!-- ===== STATIC PAGES ===== -->
