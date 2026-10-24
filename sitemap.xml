@@ -75,7 +75,7 @@
   <!-- ===== BLOG INDEX ===== -->
   <url>
     <loc>https://calcfitly.com/blog/</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -400,6 +400,16 @@
   <image:image>
     <image:loc>https://calcfitly.com/images/how-to-maintain-weight-loss-og.webp</image:loc>
     <image:title>How to Maintain Weight After Losing It (Without Regaining)</image:title>
+  </image:image>
+</url>
+        <url>
+  <loc>https://calcfitly.com/blog/high-protein-foods/</loc>
+  <lastmod>2026-10-24</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/high-protein-foods-og.webp</image:loc>
+    <image:title>High-Protein Foods: The Complete List (With Amounts)</image:title>
   </image:image>
 </url>
   <!-- ===== STATIC PAGES ===== -->
