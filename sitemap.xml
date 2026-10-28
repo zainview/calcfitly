@@ -75,7 +75,7 @@
   <!-- ===== BLOG INDEX ===== -->
   <url>
     <loc>https://calcfitly.com/blog/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -440,6 +440,16 @@
 <image:image>
 <image:loc>https://calcfitly.com/images/hiit-vs-steady-state-cardio-og.webp</image:loc>
 <image:title>HIIT vs Steady-State Cardio: Which Burns More Fat?</image:title>
+</image:image>
+</url>
+        <url>
+<loc>https://calcfitly.com/blog/metabolic-adaptation/</loc>
+<lastmod>2026-10-28</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://calcfitly.com/images/metabolic-adaptation-og.webp</image:loc>
+<image:title>Metabolic Adaptation: Why Diets Stop Working (And How to Fix It)</image:title>
 </image:image>
 </url>
   <!-- ===== STATIC PAGES ===== -->
