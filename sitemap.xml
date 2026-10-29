@@ -75,7 +75,7 @@
   <!-- ===== BLOG INDEX ===== -->
   <url>
     <loc>https://calcfitly.com/blog/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -450,6 +450,16 @@
 <image:image>
 <image:loc>https://calcfitly.com/images/metabolic-adaptation-og.webp</image:loc>
 <image:title>Metabolic Adaptation: Why Diets Stop Working (And How to Fix It)</image:title>
+</image:image>
+</url>
+        <url>
+<loc>https://calcfitly.com/blog/what-is-neat/</loc>
+<lastmod>2026-10-29</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://calcfitly.com/images/what-is-neat-og.webp</image:loc>
+<image:title>What Is NEAT? The Hidden Calorie Burner</image:title>
 </image:image>
 </url>
   <!-- ===== STATIC PAGES ===== -->
