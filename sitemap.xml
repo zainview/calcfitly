@@ -75,7 +75,7 @@
   <!-- ===== BLOG INDEX ===== -->
   <url>
     <loc>https://calcfitly.com/blog/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -470,6 +470,16 @@
 <image:image>
 <image:loc>https://calcfitly.com/images/signs-of-dehydration-og.webp</image:loc>
 <image:title>12 Signs of Dehydration: Are You Drinking Enough Water?</image:title>
+</image:image>
+</url>
+        <url>
+<loc>https://calcfitly.com/blog/sleep-calculator-guide/</loc>
+<lastmod>2026-10-31</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://calcfitly.com/images/sleep-calculator-guide-og.webp</image:loc>
+<image:title>What Time Should I Go to Bed? Sleep Calculator Guide</image:title>
 </image:image>
 </url>
   <!-- ===== STATIC PAGES ===== -->
