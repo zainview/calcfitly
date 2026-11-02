@@ -84,7 +84,7 @@
   <!-- ===== BLOG INDEX ===== -->
   <url>
     <loc>https://calcfitly.com/blog/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -489,6 +489,16 @@
 <image:image>
 <image:loc>https://calcfitly.com/images/sleep-calculator-guide-og.webp</image:loc>
 <image:title>What Time Should I Go to Bed? Sleep Calculator Guide</image:title>
+</image:image>
+</url>
+        <url>
+<loc>https://calcfitly.com/blog/weight-loss-plateau/</loc>
+<lastmod>2026-11-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://calcfitly.com/images/weight-loss-plateau-og.webp</image:loc>
+<image:title>Weight Loss Plateau: Why You Stopped Losing</image:title>
 </image:image>
 </url>
   <!-- ===== STATIC PAGES ===== -->
