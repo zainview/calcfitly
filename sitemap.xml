@@ -84,7 +84,7 @@
   <!-- ===== BLOG INDEX ===== -->
   <url>
     <loc>https://calcfitly.com/blog/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -500,6 +500,16 @@
 <image:loc>https://calcfitly.com/images/weight-loss-plateau-og.webp</image:loc>
 <image:title>Weight Loss Plateau: Why It Happens and How to Break It</image:title>
 </image:image>
+</url>
+        <url>
+  <loc>https://calcfitly.com/blog/what-is-waist-to-height-ratio/</loc>
+  <lastmod>2026-11-06</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/waist-to-height-ratio-og.webp</image:loc>
+    <image:title>Waist-to-Height Ratio: The 0.5 Rule (Chart and How to Measure)</image:title>
+  </image:image>
 </url>
   <!-- ===== STATIC PAGES ===== -->
   <url>
