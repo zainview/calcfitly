@@ -84,7 +84,7 @@
   <!-- ===== BLOG INDEX ===== -->
   <url>
     <loc>https://calcfitly.com/blog/</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -509,6 +509,16 @@
   <image:image>
     <image:loc>https://calcfitly.com/images/waist-to-height-ratio-og.webp</image:loc>
     <image:title>Waist-to-Height Ratio: The 0.5 Rule (Chart and How to Measure)</image:title>
+  </image:image>
+</url>
+        <url>
+  <loc>https://calcfitly.com/blog/strength-standards/</loc>
+  <lastmod>2026-11-07</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/strength-standards-og.webp</image:loc>
+    <image:title>Strength Standards: How Strong Should You Be? (Charts and Levels)</image:title>
   </image:image>
 </url>
   <!-- ===== STATIC PAGES ===== -->
