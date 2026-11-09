@@ -84,7 +84,7 @@
   <!-- ===== BLOG INDEX ===== -->
   <url>
     <loc>https://calcfitly.com/blog/</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -519,6 +519,16 @@
   <image:image>
     <image:loc>https://calcfitly.com/images/strength-standards-og.webp</image:loc>
     <image:title>Strength Standards: How Strong Should You Be? (Charts and Levels)</image:title>
+  </image:image>
+</url>
+        <url>
+  <loc>https://calcfitly.com/blog/how-many-hours-of-sleep/</loc>
+  <lastmod>2026-11-08</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/how-many-hours-of-sleep-og.webp</image:loc>
+    <image:title>How Many Hours of Sleep Do You Need? (By Age Chart)</image:title>
   </image:image>
 </url>
   <!-- ===== STATIC PAGES ===== -->
