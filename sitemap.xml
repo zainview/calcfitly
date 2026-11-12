@@ -84,7 +84,7 @@
   <!-- ===== BLOG INDEX ===== -->
   <url>
     <loc>https://calcfitly.com/blog/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -529,6 +529,16 @@
   <image:image>
     <image:loc>https://calcfitly.com/images/how-many-hours-of-sleep-og.webp</image:loc>
     <image:title>How Many Hours of Sleep Do You Need? (By Age Chart)</image:title>
+  </image:image>
+</url>
+        <url>
+  <loc>https://calcfitly.com/blog/how-many-carbs-should-you-eat/</loc>
+  <lastmod>2026-11-09</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/how-many-carbs-og.webp</image:loc>
+    <image:title>How Many Carbs Should You Eat a Day? (By Goal &amp; Activity)</image:title>
   </image:image>
 </url>
   <!-- ===== STATIC PAGES ===== -->
