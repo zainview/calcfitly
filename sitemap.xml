@@ -541,6 +541,16 @@
     <image:title>How Many Carbs Should You Eat a Day? (By Goal &amp; Activity)</image:title>
   </image:image>
 </url>
+        <url>
+  <loc>https://calcfitly.com/blog/how-much-sugar-is-too-much/</loc>
+  <lastmod>2026-11-10</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/how-much-sugar-og.webp</image:loc>
+    <image:title>How Much Sugar Is Too Much? (Daily Limit + Hidden Sugar Chart)</image:title>
+  </image:image>
+</url>
   <!-- ===== STATIC PAGES ===== -->
   <url>
     <loc>https://calcfitly.com/about/</loc>
