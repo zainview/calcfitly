@@ -561,6 +561,16 @@
     <image:title>How Much Salt Is Too Much? (Daily Limit + Hidden Sodium Chart)</image:title>
   </image:image>
 </url>
+        <url>
+  <loc>https://calcfitly.com/blog/how-much-caffeine-is-too-much/</loc>
+  <lastmod>2026-11-12</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/how-much-caffeine-og.webp</image:loc>
+    <image:title>How Much Caffeine Is Too Much? (Daily Limit + Cup Chart)</image:title>
+  </image:image>
+</url>
   <!-- ===== STATIC PAGES ===== -->
   <url>
     <loc>https://calcfitly.com/about/</loc>
