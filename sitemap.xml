@@ -84,7 +84,7 @@
   <!-- ===== BLOG INDEX ===== -->
   <url>
     <loc>https://calcfitly.com/blog/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -569,6 +569,16 @@
   <image:image>
     <image:loc>https://calcfitly.com/images/how-much-caffeine-og.webp</image:loc>
     <image:title>How Much Caffeine Is Too Much? (Daily Limit + Cup Chart)</image:title>
+  </image:image>
+</url>
+        <url>
+  <loc>https://calcfitly.com/blog/how-much-fat-should-you-eat/</loc>
+  <lastmod>2026-11-17</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <image:image>
+    <image:loc>https://calcfitly.com/images/how-much-fat-og.webp</image:loc>
+    <image:title>How Much Fat Should You Eat a Day? (Chart by Calories)</image:title>
   </image:image>
 </url>
   <!-- ===== STATIC PAGES ===== -->
